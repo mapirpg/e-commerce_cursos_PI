@@ -11,21 +11,24 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const index = express();
-index.set('view engine', 'ejs');
-index.set('views', './views');
-index.use(bodyParser.urlencoded({ extended: false }));
-index.use(express.static(path.join(__dirname, 'public')));
+const app = express();
+app.set('view engine', 'ejs');
+app.set('views', './views');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
-index.get('/', (req,res)=>{
+app.get('/', (req,res)=>{
     res.render('paginaInicial',{
         pageTitle: 'Venda de Cursos'
     });
-index.get('/paginaDeLogin', (req,res)=>{
+
+app.get('/paginaDeLogin', (req,res)=>{
     res.render('paginaLogin');
 })
 
 });
-
-index.listen(4000);
+const servidorIniciado = ()=>{
+console.log("Tudo Certo Com O Servido!!!");
+}
+app.listen(4000, servidorIniciado);
