@@ -27,8 +27,13 @@ app.get('/paginaDeLogin', (req,res)=>{
     res.render('paginaLogin');
 })
 
+app.get('/certificados', (req,res) =>{
+    res.render('paginaCertificados')
+})
+
 });
 const servidorIniciado = ()=>{
-console.log("Tudo Certo Com O Servido!!!");
+console.log("OK");
 }
 app.listen(4000, servidorIniciado);
+
