@@ -7,9 +7,15 @@ html{
     height: 100%;
 }
 body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+}
+.conteudo{
+    flex: 1 0 auto;
 }
 ul#ulNav{
     list-style-type: none;

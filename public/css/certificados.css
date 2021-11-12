@@ -1,46 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Petemoss&family=Rajdhani:wght@300&display=swap');
+h1{
+    text-align: center;
+}
 div.certificado{
     margin-left: auto;
     margin-right: auto;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     grid-template-columns: repeat(auto-fill,);
-    border: 1px solid black;
-    height: 424px;
-    width: 600px;
+    border: 2px solid black;
+    height: 571px;
+    width: 800px;
 }
 .certCabecalho{
+    display: flex;
     flex: 100%;
-    border: 1px solid black;
-    height: 60px;
-    background-color: chartreuse;
-    margin: 0;
+    background: url('/images/cert_cabecalho.png') no-repeat;
+    height: 77px;
+    margin-top: -4px;
 }
 .certLogo{
+    
+}
+.certParceiro_1,
+.certParceiro_2,
+.certParceiro_3,
+.certParceiro_4{
     flex: 1;
+    margin: 5px;
     width: 50px;
     height: 50px;
-    border: 1px solid black; 
 }
-.cnpj{
-    flex-direction: column;
-    width: 200px;
-    height: 50px;
-    border: 1px solid black;
+.certTitulo{
+    flex: 100%;
+    font-size: 30pt;
+    text-align: center;
 }
-.txtCert{
-    width: 200px;
-    height: 50px;
-    border: 1px solid black;
-}
-.conteudoCert{
+.certConteudo{
     text-align: justify;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
+    height: 200px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 26pt;
+    font-family: 'Petemoss', cursive;
+}
+.certAss{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18pt;
+    height: 70px;
+    font-family: 'Petemoss', cursive;
+}
+.ass_1,
+.ass_2{
+    flex: 50%;
+}
+.ass_data{
+    flex: 100%;
 }
 .certRodape{
+    display: flex;
+    flex: 100%;
     align-self: end;
-    border: 1px solid black;
-    width: 100%;
+    background: url('/images/cert_rodape.png') no-repeat;
+    height: 76px;
+}
+.certCnpj,
+.certEndereco,
+.certCodValidacao,
+.certEmissao{
+    flex: 1;
+    align-self: end;
     height: 50px;
-    background-color: chartreuse;
+    text-align: center;
 }

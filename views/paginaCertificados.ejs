@@ -1,28 +1,46 @@
-<%- include('partes/inicioHead') %>
 <title>E-Commerce | Certificados</title>
 <link rel="stylesheet" href="../css/certificados.css">
 </head>
 <body>
     <%- include('partes/menuNavecacao') %>
-
-    <h1 id="titulo">Certificados</h1>
+    <main class="conteudo">    
+    <h1 id="titulo">Certificado</h1>
    <div class="certificado">
         <div class="certCabecalho">
-            <div class="certLogo">Logo</div>
+            <div class="certLogo">
+                <img src="/images/empresa_logo.png" alt="Logo da Empresa" width="150px">
+            </div>
+            <div class="certParceiro_1">parceria</div>
+            <div class="certParceiro_2">parceria</div>
+            <div class="certParceiro_3">parceria</div>
+            <div class="certParceiro_4">parceria</div>
         </div>
-        <div class="cnpj">CNPJ</div>
-        <div class="txtCert">certificado</div>
-        <div class="conteudoCert">
-        Certificaos que o alun(a) <strong>Fulano De Tal</strong> concluiu o curso de <strong>Depilação Profissional</strong>, ministrado por <strong>Maria Fulana</strong>, com carga horária de <strong>400</strong> horas.
+        <div class="certTitulo">CERTIFICADO</div>
+        <div class="certConteudo">
+            Certificaos que o alun(a) <strong>Fulano De Tal</strong> concluiu o curso de <strong>Depilação Profissional</strong>, ministrado por <strong>Maria Fulana</strong>, com carga horária de <strong>400</strong> horas em <strong>30 de Fevereiro de 2015.</strong>.
         </div>
-        <div class="assCert">
-            Assinaturas
+        <div class="certAss">
+            <div class="ass_1">
+                ___________<br>
+                Aluno(a)
+            </div>
+            <div class="ass_2">
+                ___________<br>
+                Ministrante
+            </div>
+            <div class="ass_data">
+                ___________<br>
+                Data
+            </div>
         </div>
         <div class="certRodape">
-            Rodape
+            <div class="certCnpj">CNPJ</div>
+            <div class=certEndereco>Endereço</div>
+            <div class="certCodValidacao">Cod Valicação</div>
+            <div class="certEmissao">data de Emissão</div>
         </div>
    </div>
-    
+    </main>
     <%- include('partes/footer') %>
 </body>
 </html>

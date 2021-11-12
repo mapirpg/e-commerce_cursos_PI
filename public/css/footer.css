@@ -1,6 +1,16 @@
-div#footer{
+footer#footer{
+    flex-shrink: 0;
     background-color: rgba(0, 0, 0, 0.400);
+    
 }
 ul#ul-redes-sociais{
-    list-style-type: none;
+    float: right;
+    list-style-type: none;    
+}
+li.rede-social{
+    display: inline-block;
+    margin-right: 5px;
+}
+.imgRedes{
+    width: 20px;
 }
