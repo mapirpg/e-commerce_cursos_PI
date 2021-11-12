@@ -1,10 +1,28 @@
 <%- include('partes/inicioHead') %>
 <title>E-Commerce | Certificados</title>
-<link rel="stylesheet" href="../public/css/certificados.css">
+<link rel="stylesheet" href="../css/certificados.css">
 </head>
 <body>
-    <h1>Certificados</h1>
-    <h4>Desenvolvedor: Vamo que vamo</h4>
-    </footer>
+    <%- include('partes/menuNavecacao') %>
+
+    <h1 id="titulo">Certificados</h1>
+   <div class="certificado">
+        <div class="certCabecalho">
+            <div class="certLogo">Logo</div>
+        </div>
+        <div class="cnpj">CNPJ</div>
+        <div class="txtCert">certificado</div>
+        <div class="conteudoCert">
+        Certificaos que o alun(a) <strong>Fulano De Tal</strong> concluiu o curso de <strong>Depilação Profissional</strong>, ministrado por <strong>Maria Fulana</strong>, com carga horária de <strong>400</strong> horas.
+        </div>
+        <div class="assCert">
+            Assinaturas
+        </div>
+        <div class="certRodape">
+            Rodape
+        </div>
+   </div>
+    
+    <%- include('partes/footer') %>
 </body>
 </html>
