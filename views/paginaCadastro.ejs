@@ -1,53 +1,44 @@
 <title>E-commerce | Home</title>
-<link rel="stylesheet" href="/public/css/cadastroUsuario.css">
+<link rel="stylesheet" href="css/cadastroUsuario.css">
 </head>
+
 <body>
     <%- include('partes/menuNavecacao') %>
-    <main class="conteudo">
-        <h1>Seja bem vinda(o)</h1>
-        <h2 > Realize o Seu Cadastro</h2>
-        <form action="" method="post"></form>
-        <div>
-            <label for="nome">Nome    </label>
-            <input type="text" id="nome">
-        </div>
-        <div>
-            <label for="email">Email   </label>
-            <input type="email" id="email">
-        </div>
-        <div >
-            <label for="tel">Telefone</label>
-            <input type="tel" id="phone">
-        </div>
-        <div >
-            <label for="andress">Endereço</label>
-            <input type="text" id="andress">
-        </div>
-        <div>
-            <label form="number"> Numero  </label>
-            <input type="number" id="numeroAndress">
+    <main>
+            <h2 align="center"> Realize o Seu Cadastro</h2>
+            <hr>
+            <header>
+                <img  src="/public/images/testeModa.png" alt="imagemlateral">
+            </header>
+        
+            <form class="formularioCadastro" action="" method="post"></form>
+            <label for="nomesobrenome"> Nome</label>
+            <input type ="text" id="nomesobrenome"class="input-padrao"requerid placeholder="Ex. Jose da Silva"><br>
+            <label for="email">Email </label>
+            <input type ="text" id="email"class="input-padrao"requerid placeholder="Ex. meunome@email.com"><br>
+            <label for="tel">Telefone </label>
+            <input type ="tel" id="telefone"class="input-padrao"requerid placeholder="Ex. DDD-0000-0000"><br>
+            <label for="andress">Endereço </label>
+                <input type ="text" id="endereço"class="input-padrao"requerid placeholder="Ex. Rua xxxxxxx"><br>
+                <label for="number">Numero </label> 
+                <input type="number" id="numeroEnderesso" class="input-padrao"requerid placeholder="00"><br>
+                 <label for="city">Cidade </label>
+                <input type="andress" id="cidade"class="input-padrao"requerid placeholder="Ex Recife"><br>  
+                <label for="state">Estado </label>
+                <input type="andress" id="cidade"class="input-padrao"requerid placeholder="Ex Pernambuco"><br>
+            <div>
+                <label for="senhaConfirma">Senha</label>
+                <input type="password" id="pass" required inputmode="numeric" minlength="4" maxlength="8" size="8">
             </div>
             <div>
-            <label for="city">Cidade  </label>
-            <input type="andress" id="city">
+                <label for="aceiteTermos">Marque para Confirmar</label>
+                <input type="checkbox" id="confirmo">
             </div>
-            <div>
-            <label for="state">Estado  </label>
-            <input type="text" id="state">
-            </div>
-        </div>
-        </div>
-        <div>
-            <label for="senhaConfirma">Senha</label>
-            <input type="password" id="pass" required inputmode="numeric" minlength="4" maxlength="8" size="8">
-        </div>
-        <div>
-            <input  type="checkbox" id="confirmo">
-        </div>
             <strong>Ao confirmar você aceita os termos de uso de nossa plataforma </strong><br>
-        <input  type="submit" value="Confirmar Cadastro">
-
-    </main>
-    <%- include('partes/footer') %>
+            <input type="submit" value="Confirmar Cadastro">
+         
+        </main>
+        <%- include('partes/footer') %>
 </body>
+
 </html>
