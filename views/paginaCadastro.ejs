@@ -1,0 +1,53 @@
+<title>E-commerce | Home</title>
+<link rel="stylesheet" href="/public/css/cadastroUsuario.css">
+</head>
+<body>
+    <%- include('partes/menuNavecacao') %>
+    <main class="conteudo">
+        <h1>Seja bem vinda(o)</h1>
+        <h2 > Realize o Seu Cadastro</h2>
+        <form action="" method="post"></form>
+        <div>
+            <label for="nome">Nome    </label>
+            <input type="text" id="nome">
+        </div>
+        <div>
+            <label for="email">Email   </label>
+            <input type="email" id="email">
+        </div>
+        <div >
+            <label for="tel">Telefone</label>
+            <input type="tel" id="phone">
+        </div>
+        <div >
+            <label for="andress">Endereço</label>
+            <input type="text" id="andress">
+        </div>
+        <div>
+            <label form="number"> Numero  </label>
+            <input type="number" id="numeroAndress">
+            </div>
+            <div>
+            <label for="city">Cidade  </label>
+            <input type="andress" id="city">
+            </div>
+            <div>
+            <label for="state">Estado  </label>
+            <input type="text" id="state">
+            </div>
+        </div>
+        </div>
+        <div>
+            <label for="senhaConfirma">Senha</label>
+            <input type="password" id="pass" required inputmode="numeric" minlength="4" maxlength="8" size="8">
+        </div>
+        <div>
+            <input  type="checkbox" id="confirmo">
+        </div>
+            <strong>Ao confirmar você aceita os termos de uso de nossa plataforma </strong><br>
+        <input  type="submit" value="Confirmar Cadastro">
+
+    </main>
+    <%- include('partes/footer') %>
+</body>
+</html>
