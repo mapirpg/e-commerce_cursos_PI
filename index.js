@@ -20,7 +20,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req,res)=>{
     res.render('paginaInicial',{
-        pageTitle: 'Venda de Cursos'
+        pageTitle: 'Venda de Cursos',
+        
+
+        
     });
 
 app.get('/paginaDeLogin', (req,res)=>{
