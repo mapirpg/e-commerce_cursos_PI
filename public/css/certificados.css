@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Petemoss&family=Rajdhani:wght@300&display=swap');
+h1{
+    text-align: center;
+}
+section.certificado{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fill,);
+    border: 2px solid black;
+    height: 571px;
+    width: 800px;
+    /* width: 100vw; */
+}
+article.certCabecalho{
+    display: flex;
+    flex: 100%;
+    background: url('/images/cert_cabecalho.png') no-repeat;
+    height: 77px;
+    margin-top: -4px;
+}
+
+.certParceiro_1,
+.certParceiro_2,
+.certParceiro_3,
+.certParceiro_4{
+    flex: 1;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+}
+.certTitulo{
+    flex: 100%;
+    font-size: 30pt;
+    text-align: center;
+}
+article.certConteudo{
+    text-align: justify;
+    height: 200px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30pt;
+    font-family: 'Petemoss', cursive;
+}
+article.certAss{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18pt;
+    font-family: 'Petemoss', cursive;
+}
+.ass_1,
+.ass_2{
+    flex: 50%;
+}
+.ass_data{
+    flex: 100%;
+}
+article.certRodape{
+    display: flex;
+    flex: 100%;
+    align-self: end;
+    background: url('/images/cert_rodape.png') no-repeat;
+    height: 76px;
+}
+.certCnpj,
+.certEndereco,
+.certCodValidacao,
+.certEmissao{
+    flex: 1;
+    align-self: end;
+    height: 50px;
+    text-align: center;
+}

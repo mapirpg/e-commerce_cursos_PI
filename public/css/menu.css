@@ -12,18 +12,14 @@ body {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
     width: 100%;
-  
-    
   }
   
   li {
     float: left;
- 
   }
   
   li a {
@@ -34,7 +30,6 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    
   }
   
   li a:hover:not(.active) {
@@ -58,8 +53,12 @@ ul {
 
 
   #divBusca{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto; 
     float:right;
     margin-top: 10px;
+    
   }
   #txtBusca{
     float:left;
@@ -76,5 +75,6 @@ ul {
     height:32px;
     font-weight:bold;
     background:#5F9EA0;
+    position: relative;
     
   }
