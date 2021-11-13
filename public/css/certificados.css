@@ -2,7 +2,7 @@
 h1{
     text-align: center;
 }
-div.certificado{
+section.certificado{
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -12,17 +12,16 @@ div.certificado{
     border: 2px solid black;
     height: 571px;
     width: 800px;
+    /* width: 100vw; */
 }
-.certCabecalho{
+article.certCabecalho{
     display: flex;
     flex: 100%;
     background: url('/images/cert_cabecalho.png') no-repeat;
     height: 77px;
     margin-top: -4px;
 }
-.certLogo{
-    
-}
+
 .certParceiro_1,
 .certParceiro_2,
 .certParceiro_3,
@@ -37,23 +36,22 @@ div.certificado{
     font-size: 30pt;
     text-align: center;
 }
-.certConteudo{
+article.certConteudo{
     text-align: justify;
     height: 200px;
     padding-top: 50px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 26pt;
+    font-size: 30pt;
     font-family: 'Petemoss', cursive;
 }
-.certAss{
+article.certAss{
     display: flex;
     flex-wrap: wrap;
     flex: 100%;
     text-align: center;
     font-weight: bolder;
     font-size: 18pt;
-    height: 70px;
     font-family: 'Petemoss', cursive;
 }
 .ass_1,
@@ -63,7 +61,7 @@ div.certificado{
 .ass_data{
     flex: 100%;
 }
-.certRodape{
+article.certRodape{
     display: flex;
     flex: 100%;
     align-self: end;

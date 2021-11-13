@@ -1,12 +1,20 @@
-<title>E-Commerce | Certificados</title>
-<link rel="stylesheet" href="../css/certificados.css">
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <title>E-Commerce | Certificados</title>
+    <link rel="stylesheet" href="../css/certificados.css">
 </head>
+
 <body>
     <%- include('partes/menuNavecacao') %>
-    <main class="conteudo">    
+<main class="conteudo">   
     <h1 id="titulo">Certificado</h1>
-   <div class="certificado">
-        <div class="certCabecalho">
+    <section class="certificado">
+        <article class="certCabecalho">
             <div class="certLogo">
                 <img src="/images/empresa_logo.png" alt="Logo da Empresa" width="150px">
             </div>
@@ -14,33 +22,33 @@
             <div class="certParceiro_2">parceria</div>
             <div class="certParceiro_3">parceria</div>
             <div class="certParceiro_4">parceria</div>
-        </div>
+        </article>
         <div class="certTitulo">CERTIFICADO</div>
-        <div class="certConteudo">
-            Certificaos que o alun(a) <strong>Fulano De Tal</strong> concluiu o curso de <strong>Depilação Profissional</strong>, ministrado por <strong>Maria Fulana</strong>, com carga horária de <strong>400</strong> horas em <strong>30 de Fevereiro de 2015.</strong>.
-        </div>
-        <div class="certAss">
+        <article class="certConteudo">
+            Certificaos que o alun(a) <strong>Fulano De Tal</strong> concluiu o curso de <strong>Depilação Profissional</strong>, ministrado por <strong>Maria Fulana</strong>, com carga horária de <strong>400</strong> horas em <strong>30 de Fevereiro de 2015</strong>.
+        </article>
+        <article class="certAss">
             <div class="ass_1">
-                ___________<br>
+                <hr size="1" width="70%"><br>
                 Aluno(a)
             </div>
             <div class="ass_2">
-                ___________<br>
+                <hr size="1" width="70%"><br>
                 Ministrante
             </div>
             <div class="ass_data">
-                ___________<br>
+                <hr size="1" width="40%"><br>
                 Data
             </div>
-        </div>
-        <div class="certRodape">
+        </article>
+        <article class="certRodape">
             <div class="certCnpj">CNPJ</div>
             <div class=certEndereco>Endereço</div>
             <div class="certCodValidacao">Cod Valicação</div>
             <div class="certEmissao">data de Emissão</div>
-        </div>
-   </div>
-    </main>
+        </article>
+    </section>
+</main>
     <%- include('partes/footer') %>
 </body>
 </html>

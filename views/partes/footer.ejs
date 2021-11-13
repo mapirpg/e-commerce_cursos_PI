@@ -1,5 +1,39 @@
 <link rel="stylesheet" href="/css/footer.css">
+
 <footer id="footer">
+        <!-- estrutura caixa cookies -->
+        <div class="cookContainer">
+            <div class="cookContent">
+            <p>Este site utiliza cookies para aprimorar a experiência do usuário.</p>
+            <div class="cookPref">
+                <label><input type="checkbox" class="cookAccept" checked >Aceitar uso de cookies</label>
+            </div>
+            <button class="cookSave">Salvar e Continuar</button>
+            </div>
+        </div>
+        <!-- script caixa cookies -->
+        <script>
+            function cookies(){                 
+                const container = document.querySelector('.cookContainer')
+                const save = document.querySelector('.cookSave')
+                const localPref = window.localStorage.getItem('cookiesPref').value
+                    if (localPref == true){
+                        container.style.display = 'none';
+                    }  
+                function cookPref(){
+                const pref = Boolean(document.querySelector('.cookAccept').checked)
+                console.log(pref)
+                    if (!pref){
+                        container.style.display = 'none';
+                    }
+                    window.localStorage.setItem('cookiesPref', pref)
+                    container.style.display = 'none';
+                }
+                save.addEventListener('click', cookPref)
+            }
+            cookies()
+        </script>
+    </div> 
 <ul id="ul-redes-sociais">
     <li class="rede-social">
         <a class="linkFooter" href="http://Facebook.com/" target="_blank">
@@ -17,4 +51,8 @@
         </a>
     </li>
 </ul>
+<p id="copyRight" text="&copy;
+">&copy E-commerce PI<br>
+    versão 1.0.0
+</p>
 </footer>
