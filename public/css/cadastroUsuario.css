@@ -5,27 +5,19 @@
 
 #titulo{
         font-family: sans-serif;
-        color: #FFD700;
+        color: #030300;
         margin-left: 7%;
 }
 #subtitulo{
         font-family: sans-serif;
-        color: #FFD700;
+        color: #080701ee;
         margin-left: 10%;       
 }
 
 fieldset{
         border: 0;
 }
-/* body{
-        background-color: ;
-        font-family: sans-serif;
-        font-size: 1em;
-        color: #FFDD4C;
-        margin-left: 50%;
-        margin-top: 2%;
-        justify-content: center;
-} */
+
 input,button{
         border-radius: 5px;
 }
@@ -82,3 +74,4 @@ fieldset.grupo .campo{
 #termos{
         color: rgba(0, 0, 0, 0.986);
 }
+
