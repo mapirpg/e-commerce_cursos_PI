@@ -3,8 +3,8 @@
     width: 100%;
     flex-shrink: 0;
     background-color: rgba(0, 0, 0, 0.400);
-    position: relative;
-    bottom: 0;   
+    position: absolute;
+    bottom: 0;
 }
 p#copyRight{
     margin-left: 2px;
