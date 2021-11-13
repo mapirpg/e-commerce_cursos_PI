@@ -11,7 +11,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-image: linear-gradient(to right, rgb(239, 201, 0),rgb(255, 217, 0),rgb(255, 221, 76),rgb(255, 228, 116),hsl(48, 100%, 80%),rgb(255, 241, 186),rgb(255, 248, 219));
+    
 }
 .conteudo{
     flex: 1 0 auto;
@@ -23,6 +23,7 @@ ul {
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
     width: 100%;
+    background-color: #FFF8DD;
   }
   
   li {
@@ -40,7 +41,8 @@ ul {
   }
   
   li a:hover:not(.active) {
-    background-color: #ddd;
+    background-color: #FFE474;
+    color: black;
   }
   
   li a.active {
