@@ -6,9 +6,12 @@
     position: absolute;
     bottom: 0;
 }
-p#copyRight{
-    margin-left: 2px;
+#copyRight{
     font-size: 8pt;
+    float:right;
+    padding-top: 2ch;
+    padding-right: 3ch;
+
 }
 ul#ul-redes-sociais{
     float: right;
