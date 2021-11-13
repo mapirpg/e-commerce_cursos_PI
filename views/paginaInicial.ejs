@@ -5,19 +5,7 @@
 <body>
 
 <%- include('partes/menuNavecacao') %>
-<br>
-<div id="divBusca">
-    <input type="text" id="txtBusca" placeholder="Buscar..."/>
-    <img src="iconePesquisa.jpg" id="btnBusca" alt="Buscar"/>
-  </div>
-<br>
-<br>
-<br>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-
-</style>
 </head>
 <body>
 
@@ -66,6 +54,6 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 3000); // Change image every 2 seconds
+  setTimeout(showSlides, 1000); 
 }
 </script>

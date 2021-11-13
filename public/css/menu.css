@@ -16,13 +16,13 @@ ul {
     overflow: hidden;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+  
+    
   }
   
   li {
-    float: right;
+    float: left;
  
   }
   
@@ -44,4 +44,37 @@ ul {
   li a.active {
     color: white;
     background-color: #04AA6D;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  #divBusca{
+    float:right;
+    margin-top: 10px;
+  }
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    font-style:italic;
+    font-size:18px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    
+  }
+  #btnBusca{
+    float:left;
+    height:32px;
+    font-weight:bold;
+    background:#5F9EA0;
+    
   }
