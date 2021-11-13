@@ -1,7 +1,10 @@
-footer#footer{
+
+#footer{
     width: 100%;
     flex-shrink: 0;
-    background-color: rgba(0, 0, 0, 0.400);    
+    background-color: rgba(0, 0, 0, 0.400);
+    position: relative;
+    bottom: 0;   
 }
 p#copyRight{
     margin-left: 2px;
@@ -38,7 +41,6 @@ li.rede-social{
   max-width: 520px;
   border-radius: 5px;
   padding: 1rem;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 0.5rem;

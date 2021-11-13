@@ -2,6 +2,12 @@
         margin: 0;
         padding: 0;
 } */
+#centralizar{
+        width: 700px; 
+        margin-left: auto;
+        margin-right: auto; 
+}
+
 
 #titulo{
         font-family: sans-serif;
@@ -11,7 +17,7 @@
 #subtitulo{
         font-family: sans-serif;
         color: #080701ee;
-        margin-left: 10%;       
+    
 }
 
 fieldset{
@@ -23,6 +29,9 @@ input,button{
 }
 .campo{
         margin-bottom:1em ;
+        width: 700px; 
+        margin-left: auto;
+        margin-right: auto; 
 }
 .campo label{
         margin-bottom: 0.2em;
@@ -31,7 +40,7 @@ input,button{
 }
 
 fieldset.grupo .campo{
-        float: center;
+
         margin-right: 1em;
       
 }
@@ -41,6 +50,9 @@ fieldset.grupo .campo{
         border: 1px  solid #FFDD4C;
         box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
         display: block;
+        width: 400px; 
+        margin-left: auto;
+        margin-right: auto; 
 }
 
 .campo input:focus{
@@ -51,27 +63,32 @@ fieldset.grupo .campo{
         font-size: 1.2em;
         background: #FFD700;
         border:0;
-        margin-bottom: lem;
         color: #ffffff;
-        padding: 0.2em 0.6em;
         box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
         text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-        position: auto;
-        margin-right: -50%;
         transform: translate(-50, -50%);
+        width: 300px; 
+        margin-left: auto;
+        margin-right: auto; 
 }
 .botao:hover{
         background: #ccbbff;
         box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
         text-shadow: none;
+        width: 300px; 
+        margin-left: auto;
+        margin-right: auto; 
 }
 .formulario{
         display: block;
         top: 50%;
-        margin-left: 50%;
-       
 }
 #termos{
         color: rgba(0, 0, 0, 0.986);
+        width: 700px; 
+        margin-left: auto;
+        margin-right: auto; 
+        text-align: center;
+
 }
 

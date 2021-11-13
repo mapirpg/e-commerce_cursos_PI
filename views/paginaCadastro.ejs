@@ -12,11 +12,10 @@
                 <br>
                 <hr>
             </div>
-            <div class="formulario">
+            <div class="formulario" id="centralizar">
                 <form action="">
                     <fieldset class="grupo">
                         <div class="campo">
-
                             <label for="nomecompleto"> </label>
                             <input type="text" class="nomecompleto" size="50" name="nome" requerid
                                 placeholder="Digite seu Nome">
@@ -57,14 +56,14 @@
                             <input type="password" name="password" id="pass" inputmode="numeric" minlength="8"
                                 autocomplete="current-password" required placeholder="Crie uma senha">
                         </div>
-                        <div class="campo" id="termos">
-                            <strong>Ao Finalizar você aceita os termos de uso de nossa plataforma </strong><br>
-
-                            <button class="botao" type="submit"> FINALIZAR CADASTRO </button>
-                        </div>
+                     
                     </fieldset>
+
                 </form>
-            </div>
+                <div class="campo" id="termos">
+                    <strong>Ao Finalizar você aceita os termos de uso de nossa plataforma </strong><br>
+                    <button class="botao" type="submit"> FINALIZAR CADASTRO </button>
+    </div>
         </main>
 </body>
 <%- include('partes/footer') %>
