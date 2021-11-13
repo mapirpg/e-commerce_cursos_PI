@@ -1,0 +1,7 @@
+.formularioCadastro{
+        margin: 20px auto;
+        max-width: 50%;
+
+}
+
+label { display: block; width: 100px; }

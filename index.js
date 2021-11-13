@@ -31,6 +31,9 @@ app.get('/certificados', (req,res) =>{
     res.render('paginaCertificados')
 })
 
+app.get('/cadastro', (req,res) =>{
+    res.render('paginaCadastro')
+})
 });
 const servidorIniciado = ()=>{
 console.log("OK");
