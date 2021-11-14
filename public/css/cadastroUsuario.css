@@ -33,7 +33,7 @@ fieldset.grupo .campo{
         margin-right: 1em;
       
 }
-.campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo input[type="number"],.campo input[type="cidade"],.campo input[type="estado"],
+.campo input[type="text"], .campo input[type="email"], .campo input[type="data"], .campo input[type="tel"], .campo input[type="number"],.campo input[type="cidade"],.campo input[type="estado"],
 .campo input[type="password"]{
         padding: 00.2em;
         border: 1px  solid #FFDD4C;
