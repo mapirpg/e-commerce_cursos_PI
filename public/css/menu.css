@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 * {
   box-sizing: border-box;
 }
-html{
-    height: 100%;
-}
+
 body {
     height: 100%;
     display: flex;
@@ -12,32 +11,79 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    
 }
 .conteudo{
     flex: 1 0 auto;
 }
-ul#ulNav{
+ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
-}
-li.linav{
-    float: right;
-}
-li.linav a.linkNav{
-    display: block;
+    width: 100%;
+    background-color: #FFF8DD;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto; 
     color: #666;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-} 
-li.linav a.linkNav:hover:not(.active) {
-    background-color: #ddd;
-} 
-li.linav a.linkNav.active {
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #FFE474;
+    color: black;
+  }
+  
+  li a.active {
     color: white;
     background-color: #04AA6D;
-}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  #divBusca{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto; 
+    float:right;
+    margin-top: 10px;
+    
+  }
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    font-style:italic;
+    font-size:18px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    
+  }
+  #btnBusca{
+    float:left;
+    height:32px;
+    font-weight:bold;
+    background:#5F9EA0;
+    position: relative;
+    
+  }

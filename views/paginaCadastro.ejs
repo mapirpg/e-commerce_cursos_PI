@@ -1,44 +1,75 @@
-<title>E-commerce | Home</title>
+<title>Cadastro</title>
 <link rel="stylesheet" href="css/cadastroUsuario.css">
+
 </head>
 
 <body>
     <%- include('partes/menuNavecacao') %>
-    <main>
-            <h2 align="center"> Realize o Seu Cadastro</h2>
-            <hr>
-            <header>
-                <img  src="/public/images/testeModa.png" alt="imagemlateral">
-            </header>
-        
-            <form class="formularioCadastro" action="" method="post"></form>
-            <label for="nomesobrenome"> Nome</label>
-            <input type ="text" id="nomesobrenome"class="input-padrao"requerid placeholder="Ex. Jose da Silva"><br>
-            <label for="email">Email </label>
-            <input type ="text" id="email"class="input-padrao"requerid placeholder="Ex. meunome@email.com"><br>
-            <label for="tel">Telefone </label>
-            <input type ="tel" id="telefone"class="input-padrao"requerid placeholder="Ex. DDD-0000-0000"><br>
-            <label for="andress">Endereço </label>
-                <input type ="text" id="endereço"class="input-padrao"requerid placeholder="Ex. Rua xxxxxxx"><br>
-                <label for="number">Numero </label> 
-                <input type="number" id="numeroEnderesso" class="input-padrao"requerid placeholder="00"><br>
-                 <label for="city">Cidade </label>
-                <input type="andress" id="cidade"class="input-padrao"requerid placeholder="Ex Recife"><br>  
-                <label for="state">Estado </label>
-                <input type="andress" id="cidade"class="input-padrao"requerid placeholder="Ex Pernambuco"><br>
-            <div>
-                <label for="senhaConfirma">Senha</label>
-                <input type="password" id="pass" required inputmode="numeric" minlength="4" maxlength="8" size="8">
-            </div>
-            <div>
-                <label for="aceiteTermos">Marque para Confirmar</label>
-                <input type="checkbox" id="confirmo">
-            </div>
-            <strong>Ao confirmar você aceita os termos de uso de nossa plataforma </strong><br>
-            <input type="submit" value="Confirmar Cadastro">
-         
-        </main>
-        <%- include('partes/footer') %>
-</body>
+        <main>
 
-</html>
+            <div>
+                
+                <br>
+                <hr>
+            </div>
+            <div class="formulario" id="centralizar">
+                <form action="">
+                    <fieldset class="grupo">
+                        <div class="campo">
+                            <label for="nomecompleto"> </label>
+                            <input type="text" class="nomecompleto" size="50" name="nome" requerid
+                                placeholder="Digite seu Nome">
+                        </div>
+                        <div class="campo">
+                            <label for="email"></label>
+                            <input type="email" class="email" name="email" size="50" requerid
+                                placeholder="Digite seu E-mail">
+                        </div>
+                        <div class="campo">
+                            <label for="tel"></label>
+                            <input type="tel" class="telefone" name="telefone" size="50" requerid
+                                placeholder="Digite seu Contato">
+                        </div>
+                        <div class="campo">
+                            <label for="andress"></label>
+                            <input type="text" class="endereço" name="endereco" size="50" requerid
+                                placeholder="Endereço">
+                        </div>
+                        <div class="campo">
+                            <label for="text"></label>
+                            <input type="number" class="numeroEndereco" name="numeroEndereco" size="50" requerid
+                                placeholder="Numero">
+                        </div>
+                        <div class="campo">
+                            <label for="text"></label>
+                            <input type="cidade" name="cidade" class="cidade" size="50" required placeholder="Cidade">
+                        </div>
+                        <div class="campo">
+                            <label for="text"></label>
+                            <input type="estado" class="estado" size="50" required placeholder="Estado">
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="grupo">
+                        <div class=" campo">
+                            <label for="pass"></label>
+                            <input type="password" name="password" id="pass" inputmode="numeric" minlength="8"
+                                autocomplete="current-password" required placeholder="Crie uma senha">
+                        </div>
+                     
+                    </fieldset>
+                    <div class="campo" id="termos">
+                        <strong>Ao Finalizar você aceita os termos de uso de nossa plataforma </strong><br>
+                        <button class="botao" type="submit"> FINALIZAR CADASTRO </button>
+        </div>
+                </form>
+                <div class="campo" id="termos">
+                    <input type="checkbox" value="aceite" required>
+                    <strong>Concordo com os termos de uso da nossa plataforma </strong><br><br>
+                    <button class="botao" type="submit"> FINALIZAR CADASTRO </button>
+    </div>
+        </main>
+</body>
+<%- include('partes/footer') %>
+
+    </html>
