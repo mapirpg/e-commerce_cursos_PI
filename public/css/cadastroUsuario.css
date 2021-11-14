@@ -3,22 +3,11 @@
         padding: 0;
 } */
 #centralizar{
-        width: 700px; 
+        width: 800px; 
         margin-left: auto;
         margin-right: auto; 
 }
 
-
-#titulo{
-        font-family: sans-serif;
-        color: #030300;
-        margin-left: 7%;
-}
-#subtitulo{
-        font-family: sans-serif;
-        color: #080701ee;
-    
-}
 
 fieldset{
         border: 0;
@@ -91,4 +80,12 @@ fieldset.grupo .campo{
         text-align: center;
 
 }
-
+.titulo{
+        color: #FFD700;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 00.2em;
+        font-family: sans-serif;
+        
+}
