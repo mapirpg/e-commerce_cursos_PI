@@ -37,6 +37,10 @@ app.get('/certificados', (req,res) =>{
 app.get('/cadastro', (req,res) =>{
     res.render('paginaCadastro')
 })
+app.get('/reset', (req , res)=>{
+    res.render('paginaResetPassword')
+})
+
 });
 const servidorIniciado = ()=>{
 console.log("OK");
