@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Petemoss&family=Rajdhani:wght@300&display=swap');
 h1{
     text-align: center;
-}
+/* }
 .buttPdf{
-    float: center;
+    float: center; */
 }
 section.certificado{
+    position: static;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -13,9 +14,8 @@ section.certificado{
     justify-content: space-evenly;
     grid-template-columns: repeat(auto-fill,);
     border: 2px solid black;
-    height: 571px;
     width: 800px;
-    /* width: 100vw; */
+    height: 566px;
 }
 article.certCabecalho{
     display: flex;

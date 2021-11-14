@@ -51,20 +51,24 @@
     </section>
 </main>
     <script>
-        JSON.parse('./e-commerce_cursos_PI\public\css\certificados.css')
         function gerarPdf() {
-            alert('oi')
-        const certPDF = document.querySelector('.certificado').innerHTML;
-        const certWin = window.open('','_blank','width:800, height:600');
-        certWin.document.write("<html><head>");
-        certWin.document.write("<title>Certificado PDF</title></head>");
-        certWin.document.write("<body>");
-        certWin.document.write(certPDF);
-        certWin.document.write("</body></html>");
-        // certWin.print()
-        // certWin.document.close();
-
-    }
+            const pdf = require('html-pdf');
+            const ejs = require('ejs'); 
+            console.log('oi')
+            ejs.renderFile(document.querySelector('.certificado').innerHTML, {}, (err,html) =>{
+                if(err){
+                    console.log("Erro ao receber as informacoes da section");
+                }else{
+                    pdf.create(html, {}).toFile("./Certificado.pdf", (err,res) =>{
+                        if(err){
+                            console.log("Erro ao criar o PDF");
+                        } else {
+                            console.log("PDF criado!");
+                        }
+                    });
+                }
+            });
+        }       
     </script>
     <%- include('partes/footer') %>
 </body>

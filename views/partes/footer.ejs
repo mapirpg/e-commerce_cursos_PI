@@ -1,59 +1,79 @@
 <link rel="stylesheet" href="/css/footer.css">
 
-<footer id="footer">
-        <!-- estrutura caixa cookies -->
-        <div class="cookContainer">
-            <div class="cookContent">
-            <p>Este site utiliza cookies para aprimorar a experiência do usuário.</p>
-            <div class="cookPref">
-                <label><input type="checkbox" class="cookAccept" checked >Aceitar uso de cookies</label>
-            </div>
-            <button class="cookSave">Salvar e Continuar</button>
-            </div>
+<footer class="footer">
+    <section class="secFooter">
+        <p id="copyRight" text="&copy;">&copy E-commerce PI<br>
+            versão 1.0.0
+        </p>
+        <div class="navegacao">
+            <h4>Navegação</h4>
+            <ul class="footerNavegacao">
+                <li class="liUteis"><a href="#">Termos de Uso</a></li>
+                <li class="liUteis"><a href="#">Políticas de Privacidade</a></li>
+                <li class="liUteis"><a href="#">Sobre Nós</a></li>
+            </ul>
         </div>
-        <!-- script caixa cookies -->
-        <script>
-            function cookies(){                 
-                const container = document.querySelector('.cookContainer')
-                const save = document.querySelector('.cookSave')
-                const localPref = window.localStorage.getItem('cookiesPref').value
-                    if (localPref == true){
+        <div class="linksUteis">
+            <h4>Links Úteis</h4>
+            <ul class="footerLinksUteis">
+                <li class="liUteis"><a href="#">Links Úteis</a></li>
+                <li class="liUteis"><a href="#">Links Úteis</a></li>
+                <li class="liUteis"><a href="#">Links Úteis</a></li>
+            </ul>
+        </div>
+        <div class="linksRedes">
+            <ul id="ulLinksRedes">
+                <li class="rede-social">
+                    <a class="linkFooter" href="http://Facebook.com/" target="_blank">
+                        <img class="imgRedes" src="/images/facebook.svg" alt="Facebook">
+                    </a>
+                    </li>
+                <li class="rede-social">
+                    <a class="linkFooter"href="http://youtube.com/" target="_blak">
+                        <img class="imgRedes" src="/images/youtube.svg" alt="YouTube">
+                    </a>
+                </li>
+                <li class="rede-social">
+                    <a class="linkFooter"href="http://instagram.com/" target="_blank">
+                        <img class="imgRedes" src="/images/instagram.svg" alt="Instagram">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="divValid">
+            <input type="text" id="txtValid" placeholder="Validar Certificado..."/>
+            <img src="iconePesquisa.jpg" id="btnBusca" alt="Buscar"/>
+          </div>
+    </section>
+    <div class="cookContainer">
+        <div class="cookContent">
+        <p>Este site utiliza cookies para aprimorar a experiência do usuário.</p>
+        <div class="cookPref">
+            <label><input type="checkbox" class="cookAccept" checked >Aceitar uso de cookies</label>
+        </div>
+        <button class="cookSave">Salvar e Continuar</button>
+        </div>
+    </div>
+    <script>
+        function cookies(){
+            const localPref = Boolean(window.localStorage.getItem('cookiesPref').value)
+            console.log(localPref)
+                if (localPref){
                         container.style.display = 'none';
-                    }  
-                function cookPref(){
-                const pref = Boolean(document.querySelector('.cookAccept').checked)
-                console.log(pref)
-                    if (!pref){
-                        container.style.display = 'none';
-                    }
-                    window.localStorage.setItem('cookiesPref', pref)
+                    }                 
+            const container = document.querySelector('.cookContainer')
+            const save = document.querySelector('.cookSave')
+            function cookPref(){
+            const pref = Boolean(document.querySelector('.cookAccept').checked)
+            console.log(pref)
+                if (!pref){
                     container.style.display = 'none';
                 }
-                save.addEventListener('click', cookPref)
+                window.localStorage.setItem('cookiesPref', pref)
+                container.style.display = 'none';
             }
-            cookies()
-        </script>
-    </div> 
-<ul id="ul-redes-sociais">
-    <li class="rede-social">
-        <a class="linkFooter" href="http://Facebook.com/" target="_blank">
-            <img class="imgRedes" src="/images/facebook.svg" alt="Facebook">
-        </a>
-        </li>
-    <li class="rede-social">
-        <a class="linkFooter"href="http://youtube.com/" target="_blak">
-            <img class="imgRedes" src="/images/youtube.svg" alt="YouTube">
-        </a>
-    </li>
-    <li class="rede-social">
-        <a class="linkFooter"href="http://instagram.com/" target="_blank">
-            <img class="imgRedes" src="/images/instagram.svg" alt="Instagram">
-        </a>
-    </li>
-    <p id="copyRight" text="&copy;
-">&copy E-commerce PI<br>
-    versão 1.0.0
-</p>
-</ul>
-
-</footer>
+            save.addEventListener('click', cookPref)
+        }
+        cookies()
+    </script>    
+</footer>   
