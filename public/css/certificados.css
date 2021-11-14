@@ -2,6 +2,9 @@
 h1{
     text-align: center;
 }
+.buttPdf{
+    float: center;
+}
 section.certificado{
     margin-left: auto;
     margin-right: auto;

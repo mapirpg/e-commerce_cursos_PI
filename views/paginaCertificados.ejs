@@ -12,6 +12,7 @@
 <body>
     <%- include('partes/menuNavecacao') %>
 <main class="conteudo">   
+        <input type="button" clss="buttPdf" value="Gerar PDF" onclick="gerarPdf()">
     <h1 id="titulo">Certificado</h1>
     <section class="certificado">
         <article class="certCabecalho">
@@ -49,6 +50,22 @@
         </article>
     </section>
 </main>
+    <script>
+        JSON.parse('./e-commerce_cursos_PI\public\css\certificados.css')
+        function gerarPdf() {
+            alert('oi')
+        const certPDF = document.querySelector('.certificado').innerHTML;
+        const certWin = window.open('','_blank','width:800, height:600');
+        certWin.document.write("<html><head>");
+        certWin.document.write("<title>Certificado PDF</title></head>");
+        certWin.document.write("<body>");
+        certWin.document.write(certPDF);
+        certWin.document.write("</body></html>");
+        // certWin.print()
+        // certWin.document.close();
+
+    }
+    </script>
     <%- include('partes/footer') %>
 </body>
 </html>
