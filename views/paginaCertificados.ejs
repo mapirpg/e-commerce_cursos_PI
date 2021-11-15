@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
-    <title>E-Commerce | Certificados</title>
+<%- include('partes/inicioHead') %>
     <link rel="stylesheet" href="../css/certificados.css">
 </head>
 
 <body>
     <%- include('partes/menuNavecacao') %>
 <main class="conteudo">   
-        <input type="button" clss="buttPdf" value="Gerar PDF" onclick="gerarPdf()">
+        <input type="button" clss="buttPdf" value="Gerar PDF" onclick="gerarPDF()">
     <h1 id="titulo">Certificado</h1>
     <section class="certificado">
         <article class="certCabecalho">
@@ -30,15 +23,15 @@
         </article>
         <article class="certAss">
             <div class="ass_1">
-                <hr size="1" width="70%"><br>
+                <!-- <hr width="50%"> -->
                 Aluno(a)
             </div>
             <div class="ass_2">
-                <hr size="1" width="70%"><br>
+                <!-- <hr> -->
                 Ministrante
             </div>
             <div class="ass_data">
-                <hr size="1" width="40%"><br>
+                <!-- <hr> -->
                 Data
             </div>
         </article>
@@ -51,24 +44,25 @@
     </section>
 </main>
     <script>
-        function gerarPdf() {
-            const pdf = require('html-pdf');
-            const ejs = require('ejs'); 
-            console.log('oi')
-            ejs.renderFile(document.querySelector('.certificado').innerHTML, {}, (err,html) =>{
+        const pdf = require("html-pdf");
+        const ejs = require("ejs")
+        function gerarPDF () {
+            console.log(pdf);
+            console.log(ejs)
+            ejs.renderFile('./paginaCertificados.ejs', {}, (err,html) =>{
                 if(err){
-                    console.log("Erro ao receber as informacoes da section");
+                    console.log("Erro");
                 }else{
-                    pdf.create(html, {}).toFile("./Certificado.pdf", (err,res) =>{
+                    pdf.create(html, {"orientation": "landscape","base": "/css/certificado.css"}).toFile("./certificado.pdf", (err,res) =>{
                         if(err){
-                            console.log("Erro ao criar o PDF");
+                            console.log("Um erro aconteceu: :(");
                         } else {
-                            console.log("PDF criado!");
+                            console.log("res");
                         }
                     });
                 }
             });
-        }       
+        }
     </script>
     <%- include('partes/footer') %>
 </body>

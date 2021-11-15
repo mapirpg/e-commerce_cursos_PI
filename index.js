@@ -41,6 +41,10 @@ app.get('/reset', (req , res)=>{
     res.render('paginaResetPassword')
 })
 
+app.get('/cursos', (req,res) =>{
+    res.render('paginaCursos')
+})
+
 });
 const servidorIniciado = ()=>{
 console.log("OK");

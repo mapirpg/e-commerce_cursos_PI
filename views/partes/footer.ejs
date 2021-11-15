@@ -1,10 +1,11 @@
 <link rel="stylesheet" href="/css/footer.css">
-
+<link rel="stylesheet" href="/css/cookies.css">
 <footer class="footer">
     <section class="secFooter">
         <p id="copyRight" text="&copy;">&copy E-commerce PI<br>
             versão 1.0.0
         </p>
+<!-- Links de navegação -->
         <div class="navegacao">
             <h4>Navegação</h4>
             <ul class="footerNavegacao">
@@ -13,6 +14,7 @@
                 <li class="liUteis"><a href="#">Sobre Nós</a></li>
             </ul>
         </div>
+<!-- Links úteis -->
         <div class="linksUteis">
             <h4>Links Úteis</h4>
             <ul class="footerLinksUteis">
@@ -21,6 +23,7 @@
                 <li class="liUteis"><a href="#">Links Úteis</a></li>
             </ul>
         </div>
+<!-- Links para as redes sociais -->
         <div class="linksRedes">
             <ul id="ulLinksRedes">
                 <li class="rede-social">
@@ -45,6 +48,7 @@
             <img src="iconePesquisa.jpg" id="btnBusca" alt="Buscar"/>
           </div>
     </section>
+<!-- Controle de uso de Cookies -->
     <div class="cookContainer">
         <div class="cookContent">
         <p>Este site utiliza cookies para aprimorar a experiência do usuário.</p>
@@ -56,12 +60,12 @@
     </div>
     <script>
         function cookies(){
-            const localPref = Boolean(window.localStorage.getItem('cookiesPref').value)
+            const localPref = JSON.parse(window.localStorage.getItem('cookiesPref'))
+            const container = document.querySelector('.cookContainer')
             console.log(localPref)
                 if (localPref){
                         container.style.display = 'none';
                     }                 
-            const container = document.querySelector('.cookContainer')
             const save = document.querySelector('.cookSave')
             function cookPref(){
             const pref = Boolean(document.querySelector('.cookAccept').checked)
