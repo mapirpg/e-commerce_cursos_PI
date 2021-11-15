@@ -1,7 +1,10 @@
 .secFooter{
-    position: absolute;
+    flex: 0 1;
+    position: relative;
     bottom: 0;
-    height: 10vh;
+    margin-top: .5in;
+    margin-bottom: 0px;
+    height: 1in;
     border: 1px solid #e7e7e7;
     width: 100%;
     background-color: #FFF8DD;
@@ -18,6 +21,7 @@
 .linksRedes{
   margin-top: -8vh;
   padding: 0px;
+  max-height: .9in;
   height: 8vh;
   width: 20vw;
   float: right;
@@ -25,12 +29,14 @@
 .linksRedes li{
   margin: 0px;
   padding: 0px;
+  max-height: .9in;
   margin-right: 5%;
   display: inline-block;
 }   
 .imgRedes{ 
     margin: 0px;
     padding: 0px;
+    max-height: .9in;
     width: 20px;
     filter: invert(84%) sepia(38%) saturate(3839%) hue-rotate(6deg) brightness(100%) contrast(102%);
 }
