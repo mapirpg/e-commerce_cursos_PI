@@ -9,164 +9,120 @@
     <h1 id="title">Cursos</h1>
     <h2>Melhores Cursos</h2>
     <hr>
-        <section style="overflow-x: auto;" name="cursosMelhores" class="curBox">
-            <div class="curContainer">
-                <div class="curImg"><img src="/images/cursos/cur_harm_facial.png" alt=""></div>
-                    <div class="curInfo">
-                        <div class="curNome">Harmonização Facial</div>
-                        <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dolorum odit quos nisi consequuntur? Dolorem accusamus nihil labore eum minus? Odio velit ex ut eos facere assumenda impedit omnis accusantium?.</div>
-                        <div class="curCH" >Carga Horária:&nbsp;<strong>50h</strong></div>
-                        <div class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></div>
-                        <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;100,00</strong></div>
-                    </div>
-                </div>
+    <section name="cursosTodos" class="curBox">
+        <input class="boxToLeft" type="button" value="<" onmouseover="moveToLeft()" onmouseout="stopMove()" onclick="moveLeftPlus()">
+        <input class="boxToRight" type="button" value=">" onmouseover="moveToRight()" onmouseout="stopMove()" onclick="moveLeftPlus()""> 
 
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_depilacao.png" alt=""></div>
-                    <div class="curInfo">
-                        <div class="curNome">Depilação</div>
-                        <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-                        <div class="curCH" >Carga Horária:&nbsp;<strong>40h</strong></div>
-                        <div class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></div>
-                        <div class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></div>
-                    </div>
-                </div>
-            
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_sobrancelha.png" alt=""></div>
-                    <div class="curInfo">
-                        <div class="curNome">Sobrancelha</div>
-                        <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi possimus, minus similique magnam voluptatum distinctio eligendi dolor cupiditate explicabo delectus ipsam impedit, ab autem exercitationem cumque quidem recusandae laboriosam.</div>
-                        <div class="curCH" >Carga Horária:&nbsp;<strong>100h</strong></div>
-                        <div class="curTutor">Professor(a):&nbsp;<strong>Adalberta Reginalda</strong></div>
-                        <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;1200,00</strong></div>
-                    </div>
-                </div>
-        </section>
-    <h2>Cursos Gratuítos</h2>
-    <hr>
-        <section style="overflow-x: auto;" name="cursosGratis" class="curBox">
-
-            <div class="curContainer">
-                <div class="curImg"><img src="/images/cursos/cur_depilacao.png" alt=""></div>
-                <div class="curInfo">
-                    <div class="curNome">Depilação</div>
-                    <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-                    <div class="curCH" >Carga Horária:&nbsp;<strong>40h</strong></div>
-                    <div class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></div>
-                    <div class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></div>
-                </div>
-            </div>
-                
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_trat_facial.png" alt=""></div>
-                        <div class="curInfo">
-                            <div class="curNome">Tratamento Facial</div>
-                            <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti qui repudiandae necessitatibus, ipsum, officiis ratione voluptas quidem adipisci temporibus enim officia dolore facere! Mollitia quae laborum non ad dolor.</div>
-                            <div class="curCH" >Carga Horária:&nbsp;<strong>30h</strong></div>
-                            <div class="curTutor">Professor(a):&nbsp;<strong>Josiane Fernandes da Cunha</strong></div>
-                            <div class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></div>
-                        </div>
-                    </div>  
-        </section>
-    <h2>Cursos Pagos</h2>
-    <hr>
-
-        <section style="overflow-x: auto;" name="cursosPagos" class="curBox">
-
-            <div class="curContainer">
-                <div class="curImg"><img src="/images/cursos/cur_harm_facial.png" alt=""></div>
-                    <div class="curInfo">
-                        <div class="curNome">Harmonização Facial</div>
-                        <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dolorum odit quos nisi consequuntur? Dolorem accusamus nihil labore eum minus? Odio velit ex ut eos facere assumenda impedit omnis accusantium?.</div>
-                        <div class="curCH" >Carga Horária:&nbsp;<strong>50h</strong></div>
-                        <div class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></div>
-                        <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;100,00</strong></div>
-                    </div>
-                </div>
-
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_maquiagem.png" alt=""></div>
-                        <div class="curInfo">
-                            <div class="curNome">Maquiagem</div>
-                            <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam officiis neque similique, id ipsum libero fuga! Obcaecati impedit, dolor, culpa itaque non suscipit incidunt beatae magnam maxime et, numquam esse.</div>
-                            <div class="curCH" >Carga Horária:&nbsp;<strong>200h</strong></div>
-                            <div class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></div>
-                            <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></div>
-                        </div>
-                    </div>
-          
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_sobrancelha.png" alt=""></div>
-                    <div class="curInfo">
-                        <div class="curNome">Sobrancelha</div>
-                        <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi possimus, minus similique magnam voluptatum distinctio eligendi dolor cupiditate explicabo delectus ipsam impedit, ab autem exercitationem cumque quidem recusandae laboriosam.</div>
-                        <div class="curCH" >Carga Horária:&nbsp;<strong>100h</strong></div>
-                        <div class="curTutor">Professor(a):&nbsp;<strong>Adalberta Reginalda</strong></div>
-                        <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;1200,00</strong></div>
-                    </div>
-                </div>
-        </section>
-    <h2>Todos os Cursos</h2>    
-    <hr>
-
-        <section style="overflow-x: auto;" name="cursosTodos" class="curBox">
-            
             <div class="curContainer">
                 <div class="curImg"><img src="/images/cursos/cur_harm_facial.png" alt=""></div>
                     <div class="curInfo">
                     <div class="curNome">Harmonização Facial</div>
-                    <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dolorum odit quos nisi consequuntur? Dolorem accusamus nihil labore eum minus? Odio velit ex ut eos facere assumenda impedit omnis accusantium?.</div>
+                    <textarea name="cursoDesc" id="curDesc" cols="10" rows="10" disabled >
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi corporis vitae voluptatem a esse, quod voluptas alias pariatur quos voluptate perspiciatis harum expedita, dolorum asperiores ea corrupti culpa nulla doloribus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cum doloremque minus enim non saepe consequuntur tempora exercitationem commodi vitae. Dolorum iusto consequuntur quisquam veniam aliquam vitae culpa minus laudantium!
+                    </textarea>
                     <div class="curCH" >Carga Horária:&nbsp;<strong>50h</strong></div>
                     <div class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></div>
                     <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;100,00</strong></div>
                 </div>
             </div>
 
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_depilacao.png" alt=""></div>
+            <div class="curContainer">
+                <div class="curImg"><img src="/images/cursos/cur_depilacao.png" alt=""></div>
+                <div class="curInfo">
+                    <div class="curNome">Depilação</div>
+                    <textarea name="cursoDesc" id="curDesc" cols="10" rows="10" disabled >
+                    </textarea>
+                    <div class="curCH" >Carga Horária:&nbsp;<strong>40h</strong></div>
+                    <div class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></div>
+                    <div class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></div>
+                </div>
+            </div>
+
+            <div class="curContainer">
+                <div class="curImg"><img src="/images/cursos/cur_trat_facial.png" alt=""></div>
                     <div class="curInfo">
-                        <div class="curNome">Depilação</div>
-                        <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-                        <div class="curCH" >Carga Horária:&nbsp;<strong>40h</strong></div>
-                        <div class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></div>
+                        <div class="curNome">Tratamento Facial</div>
+                        <textarea name="cursoDesc" id="curDesc" cols="10" rows="10" disabled >
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi corporis vitae voluptatem a esse, quod voluptas alias pariatur quos voluptate perspiciatis harum expedita, dolorum asperiores ea corrupti culpa nulla doloribus? 
+                        </textarea>
+                        <div class="curCH" >Carga Horária:&nbsp;<strong>30h</strong></div>
+                        <div class="curTutor">Professor(a):&nbsp;<strong>Josiane Fernandes da Cunha</strong></div>
                         <div class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></div>
                     </div>
                 </div>
+            </div>    
+            <div class="curContainer">
+                <div class="curImg"><img src="/images/cursos/cur_sobrancelha.png" alt=""></div>
+                <div class="curInfo">
+                    <div class="curNome">Sobrancelha</div>
+                    <textarea name="cursoDesc" id="curDesc" cols="10" rows="10" disabled >
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </textarea>
+                    <div class="curCH" >Carga Horária:&nbsp;<strong>100h</strong></div>
+                    <div class="curTutor">Professor(a):&nbsp;<strong>Adalberta Reginalda</strong></div>
+                    <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;1200,00</strong></div>
+                </div>
+            </div>
 
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_trat_facial.png" alt=""></div>
-                        <div class="curInfo">
-                            <div class="curNome">Tratamento Facial</div>
-                            <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti qui repudiandae necessitatibus, ipsum, officiis ratione voluptas quidem adipisci temporibus enim officia dolore facere! Mollitia quae laborum non ad dolor.</div>
-                            <div class="curCH" >Carga Horária:&nbsp;<strong>30h</strong></div>
-                            <div class="curTutor">Professor(a):&nbsp;<strong>Josiane Fernandes da Cunha</strong></div>
-                            <div class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></div>
-                        </div>
-                    </div>
-                </div>    
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_sobrancelha.png" alt=""></div>
+            <div class="curContainer">
+                <div class="curImg"><img src="/images/cursos/cur_maquiagem.png" alt=""></div>
                     <div class="curInfo">
-                        <div class="curNome">Sobrancelha</div>
-                        <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi possimus, minus similique magnam voluptatum distinctio eligendi dolor cupiditate explicabo delectus ipsam impedit, ab autem exercitationem cumque quidem recusandae laboriosam.</div>
-                        <div class="curCH" >Carga Horária:&nbsp;<strong>100h</strong></div>
-                        <div class="curTutor">Professor(a):&nbsp;<strong>Adalberta Reginalda</strong></div>
-                        <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;1200,00</strong></div>
+                        <div class="curNome">Maquiagem</div>
+                        <textarea name="cursoDesc" id="curDesc" cols="10" rows="10" disabled >
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi corporis vitae voluptatem a esse, quod voluptas alias pariatur quos voluptate perspiciatis harum expedita, dolorum asperiores ea corrupti culpa nulla doloribus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cum doloremque minus enim non saepe consequuntur tempora exercitationem commodi vitae. Dolorum iusto consequuntur quisquam veniam aliquam vitae culpa minus laudantium!
+                        </textarea>
+                        <div class="curCH" >Carga Horária:&nbsp;<strong>200h</strong></div>
+                        <div class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></div>
+                        <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></div>
                     </div>
                 </div>
+    </section>
+    <h2>Cursos Gratuítos</h2>
+    <hr>
+       
+    <h2>Cursos Pagos</h2>
+    <hr>
 
-                <div class="curContainer">
-                    <div class="curImg"><img src="/images/cursos/cur_maquiagem.png" alt=""></div>
-                        <div class="curInfo">
-                            <div class="curNome">Maquiagem</div>
-                            <div class="curDesc"><strong>Decrição:</strong>&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam officiis neque similique, id ipsum libero fuga! Obcaecati impedit, dolor, culpa itaque non suscipit incidunt beatae magnam maxime et, numquam esse.</div>
-                            <div class="curCH" >Carga Horária:&nbsp;<strong>200h</strong></div>
-                            <div class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></div>
-                            <div class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></div>
-                        </div>
-                    </div>
-        </section>
+    <h2>Todos os Cursos</h2>    
+    <hr>
+    <script>
+        let toLeft = 0;
+        let toRight = 0;
+        const curBox = document.querySelector('.curBox');
+        
+        function moveToRight(){           
+            if (toRight > curBox.scrollLeft){
+                return;
+            } else {
+                setTimeout(function() {                 
+                    curBox.scrollLeft += 2;
+                    toLeft += 2;
+                    toRight += 2;
+                    moveToRight()
+                }, 4)
+            }
+        }
+        function moveToLeft(){
+            if (toLeft < curBox.scrollLeft){
+                return
+            } else {
+                setTimeout(function() {                 
+                    curBox.scrollLeft -= 2;
+                    toLeft -= 2;
+                    toRight -= 2;
+                    moveToLeft()
+                }, 4)
+            }
+        }   
+        function stopMove(){
+            toLeft = curBox.scrollLeft -100
+            toRight = curBox.scrollLeft + 100
+            setTimeout(function() {                 
+                toLeft = curBox.scrollLeft +100
+                toRight = curBox.scrollLeft -100    
+                }, 1)      
+        }
+    </script>        
     </main>
     <%- include('partes/footer') %>
 </body>

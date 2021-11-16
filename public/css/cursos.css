@@ -9,6 +9,30 @@ h1#title{
     overflow-x: auto;
     overflow-x: scroll;
     width: inherit;
+    height: 4.15in;
+    max-height: 4.15in;
+    overflow-x: hidden;
+}
+.boxToRight{
+    position: absolute;
+    margin-left: 98%;
+    height: 4.15in;
+    width: 2%;
+}
+.boxToLeft{
+    position: absolute;
+    height: 4.15in;
+}
+.boxToRight, .boxToLeft{
+    background-color: transparent;
+    border: none;
+    transition: .1s ease-out .1s;
+    font-size: 18p;
+    font-weight: 900;
+}
+.boxToRight:hover, .boxToLeft:hover {
+    background-color: #FFF8DD;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 h2{
     margin-left: 1vw;
@@ -21,6 +45,10 @@ h2{
     margin-right: .1in;
     background-color: #FFDD4C;
     color: black;
+    transition: .1s ease-out .2s;
+}
+.curContainer:hover{
+    color: white;
 }
 .curImg{
     margin: 2%;
@@ -36,16 +64,23 @@ h2{
     font-weight: bolder;
     font-size: 16pt;
 }
-.curDesc{
-    flex: 2;
-    align-content: initial;
-    text-align: justify;
+#curDesc{
+    flex: 1;
     font-size: 8pt;
-    margin: auto 2%;
-    border-top: 1px dotted #FFF8DD;
+    -webkit-scrollbar-button: white; 
+    scrollbar-darkshadow-color: black;
+    -webkit-scrollbar-track-piece: black;
+    background-color: #FFDD4C;
+    text-align: justify;
+    padding: 0 0.08in;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: auto;
+    margin-bottom: 0.15in;
+    margin-top: .2in;
 }
 .curCH{
-    border-top: 1px dotted #FFF8DD;
     flex: 1;
     text-align: left;
     font-size: 10pt;

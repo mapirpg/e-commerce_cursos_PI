@@ -6,11 +6,12 @@
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: fixed;
     width: 100%;
-    bottom: 2rem;
+    bottom: 1in;
+    left: 30%;
     z-index: 1000;
   }
   .cookContent {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.40);
     background: white;
     max-width: 520px;
     border-radius: 5px;
