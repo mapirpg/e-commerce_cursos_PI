@@ -25,6 +25,7 @@
   height: 8vh;
   width: 20vw;
   float: right;
+  
 }
 .linksRedes li{
   margin: 0px;
@@ -32,6 +33,7 @@
   max-height: .9in;
   margin-right: 5%;
   display: inline-block;
+  float: right;
 }   
 .imgRedes{ 
     margin: 0px;
@@ -83,7 +85,7 @@ div#divValid{
 }
 input#txtValid{
   float:left;
-  background-color:white;
+  background-color:transparent;
   font-style:italic;
   font-size: 16px;
   box-shadow: 0 0 0 0;
