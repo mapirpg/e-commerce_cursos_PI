@@ -3,6 +3,9 @@
 * {
   box-sizing: border-box;
 }
+nav{
+  position: fixed;
+}
 body {
     height: 100vh;
     display: flex;
@@ -21,6 +24,9 @@ ul#menu {
     background-color: #f3f3f3;
     width: 100%;
     background-color: #FFF8DD;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
   li.liMenu {
     float: left;
