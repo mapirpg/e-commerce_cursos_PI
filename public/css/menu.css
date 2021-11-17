@@ -23,7 +23,7 @@ ul#menu {
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
     width: 100%;
-    background-color: #FFF8DD;
+    background-color: #FFEA98;
     position: fixed;
     top: 0;
     left: 0;
@@ -42,7 +42,7 @@ ul#menu {
   }
   
   li a:hover:not(.active) {
-    background-color: #FFE474;
+    background-color: #FFEA98;
     color: black;
   }
   
