@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Petemoss&family=Rajdhani:wght@300&display=swap');
-*{
-    box-sizing: border-box;
-}
-body{
-    height: 100%;
-}
 h1{
     text-align: center;
-/* }
-.buttPdf{
-    float: center; */
 }
-section.certificado{
+#buttPdf{
+    float: center;
+}
+#certificado{
     position: static;
     margin-left: auto;
     margin-right: auto;
@@ -23,33 +17,42 @@ section.certificado{
     width: 800px;
     height: 566px;
 }
-article.certCabecalho{
+.certCabecalho{
     display: flex;
     flex: 100%;
-    background: url('/images/cert_cabecalho.png') no-repeat;
-    height: 77px;
-    margin-top: -4px;
+    background: url('/images/certificado/cert_cabecalho.png') no-repeat;
+    height: 13%;
+}
+#certLogo{
+    width: 20%;
+}
+#certLogoImg{
+    width: 100%;
+}
+.certParceiro{
+    flex: 1;
+    margin: .5%;
+    width: 8%;
+    height: 60%;
+    align-self: start;
+    text-align: center;
+}
+.certParceiro #parc1{
+    width: 50%;
 }
 
-.certParceiro_1,
-.certParceiro_2,
-.certParceiro_3,
-.certParceiro_4{
-    flex: 1;
-    margin: 5px;
-    width: 50px;
-    height: 50px;
-}
 .certTitulo{
-    flex: 100%;
-    font-size: 30pt;
+    flex: 1;
+    font-size: 150%;
     text-align: center;
 }
 article.certConteudo{
     text-align: justify;
-    height: 46.5%;
+    justify-self: center;
+    align-self: center;
+    /* height: 46.5%; */
     padding: 3% 2%;
-    font-size: 30pt;
+    font-size: 200%;
     font-family: 'Petemoss', cursive;
 
 }
@@ -60,32 +63,26 @@ article.certAss{
     padding-top: 4%;
     text-align: center;
     font-weight: bolder;
-    font-size: 18pt;
+    font-size: 120%;
     font-family: 'Petemoss', cursive;
 }
 .ass_1,
 .ass_2{
     flex: 50%;
-    height: 30px;
     text-align: center;
     /* border: 1px solid black; */
 }
 .ass_data{
     flex: 100%;
-    height: 30px;
     text-align: center;
-    /* border: 1px solid black; */
-}
-article.certConteudo hr{
-    margin-left: 15px;
-    size: 30%;
+
 }
 article.certRodape{
     display: flex;
     flex: 100%;
     align-self: end;
-    background: url('/images/cert_rodape.png') no-repeat;
-    height: 76px;
+    background: url('/images/certificado/cert_rodape.png') no-repeat;
+    height: 13%;
 }
 .certCnpj,
 .certEndereco,
@@ -93,6 +90,41 @@ article.certRodape{
 .certEmissao{
     flex: 1;
     align-self: end;
-    height: 50px;
     text-align: center;
 }
+/* Opções de media */
+
+/* media < 800px */
+@media(max-width: 800px){
+    #certificado{
+        width: 100vw;
+    }
+}
+
+/* media < 400px */
+#media-400{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#media-400 p{
+    margin-top: 15%;
+    text-align: center;
+}
+
+#media-400 img{
+    width: 100vw;
+}
+
+#media-400{
+    display: none;
+}
+@media(max-width: 400px){
+    #certificado{
+        display: none;
+    }
+    #media-400{
+        display: unset;
+    }
+}
+
