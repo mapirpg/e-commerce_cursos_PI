@@ -1,0 +1,85 @@
+/* *{
+        margin: 0;
+        padding: 0;
+} */
+#centralizar{
+    width: 800px; 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 30px;
+}
+
+
+input,button{
+    border-radius: 5px;
+}
+.campo{
+    margin-bottom:1em ;
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+.campo label{
+    margin-bottom: 0.2em;
+    color: #FFDD4C;
+    display: block;
+}
+
+fieldset.grupo .campo{
+
+    margin-right: 1em;
+  
+}
+.campo input[type="email"],.campo input[type="password"]{
+    padding: 00.2em;
+    border: 1px  solid #FFDD4C;
+    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+    display: block;
+    width: 400px; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.campo input:focus{
+    background: #e0e0f8;
+}
+
+.botao{
+    font-size: 1.2em;
+    background: #FFD700;
+    border:0;
+    color: #ffffff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    transform: translate(-50, -50%);
+    margin-bottom:1em ;
+    width: 400px; 
+    margin-left: 150px;
+    margin-top: 5px;
+    
+}
+.botao:hover{
+    background: #ccbbff;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+    width: 300px; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+#cadastro-se{
+    background-image: url(../images/foto_cadastro.jpeg);
+    height: 130px;
+    display: flex;
+    background-position: center;
+    width: 100%;   
+    margin-top: 50px;
+    background-size:cover ;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px #FFD700, 0 0 1em #FFDD4C, 0 0 0.2em white;
+    color: white;
+    font-size: 50px;
+
+}
