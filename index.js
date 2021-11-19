@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
+
 app.get('/', (req,res)=>{
     res.render('paginaInicial',{
         pageTitle: 'Venda de Cursos',

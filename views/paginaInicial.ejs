@@ -1,6 +1,5 @@
 
 <%- include('partes/inicioHead') %>
-
 <link rel="stylesheet" href="/css/styleInicial.css">
 </head>
 <body>
@@ -34,7 +33,7 @@
   </div>
   
   <div>
-    <p id="tituloCursoRecomendado">Curso mais recomendado</p>
+    <p id="tituloCursoRecomendado">Recomendado</p>
 </div>
   <br>
   <div id="informacaoCursoRecomendado">
@@ -48,6 +47,7 @@
 </div>
 </div>
 <%- include('partes/menuCursos') %>
+<br>
  <script>
   var slideIndex = [1,1];
   var slideId = ["slide01"]
@@ -73,11 +73,13 @@
   }
 
     x[slideIndex[no]-1].style.display = "block"; 
-    dots[slideIndex-1].className += " active";
+    
   }
+  
   </script>
     </main>
     <%- include('partes/footer') %>
 </body>
+
 </html>
 

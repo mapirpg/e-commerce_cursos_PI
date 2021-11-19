@@ -3,9 +3,7 @@
 * {
   box-sizing: border-box;
 }
-nav{
-  position: fixed;
-}
+
 body {
     height: 100vh;
     display: flex;
@@ -18,15 +16,11 @@ body {
 }
 ul#menu {
     list-style-type: none;
-    margin: 0;
     overflow: hidden;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
     width: 100%;
     background-color: #FFEA98;
-    position: fixed;
-    top: 0;
-    left: 0;
   }
   li.liMenu {
     float: left;
