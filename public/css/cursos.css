@@ -4,6 +4,7 @@
 h1#title{
     text-align: center;
 }
+/* section de Cursos */
 .curBox{
     display: flex;
     overflow-x: auto;
@@ -13,6 +14,85 @@ h1#title{
     max-height: 4.15in;
     overflow-x: hidden;
 }
+
+/* conteudo das div de cursos */
+h2{
+    margin-left: 1vw;
+}
+.curContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+    min-width: 4.5in;
+    margin-right: .1in;
+    background-color: rgba(0, 0, 0, 0.308);
+    color: black;
+    transition: .1s ease-out .2s;
+    border-radius: 5%;
+}
+.curContainer:hover{
+    color: white;
+    border: 1px solid black;
+}
+.curImg{
+    flex: 1;
+    width: 100%;
+    height: 50%;
+    filter:opacity(50%);
+    border: 1px solid black;
+
+}
+.curDetalhes{
+    flex: 1;
+}
+.curInfo{
+    flex-direction: column;
+    margin: auto 2%;
+    border: 1px solid black;
+
+}
+.curNome{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 1px solid black;
+
+}
+#curDesc{
+    flex: 2;
+    font-size: 10px;
+    background-color: #FFDD4C;
+    text-align: justify;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: auto;
+    margin-bottom: 0.15in;
+    margin-top: .2in;
+    border: 1px solid black;
+
+}
+.curCarga{
+    flex: 1;
+    text-align: left;
+    font-size: 10pt;
+    border: 1px solid black;
+
+}
+.curTutor{
+    flex: 1;
+    font-size: 10pt;
+    border: 1px solid black;
+
+}
+.curVal{
+    flex: 1;
+    font-size: 10pt;
+    border: 1px solid black;
+
+}
+/* botoes para movimentação do carrosel da section de cursos */
 .boxToRight{
     position: absolute;
     margin-left: 98%;
@@ -33,64 +113,5 @@ h1#title{
 .boxToRight:hover, .boxToLeft:hover {
     background-color: #FFF8DD;
     border: 1px solid rgba(255, 255, 255, 0.5);
-}
-h2{
-    margin-left: 1vw;
-}
-.curContainer{
-    display: flex;
-    flex: 1;
-    min-width: 4.5in;
-    width: 4.5in;
-    margin-right: .1in;
-    background-color: #FFDD4C;
-    color: black;
-    transition: .1s ease-out .2s;
-}
-.curContainer:hover{
-    color: white;
-}
-.curImg{
-    margin: 2%;
-}
-.curInfo{
-    display: flex;
-    flex-direction: column;
-    margin: auto 2%;
-}
-.curNome{
-    flex: 1;
-    text-align: center;
-    font-weight: bolder;
-    font-size: 16pt;
-}
-#curDesc{
-    flex: 1;
-    font-size: 8pt;
-    -webkit-scrollbar-button: white; 
-    scrollbar-darkshadow-color: black;
-    -webkit-scrollbar-track-piece: black;
-    background-color: #FFDD4C;
-    text-align: justify;
-    padding: 0 0.08in;
-    border: none;
-    resize: none;
-    outline: none;
-    overflow: auto;
-    margin-bottom: 0.15in;
-    margin-top: .2in;
-}
-.curCH{
-    flex: 1;
-    text-align: left;
-    font-size: 10pt;
-}
-.curTutor{
-    flex: 1;
-    font-size: 10pt;
-}
-.curVal{
-    flex: 1;
-    font-size: 10pt;
 }
 

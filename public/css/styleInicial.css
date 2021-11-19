@@ -87,7 +87,9 @@
 }
 
 #sobreCursoRecomendado{
-
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, rgba(248, 234, 234, 0.582), transparent);  
   border-left-style: ridge;
   float: right;
   width: 50%;
