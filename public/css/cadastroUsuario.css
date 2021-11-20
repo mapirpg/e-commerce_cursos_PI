@@ -7,8 +7,6 @@
         margin-left: auto;
         margin-right: auto; 
 }
-
-
 fieldset{
         border: 0;
 }
@@ -90,7 +88,6 @@ fieldset.grupo .campo{
         display: flex;
         background-position: center;
         width: 100%;
-       
         margin-top: 50px;
         background-size:cover ;
         align-items: center;

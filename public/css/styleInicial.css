@@ -40,7 +40,8 @@
   
  
   .prev:hover, .next:hover {
-    background-color: #f1f1f1;
+    background-color: #FFF1BA
+    ;
     color: black;
   }
   .dot {
