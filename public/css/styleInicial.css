@@ -75,10 +75,11 @@
 #tituloCursoRecomendado{
   margin-left: auto;
   margin-right: auto;
-  padding-top: 8%;
+  padding-top: 2%;
   width: 700px;
   text-align: center;
-  font-size: 03ch;
+  font-size: 04ch;
+  font-weight: bold;
 }
 
 #informacaoCursoRecomendado{

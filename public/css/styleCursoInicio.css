@@ -167,7 +167,8 @@
 
     width: 700px;
     text-align: center;
-    font-size: 03ch;
+    font-size: 04ch;
+    font-weight: bold;
   }
   #linha-horizontal {
     width: 300px;
