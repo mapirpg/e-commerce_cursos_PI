@@ -1,17 +1,10 @@
-*{
-    box-sizing: border-box;
-}
 h1#title{
     text-align: center;
 }
 /* section de Cursos */
 .curBox{
     display: flex;
-    overflow-x: auto;
-    overflow-x: scroll;
-    width: inherit;
-    height: 4.15in;
-    max-height: 4.15in;
+    justify-content: space-between;
     overflow-x: hidden;
 }
 
@@ -21,97 +14,89 @@ h2{
 }
 .curContainer{
     display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    justify-content: space-between;
-    min-width: 4.5in;
-    margin-right: .1in;
-    background-color: rgba(0, 0, 0, 0.308);
     color: black;
+    justify-content: center;
+    margin-left: 2%;
+    padding: 0 1%;
+    width: 410px;
+    max-width: 410px;
     transition: .1s ease-out .2s;
-    border-radius: 5%;
+    background-color: #FFEA98;
 }
-.curContainer:hover{
-    color: white;
-    border: 1px solid black;
-}
+
 .curImg{
     flex: 1;
     width: 100%;
-    height: 50%;
-    filter:opacity(50%);
-    border: 1px solid black;
+    align-self: center;
+}  
 
-}
-.curDetalhes{
-    flex: 1;
-}
 .curInfo{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    margin: auto 2%;
-    border: 1px solid black;
-
+    align-content: center;
+    margin: 0px;
+    padding: 2%;
 }
+
 .curNome{
+    margin: 1% 0;
     text-align: center;
     font-weight: bolder;
-    font-size: 20px;
-    border: 1px solid black;
-
+    font-size: 18px;
+    cursor: pointer;
 }
-#curDesc{
-    flex: 2;
-    font-size: 10px;
-    background-color: #FFDD4C;
-    text-align: justify;
-    border: none;
-    resize: none;
-    outline: none;
-    overflow: auto;
-    margin-bottom: 0.15in;
-    margin-top: .2in;
-    border: 1px solid black;
-
+.curNome:hover{
+    color: white;
 }
 .curCarga{
-    flex: 1;
-    text-align: left;
-    font-size: 10pt;
+    height: 10%;
+    margin: 1% 0;
+    font-size: 12px;
     border: 1px solid black;
-
 }
+
 .curTutor{
-    flex: 1;
-    font-size: 10pt;
+    margin: 1% 0;
+    font-size: 12px;
     border: 1px solid black;
 
 }
+
 .curVal{
-    flex: 1;
-    font-size: 10pt;
+    height: 20%;
+    margin: 1% 0;
+    font-size: 15px;
     border: 1px solid black;
 
 }
+
 /* botoes para movimentação do carrosel da section de cursos */
-.boxToRight{
-    position: absolute;
-    margin-left: 98%;
-    height: 4.15in;
-    width: 2%;
+.moveButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
 }
-.boxToLeft{
-    position: absolute;
-    height: 4.15in;
+
+.spaceBetween{
+    flex: 98%;
 }
+
 .boxToRight, .boxToLeft{
-    background-color: transparent;
+    flex: 1;
+    position: relative;
+    height: 50%;
     border: none;
+    background-color: white;
     transition: .1s ease-out .1s;
     font-size: 18p;
     font-weight: 900;
 }
 .boxToRight:hover, .boxToLeft:hover {
-    background-color: #FFF8DD;
+    background-color: rgba(255, 255, 255, 0.301);
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 

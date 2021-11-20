@@ -75,8 +75,8 @@ article.certAss{
 .ass_data{
     flex: 100%;
     text-align: center;
-
 }
+
 article.certRodape{
     display: flex;
     flex: 100%;
@@ -108,7 +108,7 @@ article.certRodape{
 }
 
 #media-400 p{
-    margin-top: 15%;
+    margin-top: 40%;
     text-align: center;
 }
 
