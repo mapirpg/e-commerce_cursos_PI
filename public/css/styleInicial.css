@@ -53,12 +53,13 @@
     border: #FFE474 2px solid;
     display: inline-block;
     transition: background-color 0.6s ease;
-    float: left;
+   
   }
   #dotCenter{
     margin-left: 2%;
     margin-top: -10px;
     position: absolute;
+    float:left;
   }
   
 .active, .dot:hover {
@@ -89,9 +90,6 @@
   width: 1000px;
 
 
-}
-#imgCursoRecomendadoTamanho{
-  
 }
 
 #sobreCursoRecomendado{
