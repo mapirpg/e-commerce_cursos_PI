@@ -9,18 +9,21 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Road Rage';
 }
 .conteudo{
     flex: 1 0 auto;
 }
 ul#menu {
+    margin-left: 15%;
     list-style-type: none;
     overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
-    width: 100%;
-    background-color: #FFEA98;
+    border: 1px solid white;
+    background-color: white;
+    width: 85%;
+    font-family: 'Road Rage';
+    font-weight: bold;
+
   }
   li.liMenu {
     float: left;
@@ -43,6 +46,13 @@ ul#menu {
   li a.active {
     color: white;
     background-color: #04AA6D;
+  }
+  #iconeSite{
+    position: absolute;
+    float: left;
+    width: 150px;
+    height: 50px;
+    margin-left: 5%;
   }
 
 
