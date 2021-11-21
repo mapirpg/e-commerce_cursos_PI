@@ -50,33 +50,44 @@ ul.footerNavegacao li, ul.footerLinksUteis li{
 
 #footerRightSide{
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  width: 35%;
+  margin: 0;
+  padding: 0;
 }
 
 .linksRedes{
-  width: 20%; 
+  padding-top: 5%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
 }
-#ulLinksRedes li{
+
+.linksRedes img{ 
+  padding-top: 5%;
+  margin-left: 20%;
+  width: 10%;
+  filter: invert(84%) sepia(38%) saturate(3839%) hue-rotate(6deg) brightness(100%) contrast(102%);
+}
+.linksRedes a{
   list-style: none;
 }
 
-#imgFace, #imgYout, #imgInst{ 
-  width: 33%;
-  filter: invert(84%) sepia(38%) saturate(3839%) hue-rotate(6deg) brightness(100%) contrast(102%);
-}
-#imgFace{
-  flex: 1;
-}
-#imgYout{
-  flex: 2;
-}
-#imgInst{
-  flex: 3;
-}
-
-
 /* Barra de validação de certificado */
-input#txtValid{
-  
+#divValid{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#txtValid{
+  height: 50%;
+  width: 80%;
 }

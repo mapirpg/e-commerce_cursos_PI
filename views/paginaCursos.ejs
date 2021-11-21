@@ -2,116 +2,339 @@
 <%- include('partes/inicioHead') %>
 <link rel="stylesheet" href="/css/cursos.css">
 </head>
-<body>
+<body >
 <%- include('partes/menuNavecacao') %>
     <main class="conteudo">
 
-    <h1 id="title">Cursos</h1>
+        <h1 id="title">Cursos</h1>
 
-    <h2>Melhores Cursos</h2>
-    <hr>
+        <h2>Todos os Cursos</h2>
+        <hr>
 
-    <section name="cursosTodos" class="curBox">
+    <section name="cursosTodos" class="curBox" id="moveTodo">
         
-        <div class="moveButtons">
-        <input class="boxToLeft" type="button" value="<" onmouseover="moveToLeft()" onmouseout="stopMove()" onclick="moveLeftPlus()">
-        <div class="spaceBetween"></div>
-        <input class="boxToRight" type="button" value=">" onmouseover="moveToRight()" onmouseout="stopMove()" onclick="moveRightPlus()">
+        <div class="moveButtons" id="btnTodoDiv">
+            <input class="boxToLeft" id="btnTodoL" type="button" value="<" onmouseover="moveToLeft(btnTodoL)" onmouseout="stopMove()">
+            <input class="boxToRight" id="btnTodoR" type="button" value=">" onmouseover="moveToRight(btnTodoR)" onmouseout="stopMove()">
         </div>
 
-        <article class="curContainer"> 
-            <div class="curImg">
-                <img src="/images/cursos/cur_harm_facial.png" alt="Harmonização Facial">
-            </div>
-            <div class="curInfo">
-                <a href="#">
-                    <p class="curNome">Harmonização Facial</p>
-                </a>
-                <p class="curCarga" >Carga Horária:&nbsp;<strong>50h</strong></p>
-                <p class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></p>
-                <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;100,00</strong></p>
-            </div>
-        </article>
+            <article class="curContainer"> 
+                <div class="curImg">
+                    <img src="/images/cursos/cur_harm_facial.png" alt="Harmonização Facial">
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Harmonização Facial</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>50h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;100,00</strong></p>
+                </div>
+            </article>
+            
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_depilacao.png" alt="Depilação">
+                </div>
+                    <div class="curInfo">
+                        <a href="#">
+                            <p class="curNome">Depilação</p>
+                        </a>
+                        <p class="curCarga">Carga Horária:&nbsp;<strong>40h</strong></p>
+                        <p class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></p>
+                        <p class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></p>
+                    </div>
+            </article>
+
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_trat_facial.png" alt="Tratamento Facial"/>
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Tratamento Facial</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>30h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Josiane Fernandes da Cunha</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></p>
+                </div>
+            </article>   
+                
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_sobrancelha.png" alt="">
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Sobrancelha</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>100h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Adalberta Reginalda</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;1200,00</strong></p>
+                </div>
+            </article>
+
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_maquiagem.png" alt="">
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Maquiagem</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>200h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></p>
+                </div>
+            </article>
+    </section>
+
+        <h2>Cursos Gratuítos</h2>
+        <hr>
+    <section name="cursosGratuitos" class="curBox" id="moveGrat">
         
+        <div class="moveButtons" id="moveGrat">
+            <input class="boxToLeft" id="btnGratL" type="button" value="<" onmouseover="moveToLeft(btnGratL)" ontouchstart="moveToLeft(btnGratL)" onmouseout="stopMove()" ontouchend="stopMove()">
+            <div class="spaceBetween"></div>
+            <input class="boxToRight" id="btnGratR" type="button" value=">" onmouseover="moveToRight(btnGratR)" onmouseout="stopMove()">
+        </div>
+
         <article class="curContainer">
             <div class="curImg">
                 <img src="/images/cursos/cur_depilacao.png" alt="Depilação">
             </div>
                 <div class="curInfo">
-                    <p class="curNome">Depilação</p>
+                    <a href="#">
+                        <p class="curNome">Depilação</p>
+                    </a>
                     <p class="curCarga">Carga Horária:&nbsp;<strong>40h</strong></p>
                     <p class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></p>
                     <p class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></p>
                 </div>
         </article>
 
-         <article class="curContainer">
+        <article class="curContainer">
             <div class="curImg">
                 <img src="/images/cursos/cur_trat_facial.png" alt="Tratamento Facial"/>
             </div>
             <div class="curInfo">
-                <p class="curNome">Tratamento Facial</p>
+                <a href="#">
+                    <p class="curNome">Tratamento Facial</p>
+                </a>
                 <p class="curCarga" >Carga Horária:&nbsp;<strong>30h</strong></p>
                 <p class="curTutor">Professor(a):&nbsp;<strong>Josiane Fernandes da Cunha</strong></p>
                 <p class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></p>
             </div>
          </article>   
              
-        <article class="curContainer">
-            <div class="curImg">
-                <img src="/images/cursos/cur_sobrancelha.png" alt="">
-            </div>
-            <div class="curInfo">
-                <p class="curNome">Sobrancelha</p>
-                <p class="curCarga" >Carga Horária:&nbsp;<strong>100h</strong></p>
-                <p class="curTutor">Professor(a):&nbsp;<strong>Adalberta Reginalda</strong></p>
-                <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;1200,00</strong></p>
-            </div>
-        </article>
 
-        <div class="curContainer">
-            <div class="curImg">
-                <img src="/images/cursos/cur_maquiagem.png" alt="">
-            </div>
-            <div class="curInfo">
-                <p class="curNome">Maquiagem</p>
-                <p class="curCarga" >Carga Horária:&nbsp;<strong>200h</strong></p>
-                <p class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></p>
-                <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></p>
-            </div>
-        </div>
     </section>
-
-    <h2>Cursos Gratuítos</h2>
-    <hr>
        
     <h2>Cursos Pagos</h2>
     <hr>
 
-    <h2>Todos os Cursos</h2>    
+    <section name="cursosPagos" class="curBox" id="movePago">
+        
+        <div class="moveButtons" >
+            <input class="boxToLeft" id="btnPagoL" type="button" value="<" onmouseover="moveToLeft(btnPagoL)" onmouseout="stopMove()">
+            <input class="boxToRight" id="btnPagoR" type="button" value=">" onmouseover="moveToRight(btnPagoR)" onmouseout="stopMove()">
+        </div>
+
+            <article class="curContainer"> 
+                <div class="curImg">
+                    <img src="/images/cursos/cur_harm_facial.png" alt="Harmonização Facial">
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Harmonização Facial</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>50h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;100,00</strong></p>
+                </div>
+            </article>
+            
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_sobrancelha.png" alt="">
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Sobrancelha</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>100h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Adalberta Reginalda</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;1200,00</strong></p>
+                </div>
+            </article>
+
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_maquiagem.png" alt="">
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Maquiagem</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>200h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></p>
+                </div>
+            </article>
+    </section>
+
+    <h2>Melhores os Cursos</h2>    
     <hr>
+
+    <section name="cursosMelh" class="curBox" id="moveMelh">
+        
+        <div class="moveButtons" >
+            <input class="boxToLeft" id="btnMelhL" type="button" value="<" onmouseover="moveToLeft(btnMelhL)" onmouseout="stopMove()">
+            <input class="boxToRight" id="btnMelhR" type="button" value=">" onmouseover="moveToRight(btnMelhR)" onmouseout="stopMove()">
+        </div>
+
+            <article class="curContainer"> 
+                <div class="curImg">
+                    <img src="/images/cursos/cur_harm_facial.png" alt="Harmonização Facial">
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Harmonização Facial</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>50h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;100,00</strong></p>
+                </div>
+            </article>
+            
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_depilacao.png" alt="Depilação">
+                </div>
+                    <div class="curInfo">
+                        <a href="#">
+                            <p class="curNome">Depilação</p>
+                        </a>
+                        <p class="curCarga">Carga Horária:&nbsp;<strong>40h</strong></p>
+                        <p class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></p>
+                        <p class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></p>
+                    </div>
+            </article>
+
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_trat_facial.png" alt="Tratamento Facial"/>
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Tratamento Facial</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>30h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Josiane Fernandes da Cunha</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></p>
+                </div>
+            </article>   
+                
+            <article class="curContainer">
+                <div class="curImg">
+                    <img src="/images/cursos/cur_maquiagem.png" alt="Maquiagem">
+                </div>
+                <div class="curInfo">
+                    <a href="#">
+                        <p class="curNome">Maquiagem</p>
+                    </a>
+                    <p class="curCarga" >Carga Horária:&nbsp;<strong>200h</strong></p>
+                    <p class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></p>
+                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></p>
+                </div>
+            </article>
+    </section>
 
     <script>
         let toLeft = 0;
         let toRight = 0;
-        const curBox = document.querySelector('.curBox');
-        const btnLeft = document.querySelector('boxToLeft')
-        const btnRight = document.querySelector('boxToRight')
+        const curBoxTodo = document.querySelector('.curBox#moveTodo');
+        const curBoxGrat = document.querySelector('.curBox#moveGrat');
+        const curBoxPago = document.querySelector('.curBox#movePago');
+        const curBoxMelh = document.querySelector('.curBox#moveMelh');
+        
 
-        function moveToRight(){        
+        // Funções para não aparecer barras de bot~eos não 'scrollable'
+
+        // const scrollAnalyse = {
+        //     curBoxTodo,
+        //     curBoxGrat, 
+        //     curBoxPago,
+        //     curBoxMelh
+        // }
+
+        // function isScrollable(Box) {
+        //     const scrollable = Box.scrollWidth > Box.clientWidth;
+        //     const  scrollTake = window.getComputedStyle(Box).overflowX;
+        //     const scrollHide = scrollTake.indexOf('hidden') !== -1;
+        //     return scrollable && !scrollHide;
+            
+        // }
+        
+
+        // for (isScrollable(scrollAnalyse) in scrollAnalyse){
+        //     console.log(isScrollable(scrollAnalyse));
+        //     function removeScrolls(scrollAnalyse){
+        //         if (!isScrollable(scrollAnalyse)){
+        //             scrollAnalyse.style.display = 'none';
+        //         }
+        //     }
+        // }
+
+        function moveToRight(paramR){
+            const mousePosR = paramR.id
+            switch (mousePosR){
+                case 'btnTodoR':
+                    curBox = curBoxTodo;
+                    break;
+                case 'btnGratR':
+                    curBox = curBoxGrat;
+                    break;
+                case 'btnPagoR':
+                    curBox = curBoxPago;
+                    break;
+                case 'btnMelhR':
+                    curBox = curBoxMelh;
+                    break;
+                default:
+                    curBox = 0
+            }
             if (toRight > curBox.scrollLeft){
+                curBox.Style = 'display: none'
                 return;
             } else {
-                setTimeout(function() {                 
+                setTimeout(function() { 
                     curBox.scrollLeft += 2;
                     toLeft += 2;
                     toRight += 2;
-                    moveToRight()
+                    moveToRight(paramR)
                 }, 4)
-            }
+            }       
         }
 
-        function moveToLeft(){
+        function moveToLeft(paramL){
+            const mousePosL = paramL.id
+            switch (mousePosL){
+                case 'btnTodoL':
+                    curBox = curBoxTodo;
+                    break;
+                case 'btnGratL':
+                    curBox = curBoxGrat;
+                    break;
+                case 'btnPagoL':
+                    curBox = curBoxPago;
+                    break;
+                case 'btnMelhL':
+                    curBox = curBoxMelh;
+                    break;
+                default:
+                    curBox = 0
+            }
             if (toLeft < curBox.scrollLeft){
                 return
             } else {
@@ -119,18 +342,18 @@
                     curBox.scrollLeft -= 2;
                     toLeft -= 2;
                     toRight -= 2;
-                    moveToLeft()
+                    moveToLeft(paramL)
                 }, 4)
             }
         }   
 
         function stopMove(){
-            toLeft = curBox.scrollLeft -100
-            toRight = curBox.scrollLeft + 100
+            toLeft = curBox.scrollLeft - 10
+            toRight = curBox.scrollLeft +  10
             setTimeout(function() {                 
-                toLeft = curBox.scrollLeft +100
-                toRight = curBox.scrollLeft -100    
-                }, 1)      
+                toLeft = curBox.scrollLeft + 10
+                toRight = curBox.scrollLeft - 10    
+                }, .01)      
         }
     </script>        
     </main>
