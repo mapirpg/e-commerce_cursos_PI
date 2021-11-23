@@ -9,7 +9,20 @@ h1#title{
 .curBox{
     display: flex;
     overflow-x: hidden;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+}
+
+/* Dissplay frame abaixo da box cursos */
+#curInd{
+    display: none;
+    margin: 0 auto;
+}
+#curFrame{
+    width: 90%;
+    height: 300px;
+    max-height: 300px;
+    margin: 0 5%;
+    padding: 0 auto;
 }
 
 /* conteudo das div de cursos */

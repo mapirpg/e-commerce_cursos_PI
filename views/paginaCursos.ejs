@@ -2,15 +2,14 @@
 <%- include('partes/inicioHead') %>
 <link rel="stylesheet" href="/css/cursos.css">
 </head>
-<body >
+<body>
 <%- include('partes/menuNavecacao') %>
     <main class="conteudo">
 
         <h1 id="title">Cursos</h1>
-
+        
         <h2>Todos os Cursos</h2>
-        <hr>
-
+        <hr>        
     <section name="cursosTodos" class="curBox" id="moveTodo">
         
         <div class="moveButtons" id="btnTodoDiv">
@@ -18,13 +17,13 @@
             <input class="boxToRight" id="btnTodoR" type="button" value=">" onmouseover="moveToRight(btnTodoR)" onmouseout="stopMove()">
         </div>
 
-            <article class="curContainer"> 
+            <article class="curContainer" id="cur_harm_facial" > 
                 <div class="curImg">
                     <img src="/images/cursos/cur_harm_facial.png" alt="Harmonização Facial">
                 </div>
                 <div class="curInfo">
-                    <a href="#">
-                        <p class="curNome">Harmonização Facial</p>
+                    <a onclick="toFrame('#cur_harm_facial', '#title_harm_facial')">
+                        <p class="curNome" id="title_harm_facial">Harmonização Facial</p>
                     </a>
                     <p class="curCarga" >Carga Horária:&nbsp;<strong>50h</strong></p>
                     <p class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></p>
@@ -32,13 +31,13 @@
                 </div>
             </article>
             
-            <article class="curContainer">
+            <article class="curContainer" id="cur_depilacao">
                 <div class="curImg">
                     <img src="/images/cursos/cur_depilacao.png" alt="Depilação">
                 </div>
                     <div class="curInfo">
-                        <a href="#">
-                            <p class="curNome">Depilação</p>
+                        <a onclick="toFrame('#cur_depilacao', '#title_depilacao')">
+                            <p class="curNome" id="title_depilacao">Depilação</p>
                         </a>
                         <p class="curCarga">Carga Horária:&nbsp;<strong>40h</strong></p>
                         <p class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></p>
@@ -46,7 +45,7 @@
                     </div>
             </article>
 
-            <article class="curContainer">
+            <article class="curContainer" name="trat_facial">
                 <div class="curImg">
                     <img src="/images/cursos/cur_trat_facial.png" alt="Tratamento Facial"/>
                 </div>
@@ -60,7 +59,7 @@
                 </div>
             </article>   
                 
-            <article class="curContainer">
+            <article class="curContainer" name="sobrancelha">
                 <div class="curImg">
                     <img src="/images/cursos/cur_sobrancelha.png" alt="">
                 </div>
@@ -74,7 +73,7 @@
                 </div>
             </article>
 
-            <article class="curContainer">
+            <article class="curContainer" name="maquiagem">
                 <div class="curImg">
                     <img src="/images/cursos/cur_maquiagem.png" alt="">
                 </div>
@@ -86,7 +85,16 @@
                     <p class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></p>
                     <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></p>
                 </div>
-            </article>
+            </article>           
+    </section>
+
+    <!-- Painel inferior com descrição detalhada dos cursos -->
+    <section name="cursoInd" id="curInd">
+    <iframe id="curFrame">
+        <div id="frameCurInd">
+            
+        </div>
+    </iframe>
     </section>
 
         <h2>Cursos Gratuítos</h2>
@@ -94,7 +102,7 @@
     <section name="cursosGratuitos" class="curBox" id="moveGrat">
         
         <div class="moveButtons" id="moveGrat">
-            <input class="boxToLeft" id="btnGratL" type="button" value="<" onmouseover="moveToLeft(btnGratL)" ontouchstart="moveToLeft(btnGratL)" onmouseout="stopMove()" ontouchend="stopMove()">
+            <input class="boxToLeft" id="btnGratL" type="button" value="<" onmouseover="moveToLeft(btnGratL)"  onmouseout="stopMove()" ontouchend="stopMove()">
             <div class="spaceBetween"></div>
             <input class="boxToRight" id="btnGratR" type="button" value=">" onmouseover="moveToRight(btnGratR)" onmouseout="stopMove()">
         </div>
@@ -130,9 +138,8 @@
 
     </section>
        
-    <h2>Cursos Pagos</h2>
-    <hr>
-
+        <h2>Cursos Pagos</h2>
+        <hr>
     <section name="cursosPagos" class="curBox" id="movePago">
         
         <div class="moveButtons" >
@@ -183,9 +190,8 @@
             </article>
     </section>
 
-    <h2>Melhores os Cursos</h2>    
-    <hr>
-
+        <h2>Melhores os Cursos</h2>    
+        <hr>
     <section name="cursosMelh" class="curBox" id="moveMelh">
         
         <div class="moveButtons" >
@@ -253,39 +259,96 @@
     <script>
         let toLeft = 0;
         let toRight = 0;
+        let beforeClick = undefined
+        let seccondClick = false;
+        let open = false;     
+            
+        function toFrame(idCur,titleCur){           
+            let btnTitle = document.querySelector(titleCur);
+            const section = document.querySelector('#curInd');
+            let frame = document.querySelector('#curFrame');
+            
+            // console.log('inicio seccond click', seccondClick);
+            console.log('inicio', btnTitle);
+            if (!open){
+                btnTitle.setAttribute('style', 'background-color: #FFEA98;');   //---------------- define o backgroud do titulo do click 1 para amarelo
+                section.setAttribute('style', 'display: unset;');   //---------------- abre  frame inferior
+                let art = '#' + document.querySelector(idCur).id;   //---------------- atribui o src no frame
+                frame.setAttribute('src', ('/cursoInd' + (art)));   
+                seccondClick = true                    //---------------- variaveis de controle
+                open = true
+                beforeClick = btnTitle              //---------------- recebe o valor do backgroud do click 1 para depois retirar no item 2
+            } else if (open && seccondClick)  {     //---------------- se aberto e clicado em outro titulo
+                frame.removeAttribute('src');       //---------------- remove src do frame
+                beforeClick.setAttribute('style', 'background-color: "";'); //---------------- muda o valor do background do titulo anterior para branco
+                btnTitle = document.querySelector(titleCur);  //---------------- coloca o novo src no frame
+                btnTitle.setAttribute('style', 'background-color: #FFEA98;');
+                setTimeout(function(){                  
+                    let art = '#' + document.querySelector(idCur).id;   // ----------------aguarda 10ms e atribui o src no frame e
+                    frame.setAttribute('src', ('/cursoInd' + (art)));
+                }, 100)
+                beforeClick = btnTitle  //---------------- variaveis de controle
+                open = true
+                seccondClick = false
+            } else{
+                frame.removeAttribute('src');   //---------------- remove o src do frame
+                beforeClick.setAttribute('style', 'background-color: "";');     //---------------- muda o valor do background do titulo anterior para branco
+                btnTitle.setAttribute('style', 'background-color: "";');    //---------------- muda o valor do background do titulo para branco
+                section.setAttribute('style', 'display: none;');    //---------------- fecha o frame
+                open = false            //---------------- variavel de controle
+                seccondClick = true
+            }                   
+        }
+
+        // Funções para não aparecer barras de bot~eos não 'scrollable'
         const curBoxTodo = document.querySelector('.curBox#moveTodo');
         const curBoxGrat = document.querySelector('.curBox#moveGrat');
         const curBoxPago = document.querySelector('.curBox#movePago');
         const curBoxMelh = document.querySelector('.curBox#moveMelh');
         
+        const scrollAnalyse = [
+            curBoxTodo,
+            curBoxGrat, 
+            curBoxPago,
+            curBoxMelh
+        ]
 
-        // Funções para não aparecer barras de bot~eos não 'scrollable'
+        const notScrollable = scrollAnalyse.filter(f => !isScrollable(f))
 
-        // const scrollAnalyse = {
-        //     curBoxTodo,
-        //     curBoxGrat, 
-        //     curBoxPago,
-        //     curBoxMelh
-        // }
+        function isScrollable(Box) {
+            const scrollable = Box.scrollWidth > window.innerWidth;
+            return scrollable;            
+        }
 
-        // function isScrollable(Box) {
-        //     const scrollable = Box.scrollWidth > Box.clientWidth;
-        //     const  scrollTake = window.getComputedStyle(Box).overflowX;
-        //     const scrollHide = scrollTake.indexOf('hidden') !== -1;
-        //     return scrollable && !scrollHide;
-            
-        // }
-        
-
-        // for (isScrollable(scrollAnalyse) in scrollAnalyse){
-        //     console.log(isScrollable(scrollAnalyse));
-        //     function removeScrolls(scrollAnalyse){
-        //         if (!isScrollable(scrollAnalyse)){
-        //             scrollAnalyse.style.display = 'none';
-        //         }
-        //     }
-        // }
-
+            let btnR = undefined;
+            let btnL = undefined;
+        for (const item of notScrollable){
+            switch (item.id){
+                case 'moveTodo':
+                    btnR = document.querySelector('#btnTodoL');
+                    btnL = document.querySelector('#btnTodoR');
+                    break;
+                case 'moveGrat':
+                    btnR = document.querySelector('#btnGratL');
+                    btnL = document.querySelector('#btnGratR');
+                    break;
+                case 'movePago':
+                    btnR = document.querySelector('#btnPagoL');
+                    btnL = document.querySelector('#btnPagoR');
+                    break;
+                case 'moveMelh':
+                    btnR = document.querySelector('#btnMelhL');
+                    btnL = document.querySelector('#btnMelhR');
+                    break;
+                default: undefined                        
+            }
+            btnR.setAttribute('style', 'display: none;');
+            btnL.setAttribute('style', 'display: none;');
+            item.setAttribute('style', 'margin-left: 1%; margin-right: 3%')
+        } 
+    
+        // Funções para mover as boxes <   >
+           
         function moveToRight(paramR){
             const mousePosR = paramR.id
             switch (mousePosR){
@@ -302,7 +365,7 @@
                     curBox = curBoxMelh;
                     break;
                 default:
-                    curBox = 0
+                    curBox = undefined
             }
             if (toRight > curBox.scrollLeft){
                 curBox.Style = 'display: none'
@@ -333,7 +396,7 @@
                     curBox = curBoxMelh;
                     break;
                 default:
-                    curBox = 0
+                    curBox = undefined
             }
             if (toLeft < curBox.scrollLeft){
                 return

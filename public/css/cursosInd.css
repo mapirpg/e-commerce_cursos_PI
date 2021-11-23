@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font: normal 12pt;
+    overflow: hidden;
+    font-size: 10pt;
+}
+.frameCur{
+    border: 2px solid #FFEA98;
+    background-color: #ffea987a;
+    height: 250px;
+    width: 100%;
+    overflow-y: hidden;
+    margin: 0 0 100px 0;
+}
+.curContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 1%;
+}
+.curContent h1{
+    width: 100%;
+    font-size: 20px;
+    margin: 0;
+    padding: 3px;
+}
+.curContent p{
+    font-size: 18px;
+    margin: 0;
+    padding: 2px;
+}
+.pDesc{
+    width: 100%;
+}
+.curContent Ul{
+    width: 100%;
+}
+.curContent li{
+    font-size: 18px;
+}
+.curContent span{
+    color: red;
+    font-size: 24px;
+    border: 2px solid #FFEA98;;
+}
+.curContent .pValor, input{
+    margin: 0;
+    padding: none 10%;
+}
