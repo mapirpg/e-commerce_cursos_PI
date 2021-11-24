@@ -9,6 +9,7 @@ h1#title{
 .curBox{
     display: flex;
     overflow-x: hidden;
+    margin-right: 0px;
     margin-bottom: 2%;
 }
 

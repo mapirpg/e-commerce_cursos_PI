@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 *{
     box-sizing: border-box;
 }
@@ -5,11 +6,12 @@ body{
     font: normal 12pt;
     overflow: hidden;
     font-size: 10pt;
+    font-family: 'Road Rage';
 }
 .frameCur{
     border: 2px solid #FFEA98;
     background-color: #ffea987a;
-    height: 250px;
+    height: 260px;
     width: 100%;
     overflow-y: hidden;
     margin: 0 0 100px 0;
@@ -42,7 +44,7 @@ body{
 .curContent li{
     font-size: 18px;
 }
-.curContent span{
+.curContent .pValor{
     color: red;
     font-size: 24px;
     border: 2px solid #FFEA98;;
@@ -50,4 +52,18 @@ body{
 .curContent .pValor, input{
     margin: 0;
     padding: none 10%;
+}
+.linkCarrinho{
+    text-decoration: none;
+}
+.addCarrinho{
+    border: none;
+    font-size: 10px;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+#imgCarrinho{
+    width: 10%;
+    margin-left: 3%;
 }
