@@ -122,10 +122,10 @@ padding-top: 7%;
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
-  display: inline-block;
+  display: flex;
   border-radius: 100px;
   transition: all .2s;
-  position: absolute;
+  position: flex;
 }
 
 .btn:hover {
@@ -144,12 +144,11 @@ padding-top: 7%;
 }
 
 .btn::after {
-  content: "";
-  display: inline-block;
+  display: flex;
   height: 100%;
   width: 100%;
   border-radius: 100px;
-  position: absolute;
+  position: flex;
   top: 0;
   left: 0;
   z-index: -1;

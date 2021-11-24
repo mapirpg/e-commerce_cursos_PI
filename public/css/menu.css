@@ -12,6 +12,7 @@
 html, body{
   margin: 0;
   padding: 0;
+  background-color:#e4e4e4;
 }
 
 body {
@@ -19,14 +20,14 @@ body {
 }
 
 ul#menu {
-    margin-left: 15%;
     list-style-type: none;
     overflow: hidden;
     border: 1px solid white;
     background-color: white;
-    width: 85%;
+    width: 100%;
     font-family: 'Road Rage';
     font-weight: bold;
+    position: relative;
 
   }
   li.liMenu {
@@ -54,19 +55,15 @@ ul#menu {
   #iconeSite{
     position: absolute;
     float: left;
-    width: 150px;
+    width: 100px;
     height: 50px;
-    margin-left: 5%;
+    background-color: white;
+    margin-left: 3%;
   }
 
-
-
-
-
-
-
-
-
+  #primeiraLi{
+  margin-left: 15%;
+  }
 
 
 
