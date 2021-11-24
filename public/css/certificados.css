@@ -1,97 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Petemoss&family=Rajdhani:wght@300&display=swap');
-h1{
+#titulo{
     text-align: center;
+    text-shadow: 1px 1px 2px #FFD700, 0 0 1em #FFDD4C, 0 0 0.2em white;
+    text-transform: uppercase;
+    height: 130px;
+    padding-top: 2.5%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 50px;
+    background-image: url('/images/certificado/cert_background_title.jpeg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width: 100%;
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
 }
 #buttPdf{
-    float: center;
+    align-self: flex-end;
+    margin-right: 10%;
+    width: 20%;
 }
+#titulo{
+    margin: 0;
+}
+
+    /* Conteudo do certificado */
 #certificado{
-    position: static;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3% auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    grid-template-columns: repeat(auto-fill,);
-    border: 2px solid black;
+    flex-direction: column;
+    border: 6px double #FFEA98;
     width: 800px;
     height: 566px;
 }
+
+    /* CAbeçalho do certificado */
 .certCabecalho{
     display: flex;
-    flex: 100%;
+    width: 100%;
     background: url('/images/certificado/cert_cabecalho.png') no-repeat;
-    height: 13%;
+    height: 12.5%;
+    margin: 0;
 }
 #certLogo{
-    width: 20%;
+    width: 18%;
 }
 #certLogoImg{
     width: 100%;
 }
 .certParceiro{
     flex: 1;
-    margin: .5%;
+    margin: 0;
     width: 8%;
     height: 60%;
-    align-self: start;
     text-align: center;
 }
 .certParceiro #parc1{
     width: 50%;
 }
 
+    /* parce "central" do certificado */
 .certTitulo{
-    flex: 1;
-    font-size: 150%;
+    font-size: 40px;
     text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding-bottom: 1%;
 }
 article.certConteudo{
     text-align: justify;
-    justify-self: center;
-    align-self: center;
-    /* height: 46.5%; */
-    padding: 3% 2%;
-    font-size: 200%;
+    padding: 0 2%;
+    font-size: 30px;
     font-family: 'Petemoss', cursive;
-
+    height: 55%;
 }
+
+    /* Assinaturas e data */
 article.certAss{
     display: flex;
-    flex-wrap: wrap;
-    flex: 100%;
-    padding-top: 4%;
+    justify-content: space-between;
+    align-items: flex-start;
     text-align: center;
     font-weight: bolder;
-    font-size: 120%;
+    font-size: 25px;
     font-family: 'Petemoss', cursive;
-}
-.ass_1,
-.ass_2{
-    flex: 50%;
     text-align: center;
-    /* border: 1px solid black; */
+    width: 100%;
+    height: 20%;
 }
-.ass_data{
-    flex: 100%;
-    text-align: center;
+.certAss div{
+    width: 33%;
+    padding: 0 2%;
 }
 
+#ass_data{
+    align-self: flex-end;
+}
+
+    /* Rodapé do Certificado */
 article.certRodape{
     display: flex;
-    flex: 100%;
-    align-self: end;
+    align-items: flex-end;
+    width: 100%;
     background: url('/images/certificado/cert_rodape.png') no-repeat;
-    height: 13%;
-}
-.certCnpj,
-.certEndereco,
-.certCodValidacao,
-.certEmissao{
-    flex: 1;
-    align-self: end;
+    height: 12.5%;
     text-align: center;
 }
+.certRodape div{
+    flex: 1;
+}
+
 /* Opções de media */
 
 /* media < 800px */

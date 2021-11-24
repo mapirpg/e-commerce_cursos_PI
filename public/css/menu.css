@@ -17,6 +17,9 @@ html, body{
 
 body {
     font-family: 'Road Rage';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 ul#menu {

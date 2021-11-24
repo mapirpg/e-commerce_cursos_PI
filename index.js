@@ -54,5 +54,5 @@ app.get('/cursoInd', (req,res) =>{
 const servidorIniciado = ()=>{
 console.log("OK");
 }
-app.listen(4000, servidorIniciado);
+app.listen(process.env.PORT || 4000, servidorIniciado);
 

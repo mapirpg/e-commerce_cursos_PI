@@ -5,7 +5,7 @@
     <%- include('partes/menuNavecacao') %>
 <main class="conteudo">   
     <input type="button" id="buttPdf" value="Gerar PDF" onclick="gerarPDF">
-    <h1 id="titulo">Certificado</h1>
+    <h1 id="titulo">Certificados</h1>
     
     <div id="media-400">
         <p>Tente girar a tela</p>
@@ -25,23 +25,25 @@
             <div class="certParceiro" id="parc4">parceria</div>
             <div class="certParceiro" id="parcN">parceria</div>
         </article>
-        <div class="certTitulo">CERTIFICADO</div>
+        
         <article class="certConteudo">&nbsp;&nbsp;&nbsp;&nbsp;
+            <h1 class="certTitulo">CERTIFICADO</h1>
             Certificaos que o alun(a) <strong>Fulano De Tal</strong> concluiu o curso de <strong>Depilação Profissional</strong>, ministrado por <strong>Maria Fulana</strong>, com carga horária de <strong>400</strong> horas em <strong>30 de Fevereiro de 2015</strong>. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, dolores quis totam illo eos facilis consequatur repellat praesentium nobis nesciunt! Atque vel repellendus dolor dolores accusantium exercitationem, laboriosam iure doloribus.
         </article>
         <article class="certAss">
-            <div class="ass_1">
-                <hr width="50%">
+            <div id="ass_1">
+                <hr>
                 Aluno(a)
             </div>
-            <div class="ass_2">
-                <hr width="50%">
-                Ministrante
-            </div>
-            <div class="ass_data">
-                <hr width="30%">
+            <div id="ass_data">
+                <hr>
                 Data
             </div>
+            <div id="ass_2">
+                <hr>
+                Ministrante
+            </div>
+            
         </article>
         <article class="certRodape">
             <div class="certCnpj">CNPJ</div>
