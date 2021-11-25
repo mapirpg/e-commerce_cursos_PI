@@ -26,13 +26,15 @@ body {
 }
 
 /* style lista Navegação*/
-
-div.navegacao, div.linksUteis{
-  width: 25%;
-  height: 100%;
+#footerCenter{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
-
-div.navegacao h4, div.linksUteis h4{
+#navegacao, #linksUteis{
+  width: 50%;
+}
+#navegacao h4, #linksUteis h4{
   font-size: 18px;
   text-align: left;
   margin-left: 10%;
@@ -80,4 +82,51 @@ ul.footerNavegacao li, ul.footerLinksUteis li{
   border: none;
   font-size: 14px;
   text-align: center; 
+}
+@media(max-width: 650px){
+ .secFooter{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #copyRight{
+    order: 1;
+    font-size: 8px;
+    width: 100%;
+    text-align: left;
+    align-self: end;
+    padding-left: 5%;
+  }
+  #footerRightSide{
+    order: -1;
+    justify-content: column;
+    width: 80%;
+    padding-bottom: 5%;
+  }
+  #divValid{
+    justify-content: space-between;
+    width: 40%;
+    padding-top: 5%;
+  }
+  #txtValid{
+    height: 100%;
+  }
+  .linksRedes{
+    width: 40%;
+    justify-content: column;
+    padding: 5% 0 0 0;
+    margin-left: 5%;
+  }
+  .linksRedes img{
+    height: 100%;
+  }
+  #navegacao, #linksUteis{
+    width: 40%;
+    text-align: center;
+    margin: 0;
+    padding: 0 1%;
+  }
+  #footerCenter{
+    width: 100%;
+    display: flex;
+  }
 }

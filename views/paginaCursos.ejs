@@ -13,8 +13,10 @@
     <section name="cursosTodos" class="curBox" id="moveTodo">
         
         <div class="moveButtons" id="btnTodoDiv">
-            <input class="boxToLeft" id="btnTodoL" type="button" value="<" onmouseover="moveToLeft(btnTodoL, btnTodoR)" onmouseout="stopMove()">
-            <input class="boxToRight" id="btnTodoR" type="button" value=">" onmouseover="moveToRight(btnTodoR, btnTodoL)" onmouseout="stopMove()" onmouseenter="enableLeftMove(btnTodoL)">
+
+            <input class="boxToLeft" id="btnTodoL" type="button" value="esq" onmouseover="moveToLeft(btnTodoL,)" onmouseenter="enableRightMove(btnTodoR)">
+
+            <input class="boxToRight" id="btnTodoR" type="button" value=">" onmouseover="moveToRight(btnTodoR,)" onmouseenter="enableLeftMove(btnTodoL)">
         </div>
 
             <article class="curContainer" id="cur_harm_facial" > 
@@ -92,7 +94,7 @@
     <section name="cursoInd" id="curInd">
     <iframe id="curFrame">
         <div id="frameCurInd">
-            
+            <!-- Aqui serárenderizado o frame com descrição do curso -->
         </div>
     </iframe>
     </section>
@@ -102,9 +104,9 @@
     <section name="cursosGratuitos" class="curBox" id="moveGrat">
         
         <div class="moveButtons" id="moveGrat">
-            <input class="boxToLeft" id="btnGratL" type="button" value="<" onmouseover="moveToLeft(btnGratL)"  onmouseout="stopMove()" ontouchend="stopMove()">
+            <input class="boxToLeft" id="btnGratL" type="button" value="<" onmouseover="moveToLeft(btnGratL)">
             <div class="spaceBetween"></div>
-            <input class="boxToRight" id="btnGratR" type="button" value=">" onmouseover="moveToRight(btnGratR)" onmouseout="stopMove()">
+            <input class="boxToRight" id="btnGratR" type="button" value=">" onmouseover="moveToRight(btnGratR)"> 
         </div>
 
         <article class="curContainer">
@@ -143,8 +145,8 @@
     <section name="cursosPagos" class="curBox" id="movePago">
         
         <div class="moveButtons" >
-            <input class="boxToLeft" id="btnPagoL" type="button" value="<" onmouseover="moveToLeft(btnPagoL)" onmouseout="stopMove()">
-            <input class="boxToRight" id="btnPagoR" type="button" value=">" onmouseover="moveToRight(btnPagoR)" onmouseout="stopMove()">
+            <input class="boxToLeft" id="btnPagoL" type="button" value="<" onmouseover="moveToLeft(btnPagoL)" >
+            <input class="boxToRight" id="btnPagoR" type="button" value=">" onmouseover="moveToRight(btnPagoR)">
         </div>
 
             <article class="curContainer"> 
@@ -195,8 +197,8 @@
     <section name="cursosMelh" class="curBox" id="moveMelh">
         
         <div class="moveButtons" >
-            <input class="boxToLeft" id="btnMelhL" type="button" value="<" onmouseover="moveToLeft(btnMelhL)" onmouseout="stopMove()">
-            <input class="boxToRight" id="btnMelhR" type="button" value=">" onmouseover="moveToRight(btnMelhR)" onmouseout="stopMove()">
+            <input class="boxToLeft" id="btnMelhL" type="button" value="<" onmouseover="moveToLeft(btnMelhL)"> 
+            <input class="boxToRight" id="btnMelhR" type="button" value=">" onmouseover="moveToRight(btnMelhR)"> 
         </div>
 
             <article class="curContainer"> 
@@ -259,9 +261,6 @@
     </main>
     <%- include('partes/footer') %>
     <script>
-
-    let toLeft = 0;
-    let toRight = 0;
     let beforeClick = undefined;
     let seccondClick = false;
     let open = false;   
@@ -376,16 +375,23 @@
             btnL.setAttribute('style', 'display: unset;');
         }
     };
-    // Função habilitar esquerda <
+    // Função habilitar esquerda e direita <
 
     function enableLeftMove(paramL){
         if (paramL.scrollLeft > -1) {
             paramL.setAttribute('style', 'display: unset;');
         }
     };
-        
+
+    function enableRightMove(paramR){
+        if (paramR.scrollLeft < window.innerWidth) {
+            paramR.setAttribute('style', 'display: unset;');
+        }
+    }
+   
     // Funções para mover as boxes <   >
-    function moveToRight(paramR, paramL){
+    function moveToRight(paramR){
+        
         const mousePosR = paramR.id;
         switch (mousePosR){
             case 'btnTodoR':
@@ -401,11 +407,12 @@
                 curBox = curBoxMelh;
                 break;
             default:
-                curBox = undefined;
+            // if (paramR.addEventListener('mouseleave', f => {return true})) {
+            //     break;
+            // }
         };
         if ((curBox.scrollWidth - curBox.scrollLeft) <= window.innerWidth) {
             paramR.setAttribute('style', 'display: none;');
-            return;
         } else {
             setTimeout(function() { 
                 curBox.scrollLeft += 2;
@@ -414,7 +421,7 @@
         }
     };
 
-    function moveToLeft(paramL){
+    function moveToLeft(paramL,paramR){
         const mousePosL = paramL.id;
         switch (mousePosL){
             case 'btnTodoL':
@@ -432,26 +439,17 @@
             default:
                 curBox = undefined;
         }
-        if (toLeft < curBox.scrollLeft){
+        if (curBox.scrollLeft == 0){
+            paramR.setAttribute('style', 'display: none;');
             return;
         } else {
             setTimeout(function() {                 
                 curBox.scrollLeft -= 2;
-                toLeft -= 2;
-                toRight -= 2;
                 moveToLeft(paramL);
             }, 4)
         }
+        paramR.setAttribute('style', 'display: none;');        
     };   
-
-    function stopMove(){
-        toLeft = curBox.scrollLeft - 10;
-        toRight = curBox.scrollLeft + 10;
-        setTimeout(function() {                 
-            toLeft = curBox.scrollLeft + 10;
-            toRight = curBox.scrollLeft - 10;    
-            }, .01)      
-    };
 
     </script> 
 </body>
