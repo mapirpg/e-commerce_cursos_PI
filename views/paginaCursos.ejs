@@ -10,13 +10,13 @@
         
         <h2>Todos os Cursos</h2>
         <hr>        
-    <section name="cursosTodos" class="curBox" id="moveTodo">
+    <section name="cursosTodos" class="curBox" id="moveTodo" ontouchstart="dragBox()" draggable="true" ondragstart="dragBox()">
         
         <div class="moveButtons" id="btnTodoDiv">
 
-            <input class="boxToLeft" id="btnTodoL" type="button" value="esq" onmouseover="moveToLeft(btnTodoL,)" onmouseenter="enableRightMove(btnTodoR)">
+            <input class="boxToLeft" id="btnTodoL" type="button" value="<" onmouseover="moveToLeft(btnTodoL)" onmouseenter="enableRightMove(btnTodoR)" onmouseout="stopMove('stop')">
 
-            <input class="boxToRight" id="btnTodoR" type="button" value=">" onmouseover="moveToRight(btnTodoR,)" onmouseenter="enableLeftMove(btnTodoL)">
+            <input class="boxToRight" id="btnTodoR" type="button" value=">" onmouseover="moveToRight(btnTodoR)" onmouseenter="enableLeftMove(btnTodoL)" onmouseout="stopMove('stop')">
         </div>
 
             <article class="curContainer" id="cur_harm_facial" > 
@@ -91,6 +91,7 @@
     </section>
 
     <!-- Painel inferior com descrição detalhada dos cursos -->
+
     <section name="cursoInd" id="curInd">
     <iframe id="curFrame">
         <div id="frameCurInd">
@@ -261,36 +262,37 @@
     </main>
     <%- include('partes/footer') %>
     <script>
+    // verificação do frame inferior com detalhamento do curso
     let beforeClick = undefined;
     let seccondClick = false;
     let open = false;   
-
     function toFrame(idCur,titleCur){           
         let btnTitle = document.querySelector(titleCur);
         const section = document.querySelector('#curInd');
         let frame = document.querySelector('#curFrame');
-        
         if (!open){
             btnTitle.setAttribute('style', 'background-color: #FFEA98;');   //------- define o backgroud do titulo do click 1 para amarelo
             section.setAttribute('style', 'display: unset;');   //---------------- abre  frame inferior
             let art = '#' + document.querySelector(idCur).id;   //---------------- atribui o src no frame
-            frame.setAttribute('src', ('/cursoInd' + (art)));   
+            console.log(art);
+            frame.setAttribute('src', ('/curso' + (art)));   
             seccondClick = true;                    //---------------- variaveis de controle
             open = true;
             beforeClick = btnTitle;              //---------------- recebe o valor do backgroud do click 1 para depois retirar no item 2
-        } else if (open && seccondClick)  {     //---------------- se aberto e clicado em outro titulo
+        } else if (open && seccondClick && !beforeClick)  {     //---------------- se aberto e clicado em outro titulo
             frame.removeAttribute('src');       //---------------- remove src do frame
             beforeClick.setAttribute('style', 'background-color: "";'); //---------------- muda o valor do background do titulo anterior para branco
             btnTitle = document.querySelector(titleCur);  //---------------- coloca o novo src no frame
-            btnTitle.setAttribute('style', 'background-color: #FFEA98;');
+            section.setAttribute('style', 'display: none;');
             setTimeout(function(){                  
                 let art = '#' + document.querySelector(idCur).id;   // ----------------aguarda 10ms e atribui o src no frame e
-                frame.setAttribute('src', ('/cursoInd' + (art)));
+                frame.setAttribute('src', ('/curso' + (art)));
             }, 100);
+            btnTitle.setAttribute('style', 'background-color: #FFEA98;');   //------- define o backgroud do titulo do click 1 para amarelo
             beforeClick = btnTitle;  //---------------- variaveis de controle
             open = true;
             seccondClick = false;
-        } else{
+        } else {
             frame.removeAttribute('src');   //---------------- remove o src do frame
             beforeClick.setAttribute('style', 'background-color: "";');     //---------------- muda o valor do background do titulo anterior para branco
             btnTitle.setAttribute('style', 'background-color: "";');    //---------------- muda o valor do background do titulo para branco
@@ -300,7 +302,7 @@
         }                   
     }
     
-    // Funções para não aparecer barras de bot~eos não 'scrollable'
+// array para análise de  'scrollable'* e 'scrollLeft'*
     const curBoxTodo = document.querySelector('.curBox#moveTodo');
     const curBoxGrat = document.querySelector('.curBox#moveGrat');
     const curBoxPago = document.querySelector('.curBox#movePago');
@@ -313,21 +315,16 @@
         curBoxMelh
     ];
 
+// *'srollable' -- Quando carrega a página se box não for scrollavel, desabilita visualização de "<" e ">"
+    
     const notScrollable = scrollAnalyse.filter(Box => !isScrollable(Box));
-    const notScrollLeft = scrollAnalyse.filter(Box => haveScrollLeft(Box));
-
     function isScrollable(Box) {
         const scrollable = Box.scrollWidth > window.innerWidth;
         return scrollable;            
     };
 
-    function haveScrollLeft(Box){
-        const boxLeftScroll = Box.scrollLeft == 0;
-        return boxLeftScroll;
-    };
-
-        let btnR = undefined;
-        let btnL = undefined;
+    let btnR = undefined;
+    let btnL = undefined;
     for (const item of notScrollable){
         switch (item.id){
             case 'moveTodo':
@@ -353,6 +350,14 @@
         item.setAttribute('style', 'padding-right: 42%;');
     };
     
+// *'scrollLeft' -- Quando carrega a página, se "<" for 0, desabilita visualização
+
+    const notScrollLeft = scrollAnalyse.filter(Box => haveScrollLeft(Box));
+    function haveScrollLeft(Box){
+        const boxLeftScroll = Box.scrollLeft == 0;
+        return boxLeftScroll;
+    };
+
     for (const item of notScrollLeft){
         if (notScrollLeft){
             switch (item.id){
@@ -375,7 +380,8 @@
             btnL.setAttribute('style', 'display: unset;');
         }
     };
-    // Função habilitar esquerda e direita <
+
+// Funções habilitar esquerda "<" e direita ">" 
 
     function enableLeftMove(paramL){
         if (paramL.scrollLeft > -1) {
@@ -387,11 +393,14 @@
         if (paramR.scrollLeft < window.innerWidth) {
             paramR.setAttribute('style', 'display: unset;');
         }
-    }
-   
-    // Funções para mover as boxes <   >
+    };
+
+// Funções para mover as boxes - direita ">"
+    
     function moveToRight(paramR){
-        
+        if (moving == 'stop') {
+            return;
+        }
         const mousePosR = paramR.id;
         switch (mousePosR){
             case 'btnTodoR':
@@ -407,21 +416,23 @@
                 curBox = curBoxMelh;
                 break;
             default:
-            // if (paramR.addEventListener('mouseleave', f => {return true})) {
-            //     break;
-            // }
         };
         if ((curBox.scrollWidth - curBox.scrollLeft) <= window.innerWidth) {
-            paramR.setAttribute('style', 'display: none;');
+            paramR.setAttribute('style', 'display: none;');                 // desabilitar direita ">" quando chega ao fim
         } else {
-            setTimeout(function() { 
-                curBox.scrollLeft += 2;
+                setTimeout(function () { 
+                curBox.scrollLeft += 1;
                 moveToRight(paramR);
-            }, 4)
-        }
+                }, 1);
+            };
     };
+    
+// Funções para mover as boxes - esquerda "<"
 
-    function moveToLeft(paramL,paramR){
+    function moveToLeft(paramL){
+        if (moving == 'stop') {
+            return;
+        }
         const mousePosL = paramL.id;
         switch (mousePosL){
             case 'btnTodoL':
@@ -440,17 +451,40 @@
                 curBox = undefined;
         }
         if (curBox.scrollLeft == 0){
-            paramR.setAttribute('style', 'display: none;');
+            paramL.setAttribute('style', 'display: none;');                 // desabilitar esquerda "<" quando está no início
             return;
         } else {
             setTimeout(function() {                 
-                curBox.scrollLeft -= 2;
+                curBox.scrollLeft -= 1;
                 moveToLeft(paramL);
-            }, 4)
+            }, 1)
         }
-        paramR.setAttribute('style', 'display: none;');        
-    };   
+    };
 
-    </script> 
+// Funções para parar movimento da Box
+
+    let moving
+    function stopMove(params) {
+        if (params == 'stop') {
+            moving = 'stop';
+            setTimeout(function() {                 
+                moving ='';
+            }, 4)
+        };
+    };
+
+// Função para arrastar caixa de cursos, caso touch == true
+    
+        document.addEventListener("dragstart", function(event) {
+        // store a ref. on the dragged elem
+        dragged = event.target;
+        // make it half transparent
+        event.target.style.opacity = .5;
+        }, false);
+    function dragBox() {
+        const curBoxDrag = document.querySelector('.curBox')
+        curBoxDrag.setAttribute('style', 'overflow: auto;');
+    }
+    </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     padding-top: 2.5%;
     margin-top: 5%;
     margin-bottom: 3%;
-    font-size: 50px;
+    font-size: 6vw;
     background-image: url('/images/certificado/cert_background_title.jpeg');
     background-position: center;
     background-size: cover;
@@ -17,6 +17,7 @@
 .conteudo{
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 #buttPdf{
     align-self: flex-end;

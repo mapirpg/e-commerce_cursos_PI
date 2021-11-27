@@ -11,8 +11,8 @@ body{
 .frameCur{
     border: 2px solid #FFEA98;
     background-color: #ffea987a;
-    height: 260px;
     width: 100%;
+    height: 380px;
     overflow-y: hidden;
     margin: 0 0 100px 0;
 }

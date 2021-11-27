@@ -46,8 +46,8 @@ app.get('/reset', (req , res)=>{
 app.get('/cursos', (req,res) =>{
     res.render('paginaCursos')
 })
-app.get('/cursoInd', (req,res) =>{
-    res.render('paginaCursosInd')
+app.get('/curso', (req,res) =>{
+    res.render('paginaCursosInd');
 })
 
 });
@@ -55,4 +55,3 @@ const servidorIniciado = ()=>{
 console.log("OK");
 }
 app.listen(process.env.PORT || 4000, servidorIniciado);
-

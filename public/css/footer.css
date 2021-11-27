@@ -5,8 +5,9 @@ body {
 }
 
 .push {
-  height: 10%;  
+  height: 1%;  
 }
+
 .secFooter{
     display: flex;
     flex-direction: row;
@@ -17,6 +18,7 @@ body {
     background-color: #FFEA98;
     height: 100%;
 }
+
 #copyRight{
     font-size: 8px;
     width: 20%;
@@ -31,9 +33,11 @@ body {
   justify-content: space-around;
   width: 50%;
 }
+
 #navegacao, #linksUteis{
   width: 50%;
 }
+
 #navegacao h4, #linksUteis h4{
   font-size: 18px;
   text-align: left;
@@ -73,16 +77,17 @@ ul.footerNavegacao li, ul.footerLinksUteis li{
 /* Barra de validação de certificado */
 #divValid{
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 }
 #btnBusca, #txtValid{
   height: 60%;
   border: none;
-  font-size: 14px;
-  text-align: center; 
+  font-size: 10px;
+  text-align: left; 
 }
+
 @media(max-width: 650px){
  .secFooter{
     flex-direction: column;
