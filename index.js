@@ -45,10 +45,15 @@ app.get('/reset', (req , res)=>{
 
 app.get('/cursos', (req,res) =>{
     res.render('paginaCursos')
-})
+});
+
 app.get('/curso', (req,res) =>{
     res.render('paginaCursosInd');
-})
+});
+
+app.get('/carrinho', (req,res) =>{
+    res.render('paginaCarrinho');
+});
 
 });
 const servidorIniciado = ()=>{

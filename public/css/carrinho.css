@@ -1,0 +1,137 @@
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+    padding-bottom: 10%;
+}
+h1#title{
+    text-align: center;
+    text-shadow: 1px 1px 2px #FFD700, 0 0 1em #FFDD4C, 0 0 0.2em white;
+    text-transform: uppercase;
+    height: 130px;
+    padding-top: 2.5%;
+    margin-top: 5%;
+    font-size: 50px;
+    background-image: url('/images/img_titulo_carrinho.jpeg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width: 100%;
+}
+
+section#conteudoCarrinho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 98%;
+    height: 100%;
+    margin: 2.5% auto;
+}
+aside#maisProdutos{
+    border: 1px solid black;
+    height: 100%;
+    max-height: 400px;
+    width: 15%;
+}
+
+section#carrinho{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+    width: 85%;
+    margin: 0;
+    padding: 0;
+}
+
+#carrinho h2{
+    text-align: center;
+    background-color: #FFEA98;
+    font-size: 28px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+#carrinho ul{
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    height: 80%;
+    margin: 0 1%;
+    padding: 0;
+}
+
+.carItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+
+#gambiarra{
+    justify-self: center;
+}
+
+.itemValor{
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.carItem div{
+    width: 30%;
+    text-align: center;
+}
+.carCurQtde{
+    display: flex;
+}
+
+.carCurQtde p{
+    width: 30%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.carCurQtde input{
+    width: 15%;
+    user-select: none;
+    text-align: center;
+}
+
+.carCurQtde button{
+    width: 20%;
+    border: none;
+    background-color: #FFEA98;
+}
+
+#carTotal{
+    display: flex;
+    background-color: #FFEA98;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+#carTotal input{
+    height: 80%;
+    margin: auto;
+    border: none;
+}
+
+#carTotal h2{
+    margin: auto;
+}
+
+#txtCupom{
+    font-size: 16px;
+    text-align: center;
+    width: 25%;
+    margin: auto;
+    margin-right: 0;
+}
+
