@@ -63,14 +63,13 @@
         function cookies(){
             const localPref = JSON.parse(window.localStorage.getItem('cookiesPref'))
             const container = document.querySelector('.cookContainer')
-            console.log(localPref)
+            console.log('Aceitou uso de cookies: ', localPref)
                 if (localPref){
                         container.style.display = 'none';
                     }                 
             const save = document.querySelector('.cookSave')
             function cookPref(){
             const pref = Boolean(document.querySelector('.cookAccept').checked)
-            console.log(pref)
                 if (!pref){
                     container.style.display = 'none';
                 }

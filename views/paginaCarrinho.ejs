@@ -4,7 +4,7 @@
 <title>Carrinho</title>
 </head>
 <body>
-<%- include('partes/menuNavecacao') %>
+    <%- include('partes/menuNavecacao') %>
     <main class="conteudo">
         <h1 id="title">CARRINHO</h1>
 
@@ -14,12 +14,13 @@
             </aside>
             <section id="carrinho">
                 <h2>Itens no Carrinho</h2>
-                <ul id="ulItensCarrinho">
 
+                <ul id="ulItensCarrinho">
                     <!-- ITEM 1 -->
+
                     <li class="carItem" id="cur_depilacao">
                         <div class="carCurNome" >Depilação</div>
-                        
+
                         <!-- gambiarra provisoria -->
                         <div id="gambiarra">
                         <span>R$</span>
@@ -27,19 +28,19 @@
                         <span>,00</span>
                         </div>
 
-                        <div class="carCurQtde" id="cur_depilacao">
+                        <div class="carCurQtde">
                             <p>Quantidade</p>
-                            <button onclick="addQtde('#cur_depilacao')">+</button>
+                            <button onclick="addQtde('#cur_depilacao', 0)" class="qtdeAddButton">+</button>
                             <input type="number" class="txtQtde" value="1" disabled="true" min="1">
-                            <button onclick="subQtde('#cur_depilacao')" id="qtdeSubButton">-</button>
+                            <button onclick="subQtde('#cur_depilacao', 0)" class="qtdeSubButton">-</button>
                         </div>
                     </li>
 
                     <!-- ITEM 2 -->
 
-                    <li class="carItem">
-                        <div class="carCurNome">Harmonização Facial</div>
-                        
+                    <li class="carItem" id="cur_harm_facial">
+                        <div class="carCurNome" >Harmonização Facial</div>
+
                         <!-- gambiarra provisoria -->
                         <div id="gambiarra">
                         <span>R$</span>
@@ -47,88 +48,33 @@
                         <span>,00</span>
                         </div>
 
-                        <div class="carCurQtde" id="cur_harm_facial">
+                        <div class="carCurQtde">
                             <p>Quantidade</p>
-                            <button onclick="addQtde('#cur_harm_facial')">+</button>
+                            <button onclick="addQtde('#cur_harm_facial', 1)" class="qtdeAddButton">+</button>
                             <input type="number" class="txtQtde" value="1" disabled="true" min="1">
-                            <button onclick="subQtde('#cur_harm_facial')" id="qtdeSubButton">-</button>
+                            <button onclick="subQtde('#cur_harm_facial', 1)" class="qtdeSubButton">-</button>
                         </div>
                     </li>
 
                 </ul>
+
+                <!-- CALCULO DO TOTAL -->
+
                 <div id="carTotal">
                     <p id="txtCupom">Adicionar cupom de desconto</p>
                     <input type="text">
                     <h2>Total:</h2>
 
                     <span>R$</span>
-                    <input type="number" id="showTotal">
+                    <input type="number" id="showTotal" value="0">
                     <span>,00</span>
-                    
+
                 <div>
             </section>
 
         </section>
     </main>
-<%- include('partes/footer') %>
-    <script>
-
-// Script para valor TOTAL
-
-        
-        let showTotal = document.querySelector('#showTotal');
-
-
-
-// Script para controle de quantidades
-        // let itemValor = document.querySelector('.itemValor').value;
-        // let boxValor = document.querySelector('.itemValor');
-
-        
-        let quantidade = 1;
-        let btnSub = document.querySelector('#qtdeSubButton')
-        let beforeValor = 0
-
-        if (quantidade == 1) { btnSub.setAttribute('style', 'opacity: .1; cursor: not-allowed;')} 
-        
-        function addQtde(curNome) {
-            // calcular quantidade
-            let produto = document.querySelector(curNome)
-            let boxQtde = produto.children[2].querySelector('.txtQtde');
-            quantidade += 1;
-            boxQtde.value = quantidade;
-            btnSub.setAttribute('style', 'opacity: 1; cursor: pointer;')
-
-            // multuplicar quantidade por valor
-
-        }
-
-        function subQtde(curNome) {
-            let produto = document.querySelector(curNome)
-            let boxQtde = produto.children[2].querySelector('.txtQtde');
-            let boxValor = produto.children[1].querySelector('.itemValor');
-            let itemValor = boxValor.value
-            if (quantidade == 1) {
-                btnSub.setAttribute('style', 'opacity: .1; cursor: not-allowed;')
-                return;
-            } else {
-                quantidade -= 1;
-                boxQtde.value = quantidade;
-                boxValor.value -= itemValor;
-                if (quantidade == 1) {
-                    btnSub.setAttribute('style', 'opacity: .1; cursor: not-allowed;')
-                    return;
-                }
-            }
-        }
-
-
-
-
-
-
-
-
-    </script>
+    <%- include('partes/footer') %>
+    <script type="text/javascript" src="/scripts/carrinhoScript.js"></script>
 </body>
 </html>
