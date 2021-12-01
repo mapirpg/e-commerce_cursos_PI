@@ -27,7 +27,7 @@ h1#title{
 .curBox{
     display: flex;
     overflow-x: hidden;
-    margin-right: 0px;
+    padding-right: 2%;
     margin-bottom: 2%;
 }
 #moveTodo{

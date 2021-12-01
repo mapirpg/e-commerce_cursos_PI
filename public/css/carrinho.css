@@ -5,6 +5,7 @@
     height: 100%;
     padding-bottom: 10%;
 }
+
 h1#title{
     text-align: center;
     text-shadow: 1px 1px 2px #FFD700, 0 0 1em #FFDD4C, 0 0 0.2em white;
@@ -13,7 +14,7 @@ h1#title{
     padding-top: 2.5%;
     margin-top: 5%;
     font-size: 50px;
-    background-image: url('/images/img_titulo_carrinho.jpeg');
+    background-image: url('/images/carrinho/img_titulo_carrinho.jpeg');
     background-position: center;
     background-size: cover;
     color: white;
@@ -123,6 +124,11 @@ section#carrinho{
     border: none;
 }
 
+#showTotal, #boxDesconto{
+  background-color: white;
+  text-align: center;
+}
+
 #carTotal h2{
     margin: auto;
 }
@@ -133,5 +139,158 @@ section#carrinho{
     width: 25%;
     margin: auto;
     margin-right: 0;
+}
+
+/* Estilo modal de cupons */
+
+#btnToCupom {
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+}
+
+.highlights input{
+  width: 0;
+  height: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s 0.5s ease-in-out;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-width: 600px;
+  min-width: 360px;
+  max-height: 85%;
+  height: 50%;
+  overflow: auto;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  z-index: 2;
+  opacity: 0;
+  border-radius: 3px;
+  background: #fff;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+  
+.modal-content p {
+  padding-top: 10px;
+  text-align: justify;
+}
+
+.modal-content label{
+  border: none;
+  background-color: #FFEA98;
+  padding:  5px;
+}
+
+.addCodDesconto{
+  border: none;
+  background-color: #FFEA98;
+  padding:  5px;
+}
+
+#codInvalido{
+  color: red;
+  text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.5);
+  display: none;
+}
+
+#codValido{
+  color: green;
+  text-shadow: 1px 1px 3px rgba(0, 128, 0, 0.5);
+  display: none;
+}
+
+#outroCupom{
+  color: red;
+  text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.5);
+  display: none;
+}
+
+#outroCupom span{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modalClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modalClose:after {
+  content: "X";
+  float: right;
+  margin: 5px 5px 0 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 3px #000;
+}
+
+input[id*="modalDescontos"] {
+  position: fixed;
+  left: -9999px;
+  top: 50%;
+  opacity: 0;
+}
+
+input[id*="modalDescontos"]:checked + div.modal{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+input[id*="modalDescontos"]:checked + div.modal .modalContent {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-transition-delay: 0.5s;
+  -ms-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#teste{
+  margin-top: 10px;
+  padding: 0;
 }
 

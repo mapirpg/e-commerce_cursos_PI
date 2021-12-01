@@ -8,15 +8,20 @@
     const btnAddAll = document.querySelectorAll('.qtdeAddButton');
     let produtosValores = document.querySelectorAll('.itemValor');
     let boxTotal = document.querySelector('#showTotal');
+    let desconto = (document.querySelector('#boxDesconto').value)/100;
+    console.log(desconto);
+
 
     for (i = 0; i < btnSubAll.length; i++) {
+        console.log(desconto);
         btnSubAll[i].setAttribute('style', 'opacity: .3; cursor: not-allowed;');
         quantidade[i] = 1;
         beforeClick[i] = 0;
         beforeValor[i] = 0;
         toTotal[i] = Number(produtosValores[i].value);
         btnAddAll[i].addEventListener("click", function (event) {
-            boxTotal.value = toTotal.reduce(function(boxTotal, i) {return boxTotal + i;});;
+            boxTotal.value = toTotal.reduce(function(boxTotal, i) {return boxTotal + i});
+            console.log(desconto);
         });
         btnSubAll[i].addEventListener("click", function (event) {
             boxTotal.value = toTotal.reduce(function(boxTotal, i) {return boxTotal + i;});;
