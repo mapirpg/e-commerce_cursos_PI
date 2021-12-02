@@ -5,262 +5,106 @@
 </head>
 
 <body>
-    <%- include('partes/menuNavecacao') %>
-    
-    <main class="conteudo">
-        <h1 id="title">CARRINHO</h1>
+	<%- include('partes/menuNavecacao') %>
+	
+	<main class="conteudo">
+		<h1 id="title">CARRINHO</h1>
 
-        <section id="conteudoCarrinho">
+		<section id="conteudoCarrinho">
+			<section id="carrinho">
+				<h2>Itens no Carrinho</h2>
 
-            <aside id="maisProdutos">
-            </aside>
-            <section id="carrinho">
-                <h2>Itens no Carrinho</h2>
+				<ul id="ulItensCarrinho">
+					<!-- ITEM 1 -->
 
-                <ul id="ulItensCarrinho">
-                    <!-- ITEM 1 -->
+					<li class="carItem" id="cur_depilacao">
+						<div class="curInfo">
+							<div class="carCurNome" >Depilação</div>
 
-                    <li class="carItem" id="cur_depilacao">
-                        <div class="carCurNome" >Depilação</div>
+							<!-- gambiarra provisoria -->
+							<div class="gambiarra">
+							<span>R$</span>
+							<input type="number" value="200" class="itemValor" disabled="true">
+							<span>,00</span>
+							</div>
+						</div>
 
-                        <!-- gambiarra provisoria -->
-                        <div id="gambiarra">
-                        <span>R$</span>
-                        <input type="number" value="200" class="itemValor" disabled="true">
-                        <span>,00</span>
-                        </div>
+						<div class="carCurQtde">
+							<p>Quantidade</p>
+							<button onclick="addQtde('#cur_depilacao', 0)" class="qtdeAddButton">+</button>
+							<input type="number" class="txtQtde" value="1" disabled="true" min="1">
+							<button onclick="subQtde('#cur_depilacao', 0)" class="qtdeSubButton">-</button>
+							<input type="button" class="removerProduto" value=&#128465 title="Remover Produto" onclick="removerProduto('#cur_depilacao', 0)">
+						</div>
+					</li>
 
-                        <div class="carCurQtde">
-                            <p>Quantidade</p>
-                            <button onclick="addQtde('#cur_depilacao', 0)" class="qtdeAddButton">+</button>
-                            <input type="number" class="txtQtde" value="1" disabled="true" min="1">
-                            <button onclick="subQtde('#cur_depilacao', 0)" class="qtdeSubButton">-</button>
-                        </div>
-                    </li>
+						<!-- ITEM 2 -->
 
-                    <!-- ITEM 2 -->
+					<li class="carItem" id="cur_harm_facial">
+						<div class="curInfo">
+							<div class="carCurNome" >Harmonização Facial</div>
 
-                    <li class="carItem" id="cur_harm_facial">
-                        <div class="carCurNome" >Harmonização Facial</div>
+							<!-- gambiarra provisoria -->
+							<div class="gambiarra">
+							<span>R$</span>
+							<input type="number" value="500" class="itemValor" disabled="true">
+							<span>,00</span>
+							</div>
+						</div>
 
-                        <!-- gambiarra provisoria -->
-                        <div id="gambiarra">
-                        <span>R$</span>
-                        <input type="number" value="500" class="itemValor" disabled="true">
-                        <span>,00</span>
-                        </div>
+						<div class="carCurQtde">
+							<p>Quantidade</p>
+							<button onclick="addQtde('#cur_harm_facial', 1)" class="qtdeAddButton">+</button>
+							<input type="number" class="txtQtde" value="1" disabled="true" min="1">
+							<button onclick="subQtde('#cur_harm_facial', 1)" class="qtdeSubButton">-</button>
+							<input type="button" class="removerProduto" value=&#128465 title="Remover Produto" onclick="removerProduto('#cur_harm_facial', 1)">
+						</div>
+					</li>
+				</ul>
 
-                        <div class="carCurQtde">
-                            <p>Quantidade</p>
-                            <button onclick="addQtde('#cur_harm_facial', 1)" class="qtdeAddButton">+</button>
-                            <input type="number" class="txtQtde" value="1" disabled="true" min="1">
-                            <button onclick="subQtde('#cur_harm_facial', 1)" class="qtdeSubButton">-</button>
-                        </div>
-                    </li>
-                </ul>
+					<!-- CALCULO DO TOTAL -->
 
-                <!-- CALCULO DO TOTAL -->
+				<div id="carTotal">
+						<!-- Botão adicionar cupom -->
+						<div class="highlights">
+								<div class="highlights-items">
+										<label id="btnToCupom" for="modalDescontos" onclick="toDesconto()">Adicionar cupom de descontos</label>
+										<input type="radio" name="highlights" checked="checked" id="modalSelector"/>
+										<input type="text" id="boxDesconto" disabled> 
+										<span>%</span>
+								</div>
+						</div>
+						<div class="mediaTotal">
+							<p>Total:</P>
+							<span>R$</span>
+							<input type="number" id="showTotal" value="0" disabled>
+							<span>,00</span>
+						</div>
+				</div>
+							
+			</section>
+			<!-- Frame Modal de descontos -->
+			<input type="checkbox" id="modalDescontos" />
+			<div class="modal">
+				<div class="modalContent">
+					<h4>Dgite o código do cupom</h4>
+					<div>
+						<input type="text" id="codDesconto">
+						<button for="modalDescontos" class="addCodDesconto" onclick="addDesconto()" >Adicionar</button>
+					</div>
+					<p id="codInvalido">Código inválido &#129320; !</p>
+					<p id="codValido">Cupom validado &#128521; !</p>
+					<p id="outroCupom">
+						Um cupom já foi adicionado.<br>
+						Clique <span onclick="removeCupom()">aqui</span> para remover o desconto.
+					</p>
+				</div>
+					<label class="modalBackground" for="modalDescontos"></label>
+			</div>
 
-                <div id="carTotal">
-                    <!-- Botão adicionar cupom -->
-                    <div class="highlights">
-                        <div class="highlights-item">
-                            <label id="btnToCupom" for="modalDescontos" onclick="toDesconto()">Adicionar cupom de descontos</label>
-                            <input type="radio" name="highlights" checked="checked" />
-                        </div>
-                    </div>
-                    <input type="text" id="boxDesconto" disabled> 
-                    <span>%</span>
-                    <h2>Total:</h2>
-
-                    <span>R$</span>
-                    <input type="number" id="showTotal" value="0">
-                    <span>,00</span>
-
-                <div>
-                    
-            </section>
-            <!-- Frame Modal de descontos -->
-            <input type="checkbox" id="modalDescontos" />
-            <div class="modal">
-                <div class="modalContent">
-                    <h4>Dgite o código do cupom</h4>
-                    <div>
-                        <input type="text" id="codDesconto">
-                        <button for="modalDescontos" class="addCodDesconto" onclick="addDesconto()" >Adicionar</button>
-                    </div>
-                    <p id="codInvalido">Código inválido &#129320; !</p>
-                    <p id="codValido">Cupom validado &#128521; !</p>
-                    <p id="outroCupom">
-                        Um cupom já foi adicionado.<br>
-                        Clique <span onclick="removeCupom()">aqui</span> para remover o desconto.
-                    </p>
-                </div>
-                <label class="modalClose" for="modalDescontos"></label>
-            </div>
-
-        </section>
-    </main>
+		</section>
+	</main>
     <%- include('partes/footer') %>
-    <!-- <script type="text/javascript" src="/scripts/carrinhoScript.js"> -->
-    <script>
-            // Script para controle de quantidades
-    let quantidade = [];
-    let beforeClick = [];
-    let beforeValor = [];
-    let toTotal = [];
-    const btnSubAll = document.querySelectorAll('.qtdeSubButton');
-    const btnAddAll = document.querySelectorAll('.qtdeAddButton');
-    let produtosValores = document.querySelectorAll('.itemValor');
-    let boxTotal = document.querySelector('#showTotal');
-    let boxDesconto = document.querySelector('#boxDesconto');
-    let codDesconto = document.querySelector('#codDesconto');
-    let btnAddDesconto = document.querySelector('.addCodDesconto')
-    let desconto = 0
-    let invalido = document.querySelector('#codInvalido');
-    let valido = document.querySelector('#codValido');
-    let outroCupom = document.querySelector('#outroCupom');
-    // códigos de desconto
-    let desconto1 = ['a', 0.1];
-    let desconto2 = ['b', 0.2];
-    let desconto3 = ['c', 0.05];
-    // atribuição de valores padão às arrays
-    for (i = 0; i < btnSubAll.length; i++) {
-        btnSubAll[i].setAttribute('style', 'opacity: .3; cursor: not-allowed;');
-        quantidade[i] = 1;
-        beforeClick[i] = 0;
-        beforeValor[i] = 0;
-        // calculo do Total
-        toTotal[i] = Number(produtosValores[i].value);
-        btnAddAll[i].addEventListener("click", function (event) {
-            boxTotal.value = toTotal.reduce(function(boxTotal, i) {return boxTotal + i;})
-        });
-        btnSubAll[i].addEventListener("click", function (event) {
-            boxTotal.value = toTotal.reduce(function(boxTotal, i) {return boxTotal + i;})
-        });
-    };
-
-    // Total Inicial
-    boxTotal.value = toTotal.reduce(function(boxTotal, i) {return boxTotal + i;});
-
-    // Botão para abrir o modal de adicionar desconto
-    function toDesconto() {
-        if (desconto == desconto1[1] || desconto == desconto2[1] || desconto == desconto3[1]) {
-            outroCupom.setAttribute('style', 'display: inline;');
-            btnAddDesconto.setAttribute('style', 'display: none');
-            return;
-        } else {
-        codDesconto.value = '';
-        valido.setAttribute('style', 'display: none;');
-        invalido.setAttribute('style', 'display: none;');
-        btnAddDesconto.setAttribute('style', 'display: inline;')
-        }
-    }
-
-    
-    function addDesconto() {
-        // se cupom repetido
-        if (desconto == desconto1[1] || desconto == desconto2[1] || desconto == desconto3[1]) {
-            outroCupom.setAttribute('style', 'display: inline;');
-            btnAddDesconto.setAttribute('style', 'display: none');
-            return;
-        } else {
-            // se cupom válido
-        switch (codDesconto.value) {
-            case desconto1[0]:
-                desconto = desconto1[1];
-                valido.setAttribute('style', 'display: flex;');
-                boxDesconto.value = 'desconto de '+ (desconto*100)+'%';
-                btnAddDesconto.setAttribute('style', 'display: none');
-                invalido.setAttribute('style', 'display: none;');
-                break;
-            case desconto2[0]:
-                desconto = desconto2[1];
-                valido.setAttribute('style', 'display: flex;');
-                boxDesconto.value = 'desconto de '+ (desconto*100)+'%';
-                btnAddDesconto.setAttribute('style', 'display: none');
-                invalido.setAttribute('style', 'display: none;');
-                break;
-            case desconto3[0]: 
-                desconto = desconto3[1];
-                valido.setAttribute('style', 'display: flex;');
-                boxDesconto.value = 'desconto de '+ (desconto*100)+'%';
-                btnAddDesconto.setAttribute('style', 'display: none');
-                invalido.setAttribute('style', 'display: none;');
-                break;
-            default:
-                // se cupom inválido
-                console.log('desconto saida:',desconto);
-                invalido.setAttribute('style', 'display: flex;')
-                boxDesconto.value = 'nenhum desconto adicionado';
-                return;
-                break;
-        };
-        boxTotal.value -= (boxTotal.value * desconto);
-        };
-   };
-
-    // Remover cupom
-
-    function removeCupom() {
-        desconto = 0
-        boxTotal.value = toTotal.reduce(function(boxTotal, i) {return boxTotal + i;});
-        btnAddDesconto.setAttribute('style', 'display: inline');
-        outroCupom.setAttribute('style', 'display: none;');
-        boxDesconto.value = '';
-    }
-
-   
-// Adicionar quantidade
-
-    function addQtde(curNome, i) { 
-        boxDesconto.value = 'nenhum desconto adicionado';
-        desconto = 0;
-        let produto = document.querySelector(curNome);
-            // Habilita o botão "-"
-        let btnSub = produto.children[2].querySelector('.qtdeSubButton').setAttribute('style', 'opacity: 1; cursor: pointer;');
-            // calcular quantidade
-        quantidade[i] += 1;
-        let boxQtde = produto.children[2].querySelector('.txtQtde').value = quantidade[i];
-            // multuplicar quantidade por valor
-        let itemValor = produto.children[1].querySelector('.itemValor').value;
-        let boxValor = produto.children[1].querySelector('.itemValor');
-        beforeClick[i] += 1;
-        if (beforeClick[i] <= 1) {
-            beforeValor[i] = itemValor;
-            boxValor.value = itemValor * quantidade[i];
-        };
-        boxValor.value = beforeValor[i] * quantidade[i];
-        toTotal[i] = Number(boxValor.value);
-    };
-
-// subtrair quantidade
-
-    function subQtde(curNome, i) {
-        boxDesconto.value = 'nenhum desconto adicionado';
-        desconto = 0; 
-        let produto = document.querySelector(curNome);
-        let btnSub = produto.children[2].querySelector('.qtdeSubButton');
-        let boxQtde = produto.children[2].querySelector('.txtQtde');
-        let boxValor = produto.children[1].querySelector('.itemValor');
-            // desabilitar botão "-"
-        if (quantidade[i] == 1) {
-            btnSub.setAttribute('style', 'opacity: .3; cursor: not-allowed;');
-            return;
-        } else {
-                // calcular quantidade
-            boxQtde.value = quantidade[i] -= 1;
-                // subtrai quantidade do valor
-            boxValor.value -= beforeValor[i];
-                // desabilitar botão "-"
-            if (quantidade[i] == 1) {
-                btnSub.setAttribute('style', 'opacity: .3; cursor: not-allowed;');
-                toTotal[i] = Number(boxValor.value);
-                return;
-            };
-        };
-        toTotal[i] = Number(boxValor.value);
-    };
-    </script>
+    <script type="text/javascript" src="/scripts/carrinhoScript.js"></script>
 </body>
 </html>

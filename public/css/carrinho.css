@@ -29,19 +29,13 @@ section#conteudoCarrinho{
     height: 100%;
     margin: 2.5% auto;
 }
-aside#maisProdutos{
-    border: 1px solid black;
-    height: 100%;
-    max-height: 400px;
-    width: 15%;
-}
 
 section#carrinho{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     height: 100%;
-    width: 85%;
+    width: 98%;
     margin: 0;
     padding: 0;
 }
@@ -72,6 +66,12 @@ section#carrinho{
     height: 30px;
 }
 
+.curInfo{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
 #gambiarra{
     justify-self: center;
 }
@@ -84,24 +84,22 @@ section#carrinho{
     padding: 0;
 }
 
-.carItem div{
-    width: 30%;
-    text-align: center;
-}
 .carCurQtde{
     display: flex;
 }
 
 .carCurQtde p{
-    width: 30%;
+    width: 32%;
     margin: 0 auto;
     padding: 0;
 }
 
 .carCurQtde input{
-    width: 15%;
+    width: 20%;
     user-select: none;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .carCurQtde button{
@@ -110,51 +108,83 @@ section#carrinho{
     background-color: #FFEA98;
 }
 
+.carCurQtde button:hover{
+  background-color: #FFF8DD ;
+}
+
+/* parte inferior */
+
 #carTotal{
     display: flex;
     background-color: #FFEA98;
     width: 100%;
-    height: 40px;
+    height: 50px;
     margin: 0;
     padding: 0;
 }
-#carTotal input{
-    height: 80%;
-    margin: auto;
-    border: none;
+
+.highlights{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100%;
+}
+
+#modalSelector{
+  display: none;
+}
+#btnToCupom {
+  padding: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  height: 60%;
+  margin: 5px;
+  align-self: center;
+}
+
+#btnToCupom:hover{
+  background-color: #FFF8DD ;
+}
+
+.mediaTotal{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mediaTotal p{
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 #showTotal, #boxDesconto{
   background-color: white;
   text-align: center;
+  margin: 5px;
+  padding: 1px;
+  height: 80%;
+  border: none;  
 }
 
-#carTotal h2{
-    margin: auto;
-}
-
-#txtCupom{
-    font-size: 16px;
-    text-align: center;
-    width: 25%;
-    margin: auto;
-    margin-right: 0;
-}
-
-/* Estilo modal de cupons */
-
-#btnToCupom {
-  display: flex;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 3px;
+.removerProduto{
+  background-color: rgba(255, 0, 0, 0.5);
   border: none;
 }
 
-.highlights input{
-  width: 0;
-  height: 0;
+.removerProduto:hover{
+  background-color: red;
 }
+
+
+/* Estilo modal de cupons */
+
 
 .modal {
   position: fixed;
@@ -173,18 +203,14 @@ section#carrinho{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  max-width: 600px;
-  min-width: 360px;
-  max-height: 85%;
   height: 50%;
-  overflow: auto;
+  width: 50%;
+  overflow: hidden;
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   z-index: 2;
   opacity: 0;
-  border-radius: 3px;
   background: #fff;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -192,6 +218,7 @@ section#carrinho{
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+
   
 .modal-content p {
   padding-top: 10px;
@@ -204,11 +231,20 @@ section#carrinho{
   padding:  5px;
 }
 
+#codDesconto{
+  text-transform: lowercase;
+}
+
 .addCodDesconto{
   border: none;
   background-color: #FFEA98;
   padding:  5px;
 }
+
+.addCodDesconto:hover{
+  background-color: #FFF8DD ;
+}
+  
 
 #codInvalido{
   color: red;
@@ -234,7 +270,7 @@ section#carrinho{
   cursor: pointer;
 }
 
-.modalClose {
+.modalBackground {
   position: absolute;
   top: 0;
   right: 0;
@@ -243,23 +279,23 @@ section#carrinho{
   background-color: rgba(0,0,0,0.5);
 }
 
-.modalClose:after {
+.modalBackground::after {
   content: "X";
-  float: right;
-  margin: 5px 5px 0 0;
-  width: 30px;
+  width: 50px;
   height: 30px;
+  line-height: 30px;
   position: relative;
+  padding: 9px 15px;
+  top: 19%;
+  left: 72%;
   z-index: 3;
   text-align: center;
-  line-height: 30px;
   cursor: pointer;
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 20px;
-  box-shadow: 0 0 3px #000;
+  background-color: #FFEA98;
+  border-radius: 25px;
 }
 
-input[id*="modalDescontos"] {
+input[id*="modalDescontos"]{
   position: fixed;
   left: -9999px;
   top: 50%;
@@ -289,8 +325,229 @@ input[id*="modalDescontos"]:checked + div.modal .modalContent {
   align-items: center;
 }
 
-#teste{
-  margin-top: 10px;
-  padding: 0;
-}
+@media(max-width: 400px){ 
+  .carItem{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: 20%;
+    border: 1px solid #FFDD4C;
+    padding: 2%;
+    margin-bottom: 1%;
+  }
 
+  /* parte superior */
+  .curInfo{
+    display: flex;
+    width: 100%;
+  }
+
+  .carCurNome{
+    width: 50%;
+    text-align: center;
+  }
+
+  .gambiarra{
+    width: 50%;
+    text-align: center;
+  }
+  .itemValor{
+    background-color: transparent;
+    border: none;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* parte inferior */
+
+  .carCurQtde{
+    width: 100%;
+  }
+  .carCurQtde p{
+    width: 40%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .carCurQtde input{
+    width: 10%;
+    user-select: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .carCurQtde button{
+    width: 10%;
+    border: none;
+    background-color: #FFEA98;
+    height: 100%;
+ }
+
+ /* rodape */
+ #carTotal{
+   display: flex;
+   flex-flow: wrap;
+   height: 90px;
+ }
+
+  .highlights{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 40px;
+    width: 100%;
+    margin: 0;
+  }
+
+  #btnToCupom{
+    font-size: 12px;
+  }
+
+  .highlights-items{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .mediaTotal{
+    height: 40px;
+    width: 100%;
+  }
+
+  /* Modal */
+
+  
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 2;
+    opacity: 0;
+    background: #fff;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    padding: 5px;
+    width: 325px;
+  }
+  
+    
+  .modal-content p {
+    text-align: justify;
+  }
+  
+  .modal-content label{
+    border: none;
+    background-color: #FFEA98;
+  }
+
+  .modal-content input{
+    width: 10px;
+  }
+  
+  #codDesconto{
+    text-transform: lowercase;
+  }
+  
+  .addCodDesconto{
+    border: none;
+    background-color: #FFEA98;
+  }
+  
+  .addCodDesconto:hover{
+    background-color: #FFF8DD ;
+  }
+    
+  
+  #codInvalido{
+    color: red;
+    text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.5);
+    display: none;
+  }
+  
+  #codValido{
+    color: green;
+    text-shadow: 1px 1px 3px rgba(0, 128, 0, 0.5);
+    display: none;
+  }
+  
+  #outroCupom{
+    color: red;
+    text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.5);
+    display: none;
+  }
+  
+  #outroCupom span{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .modalBackground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  /* .modalBackground::after {
+    content: "X";
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    padding: 9px 15px;
+    top: 19%;
+    left: 72%;
+    z-index: 3;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFEA98;
+    border-radius: 25px;
+  } */
+  
+  input[id*="modalDescontos"]{
+    position: fixed;
+    left: -9999px;
+    top: 50%;
+    opacity: 0;
+  }
+  
+  input[id*="modalDescontos"]:checked + div.modal{
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  
+  input[id*="modalDescontos"]:checked + div.modal .modalContent {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+  }
+  .modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
