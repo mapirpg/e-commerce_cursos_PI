@@ -1,32 +1,16 @@
 {
-  "name": "e-commerce_cursos_pi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "body": "^5.1.0",
-    "css": "^3.0.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "flickity": "^2.2.2",
-    "html-pdf": "^3.0.1",
-    "init": "^0.1.2",
-    "jquery": "^3.6.0",
-    "nodemon": "^2.0.15"
-  },
-  "devDependencies": {},
+  "name": "e-commerce-cursos-pi",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index"
+    "start": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mapirpg/e-commerce_cursos_PI.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mapirpg/e-commerce_cursos_PI/issues"
-  },
-  "homepage": "https://github.com/mapirpg/e-commerce_cursos_PI#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  }
 }
