@@ -46,3 +46,8 @@
 .eventoTexto{
         width: 90%;
 }
+.eventoTexto2{
+    width: 90%;
+    font-weight: bold;
+    font-size: 3ch;
+}

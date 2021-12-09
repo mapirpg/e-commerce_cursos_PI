@@ -96,6 +96,7 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+        
 }
 .slider__image {
   font-size: 2.7rem;
