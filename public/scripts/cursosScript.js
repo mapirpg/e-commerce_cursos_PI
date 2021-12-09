@@ -1,5 +1,4 @@
-
-// verificação do frame inferior com detalhamento do curso
+    // verificação do frame inferior com detalhamento do curso
     let beforeClick = undefined;
     let seccondClick = false;
     let open = false;   
@@ -30,7 +29,10 @@
             open = true;
             seccondClick = false;
         } else {
-            frame.removeAttribute('src');   //---------------- remove o src do frame
+        //    frame.removeAttribute('src');   //---------------- remove o src do frame
+            console.log('window H', window.scrollY);
+            window.scrollY += 10;
+            console.log('window H', window.scrollY);
             beforeClick.setAttribute('style', 'background-color: "";');     //---------------- muda o valor do background do titulo anterior para branco
             btnTitle.setAttribute('style', 'background-color: "";');    //---------------- muda o valor do background do titulo para branco
             section.setAttribute('style', 'display: none;');    //---------------- fecha o frame
@@ -208,4 +210,34 @@
                 moving ='';
             }, 4)
         };
+    };
+
+// Função para arrastar caixa de cursos
+
+    // const boxDragCursor = document.querySelector('.curBox');
+
+    // function toDragCursor(event){
+    //     setTimeout(() => {
+    //     event.layerX = window.scrollWidth
+    //     boxDragCursor.scrollLeft = event.layerX;
+    //     console.log('box: ', boxDragCursor.scrollLeft);
+    //     console.log('mouse', (event.layerX *.5) - 400);
+    //     }, 100);
+    // };
+
+    // boxDragCursor.addEventListener('mousedown',function() {
+    //     setTimeout(() => {
+    //         boxDragCursor.addEventListener('mousemove',toDragCursor);
+    //     }, 100);
+    // });
+
+    // boxDragCursor.addEventListener('mouseup', function(){  
+    //     boxDragCursor.removeEventListener('mousemove',toDragCursor);
+    // });
+
+// Função para arrastar caixa de cursos, caso touch == true
+
+    function dragBox() {
+        const curBoxDrag = document.querySelector('.curBox');
+        curBoxDrag.setAttribute('style', 'overflow-x: auto;');
     };

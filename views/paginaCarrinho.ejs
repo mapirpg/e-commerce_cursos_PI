@@ -1,0 +1,110 @@
+
+<%- include('partes/inicioHead') %>
+<link rel="stylesheet" href="/css/carrinho.css">
+<title>Carrinho</title>
+</head>
+
+<body>
+	<%- include('partes/menuNavecacao') %>
+	
+	<main class="conteudo">
+		<h1 id="title">CARRINHO</h1>
+
+		<section id="conteudoCarrinho">
+			<section id="carrinho">
+				<h2>Itens no Carrinho</h2>
+
+				<ul id="ulItensCarrinho">
+					<!-- ITEM 1 -->
+
+					<li class="carItem" id="cur_depilacao">
+						<div class="curInfo">
+							<div class="carCurNome" >Depilação</div>
+
+							<!-- gambiarra provisoria -->
+							<div class="gambiarra">
+							<span>R$</span>
+							<input type="number" value="200" class="itemValor" disabled="true">
+							<span>,00</span>
+							</div>
+						</div>
+
+						<div class="carCurQtde">
+							<p>Quantidade</p>
+							<button onclick="addQtde('#cur_depilacao', 0)" class="qtdeAddButton">+</button>
+							<input type="number" class="txtQtde" value="1" disabled="true" min="1">
+							<button onclick="subQtde('#cur_depilacao', 0)" class="qtdeSubButton">-</button>
+							<input type="button" class="removerProduto" value=&#128465 title="Remover Produto" onclick="removerProduto('#cur_depilacao', 0)">
+						</div>
+					</li>
+
+						<!-- ITEM 2 -->
+
+					<li class="carItem" id="cur_harm_facial">
+						<div class="curInfo">
+							<div class="carCurNome" >Harmonização Facial</div>
+
+							<!-- gambiarra provisoria -->
+							<div class="gambiarra">
+							<span>R$</span>
+							<input type="number" value="500" class="itemValor" disabled="true">
+							<span>,00</span>
+							</div>
+						</div>
+
+						<div class="carCurQtde">
+							<p>Quantidade</p>
+							<button onclick="addQtde('#cur_harm_facial', 1)" class="qtdeAddButton">+</button>
+							<input type="number" class="txtQtde" value="1" disabled="true" min="1">
+							<button onclick="subQtde('#cur_harm_facial', 1)" class="qtdeSubButton">-</button>
+							<input type="button" class="removerProduto" value=&#128465 title="Remover Produto" onclick="removerProduto('#cur_harm_facial', 1)">
+						</div>
+					</li>
+				</ul>
+
+					<!-- CALCULO DO TOTAL -->
+
+				<div id="carTotal">
+						<!-- Botão adicionar cupom -->
+						<div class="highlights">
+								<div class="highlights-items">
+										<label id="btnToCupom" for="modalDescontos" onclick="toDesconto()">Adicionar cupom de descontos</label>
+										<input type="radio" name="highlights" checked="checked" id="modalSelector"/>
+										<input type="text" id="boxDesconto" disabled> 
+										<span>%</span>
+								</div>
+						</div>
+						<div class="mediaTotal">
+							<p>Total:</P>
+							<span>R$</span>
+							<input type="number" id="showTotal" value="0" disabled>
+							<span>,00</span>
+						</div>
+				</div>
+							
+			</section>
+			<!-- Frame Modal de descontos -->
+			<input type="checkbox" id="modalDescontos" />
+			<div class="modal">
+				<div class="modalContent">
+					<h4>Dgite o código do cupom</h4>
+					<div>
+						<input type="text" id="codDesconto">
+						<button for="modalDescontos" class="addCodDesconto" onclick="addDesconto()" >Adicionar</button>
+					</div>
+					<p id="codInvalido">Código inválido &#129320; !</p>
+					<p id="codValido">Cupom validado &#128521; !</p>
+					<p id="outroCupom">
+						Um cupom já foi adicionado.<br>
+						Clique <span onclick="removeCupom()">aqui</span> para remover o desconto.
+					</p>
+				</div>
+					<label class="modalBackground" for="modalDescontos"></label>
+			</div>
+
+		</section>
+	</main>
+    <%- include('partes/footer') %>
+    <script type="text/javascript" src="/scripts/carrinhoScript.js"></script>
+</body>
+</html>

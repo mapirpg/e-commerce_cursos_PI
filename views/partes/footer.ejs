@@ -29,22 +29,22 @@
         <div class="linksRedes">
             <div class="redes">
                 <a class="linksRedes" href="http://Facebook.com/" target="_blank">
-                    <img id="imgFace" src="/images/facebook.svg" alt="Facebook">
+                    <img id="imgFace" src="/images/footer/facebook.svg" alt="Facebook">
                 </a>
             </div>
             <div class="redes">
                 <a class="linksRedes"href="http://youtube.com/" target="_blak">
-                    <img id="imgYout" src="/images/youtube.svg" alt="YouTube">
+                    <img id="imgYout" src="/images/footer/youtube.svg" alt="YouTube">
                 </a>
             </div> 
             <div class="redes">
                 <a class="linksRedes"href="http://instagram.com/" target="_blank">
-                    <img id="imgInst" src="/images/instagram.svg" alt="Instagram">
+                    <img id="imgInst" src="/images/footer/instagram.svg" alt="Instagram">
                 </a>
             </div>
         </div>
         <div id="divValid">
-            <img src="iconePesquisa.jpg" id="btnBusca" alt="Buscar"/>
+            <img src="/images/footer/iconePesquisa_footer.jpg" id="btnBusca" alt="Buscar"/>
             <input type="text" id="txtValid" placeholder="Validar Certificado..."/>
         </div>
     </div>    
@@ -63,14 +63,13 @@
         function cookies(){
             const localPref = JSON.parse(window.localStorage.getItem('cookiesPref'))
             const container = document.querySelector('.cookContainer')
-            console.log(localPref)
+            console.log('Aceitou uso de cookies: ', localPref)
                 if (localPref){
                         container.style.display = 'none';
                     }                 
             const save = document.querySelector('.cookSave')
             function cookPref(){
             const pref = Boolean(document.querySelector('.cookAccept').checked)
-            console.log(pref)
                 if (!pref){
                     container.style.display = 'none';
                 }
