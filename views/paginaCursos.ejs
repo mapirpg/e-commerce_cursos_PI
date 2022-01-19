@@ -1,152 +1,82 @@
-
 <%- include('partes/inicioHead') %>
 <link rel="stylesheet" href="/css/cursos.css">
 </head>
 <body>
 <%- include('partes/menuNavecacao') %>
-    <main class="conteudo">
-
-        <h1 id="title">Cursos</h1>
-        
-        <h2>Todos os Cursos</h2>
-        <hr>        
+  <main class="conteudo">
+    <h1 id="title">Cursos</h1>
+    <h2>Todos os Cursos</h2>
+    <hr>        
     <section name="cursosTodos" class="curBox" id="moveTodo" ontouchstart="dragBox()">
-        
-            <!-- DIV DE BOTÕES DE MOVIMENTAÇÃO DO FRAME -->
+      <!-- DIV DE BOTÕES DE MOVIMENTAÇÃO DO FRAME -->
+      <div class="moveButtons" id="btnTodoDiv">
+        <input 
+          class="boxToLeft" 
+          id="btnTodoL" 
+          type="button" 
+          value="<" 
+          onmouseover="moveToLeft(btnTodoL)" 
+          onmouseenter="enableRightMove(btnTodoR)" 
+          onmouseout="stopMove('stop')"
+        >
+        <input 
+          class="boxToRight" 
+          id="btnTodoR" 
+          type="button" 
+          value=">" 
+          onmouseover="moveToRight(btnTodoR)" 
+          onmouseenter="enableLeftMove(btnTodoL)" 
+          onmouseout="stopMove('stop')"
+        >
+      </div>
 
-        <div class="moveButtons" id="btnTodoDiv">
+      <!-- CURSOS -->
+      <% cursos.forEach((curso) => { %>
+      <article class="curContainer" id="cur_harm_facial"> 
+          <div class="curImg">
+              <img 
+                src="<%= curso.img %>>" 
+                alt="Harmonização Facial" 
+                draggable="false"
+              >
+          </div>
+          <div class="curInfo">
+              <a onclick="toFrame('#cur_harm_facial', '#title_harm_facial')">
+                  <p class="curNome" id="title_harm_facial" >
 
-            <input class="boxToLeft" id="btnTodoL" type="button" value="<" onmouseover="moveToLeft(btnTodoL)" onmouseenter="enableRightMove(btnTodoR)" onmouseout="stopMove('stop')">
+                    <%= curso.nome%>
 
-            <input class="boxToRight" id="btnTodoR" type="button" value=">" onmouseover="moveToRight(btnTodoR)" onmouseenter="enableLeftMove(btnTodoL)" onmouseout="stopMove('stop')">
-        </div>
+                  </p>
+              </a>
+              <p class="curCarga" >
+                Carga Horária:&nbsp;<strong>
 
-        <!-- CURSO HAMONIZAÇÃO FACIAL -->
+                  <%= curso.cargaHoraria %>h
 
-            <article class="curContainer" id="cur_harm_facial"> 
-                <div class="curImg">
-                    <img src="/images/cursos/cur_harm_facial.png" alt="Harmonização Facial" draggable="false">
-                </div>
-                <div class="curInfo">
-                    <a onclick="toFrame('#cur_harm_facial', '#title_harm_facial')">
-                        <p class="curNome" id="title_harm_facial">Harmonização Facial</p>
-                    </a>
-                    <p class="curCarga" >Carga Horária:&nbsp;<strong>50h</strong></p>
-                    <p class="curTutor">Professor(a):&nbsp;<strong>Maria Fernanda da Graça</strong></p>
-                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;100,00</strong></p>
-                </div>
-            </article>
-            
-        <!-- CURSO DEPILAÇÃO -->
-
-            <article class="curContainer" id="cur_depilacao">
-                <div class="curImg">
-                    <img src="/images/cursos/cur_depilacao.png" alt="Depilação" draggable="false">
-                </div>
-                    <div class="curInfo">
-                        <a onclick="toFrame('#cur_depilacao', '#title_depilacao')">
-                            <p class="curNome" id="title_depilacao">Depilação</p>
-                        </a>
-                        <p class="curCarga">Carga Horária:&nbsp;<strong>40h</strong></p>
-                        <p class="curTutor">Professor(a):&nbsp;<strong>José da Silva Prado</strong></p>
-                        <p class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></p>
-                    </div>
-            </article>
-
-        <!-- CURSO TRATAMENTO FACIAL -->
-
-            <article class="curContainer" id="cur_trat_facial">
-                <div class="curImg">
-                    <img src="/images/cursos/cur_trat_facial.png" alt="Tratamento Facial"/ draggable="false">
-                </div>
-                <div class="curInfo">
-                    <a onclick="toFrame('#cur_trat_facial', '#title_trat_facial')">
-                        <p class="curNome" id="title_trat_facial">Tratamento Facial</p>
-                    </a>
-                    <p class="curCarga" >Carga Horária:&nbsp;<strong>30h</strong></p>
-                    <p class="curTutor">Professor(a):&nbsp;<strong>Josiane Fernandes da Cunha</strong></p>
-                    <p class="curVal">Valor:&nbsp;<strong>GRÁTIS&nbsp;!</strong></p>
-                </div>
-            </article>   
-
-        <!-- CURSO SOBRANCELHA -->
-                
-            <article class="curContainer" id="cur_sobrancelha">
-                <div class="curImg">
-                    <img src="/images/cursos/cur_sobrancelha.png" alt="" draggable="false">
-                </div>
-                <div class="curInfo">
-                    <a onclick="toFrame('#cur_sobrancelha', '#title_sobrancelha')">
-                        <p class="curNome" id="title_sobrancelha">Sobrancelha</p>
-                    </a>
-                    <p class="curCarga" >Carga Horária:&nbsp;<strong>100h</strong></p>
-                    <p class="curTutor">Professor(a):&nbsp;<strong>Adalberta Reginalda</strong></p>
-                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;1200,00</strong></p>
-                </div>
-            </article>
-
-        <!-- CURSO MAQUIAGEM -->
-
-            <article class="curContainer" id="cur_maquiagem">
-                <div class="curImg">
-                    <img src="/images/cursos/cur_maquiagem.png" alt="" draggable="false">
-                </div>
-                <div class="curInfo">
-                    <a onclick="toFrame('#cur_maquiagem', '#title_maquiagem')">
-                        <p class="curNome" id="title_maquiagem">Maquiagem</p>
-                    </a>
-                    <p class="curCarga" >Carga Horária:&nbsp;<strong>200h</strong></p>
-                    <p class="curTutor">Professor(a):&nbsp;<strong>Aderbaldo Garcia</strong></p>
-                    <p class="curVal">Valor:&nbsp;<strong>R$&nbsp;500,00</strong></p>
-                </div>
-            </article>           
+                </strong>
+              </p>
+              <p class="curTutor">
+                Professor(a):&nbsp;<strong><%= curso.professor %></strong>
+              </p>
+              <p class="curVal">
+                Valor:&nbsp;<strong> <%= curso.valor > 0.00? 'R$' : '' %>&nbsp;<%=  curso.valor == 0? 'GRÁTIS' : curso.valor %></strong>
+              </p>
+          </div>
+      </article>
+      <% }); %>
     </section>
 
-    <!-- Painel inferior com descrição detalhada dos cursos -->
+  <!-- FRAME COM INFORMAÇÕES DO CURSO -->
 
-    <section name="cursoInd" id="curInd">
-    <iframe id="curFrame">
-        <div id="frameCurInd">
-            <!-- Aqui serárenderizado o frame com descrição do curso -->
-        </div>
-    </iframe>
-    </section>
-<!-- ------------------------------------------------------------------------- -->
-        <h2>Cursos Gratuítos</h2>
-        <hr>
-    <section name="cursosGratuitos" class="curBox" id="moveGrat" ontouchstart="dragBox()" draggable="false">
-        <div class="moveButtons" id="btnGratDiv">
+  <section name="cursoInd" id="curInd">
 
-            <input class="boxToLeft" id="btnGratL" type="button" value="<" onmouseover="moveToLeft(btnGratL)" onmouseenter="enableRightMove(btnGratR)" onmouseout="stopMove('stop')">
-
-            <input class="boxToRight" id="btnGratR" type="button" value=">" onmouseover="moveToRight(btnGratR)" onmouseenter="enableLeftMove(btnGratL)" onmouseout="stopMove('stop')">
-        </div>
-    </section>
-<!-- ------------------------------------------------------------------------- -->
-        <h2>Cursos Pagos</h2>
-        <hr>
-        <section name="cursosPagos" class="curBox" id="movePago" ontouchstart="dragBox()" draggable="false">
-            <div class="moveButtons" id="btnPagoDiv">
-
-                <input class="boxToLeft" id="btnPagoL" type="button" value="<" onmouseover="moveToLeft(btnPagoL)" onmouseenter="enableRightMove(btnPagoR)" onmouseout="stopMove('stop')">
-    
-                <input class="boxToRight" id="btnPagoR" type="button" value=">" onmouseover="moveToRight(btnPagoR)" onmouseenter="enableLeftMove(btnPagoL)" onmouseout="stopMove('stop')">
-            </div>
-        </section>
-<!-- ------------------------------------------------------------------------- -->
-        <h2>Melhores os Cursos</h2>    
-        <hr>
-        <section name="cursosMelhores" class="curBox" id="moveMelh" ontouchstart="dragBox()" draggable="false">
-            <div class="moveButtons" id="btnMelhDiv">
-
-                <input class="boxToLeft" id="btnMelhL" type="button" value="<" onmouseover="moveToLeft(btnMelhL)" onmouseenter="enableRightMove(btnMelhR)" onmouseout="stopMove('stop')">
-    
-                <input class="boxToRight" id="btnMelhR" type="button" value=">" onmouseover="moveToRight(btnMelhR)" onmouseenter="enableLeftMove(btnMelhL)" onmouseout="stopMove('stop')">
-            </div>
-        </section>
-<!-- ------------------------------------------------------------------------- -->
-    </main>
+  </section>
+  </main>
     <%- include('partes/footer') %>
-    <script type="text/javascript" src="/scripts/cursosScript.js"></script>
+
+  <script>
+    const img = require('../public/images/')
+    
+  </script>
 </body>
 </html>

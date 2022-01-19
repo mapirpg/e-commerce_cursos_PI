@@ -51,13 +51,14 @@ h2{
     margin-left: 1vw;
 }
 .curContainer{
+  flex: 1;
     display: flex;
     color: black;
     justify-content: center;
     margin: 0 1%;
     padding: 1%;
-    width: 410px;
     max-width: 410px;
+    min-width: 410px;
     border: 2px solid #FFEA98;
 }
 
