@@ -36,6 +36,7 @@ app.use('/cursos', require('./router/cursosRoute'));
 app.use('/login', require('./router/loginRoute'));
 app.use('/cadastro', require('./router/cadastroRoute'));
 app.use('/nova_senha', require('./router/resetPasswordRoute'));
+app.use('/admin', require('./router/adminRoute'));
 
 // mongo enviando dados
 app.post("/artigo", (req, res) => {
