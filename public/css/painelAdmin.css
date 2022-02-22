@@ -1,0 +1,24 @@
+#menu-coluna{
+    background-color: blue;
+    width: 30%;
+    border-radius: 10%;
+    height: auto;
+}
+
+#retangulo-admin{
+    background-color: burlywood;
+    width: 70%;
+    height: auto;
+    border-radius: 10%;
+ 
+}
+
+.container{
+    background-color: blueviolet;
+    display:flex; 
+    padding:0%;
+    height: auto;
+  
+    
+       
+}
