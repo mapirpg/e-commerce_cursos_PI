@@ -6,12 +6,52 @@
 <div class="container">
 
     <div id="menu-coluna">
-        <h2>dsdshdjs</h2>
         
-        </div>
+        <div id="foto-perfil">
+            <img src="images/admin/perfilAdmin.jpeg">
+            <p>email@gmail.com</p>
+    </div>
+
+    <nav id="menu-opcoes">
+            <a href="#"><h4>Cadastrar Alunos</h4></a> 
+            <br>
+            <a href="#"><h4>Cadastrar Professores</h4></a> 
+            <br>
+            <a href="#"><h4>Cadastrar Cursos/Turmas</h4></a> 
+            <br>
+            <a href="#"><h4>Cadastrar Postagens</h4></a>
+            <br>  
+    </nav>
+
         
+    </div>
         <div id="retangulo-admin" >
-        <h2>sdsd</h2>
+        <form action="POST" class="formulario">
+           <label for="nome">Nome: </label>
+           <input type="text" name="nome" placeholder="Digite o nome completo">
+           <br>
+           <label for="curso">Curso: </label>
+           <select name="turma">
+            <option value="A">Harmonização Facial</option>
+            <option value="B">Depilação</option>
+            <option value="C">Sombrancelha</option>
+        </select>
+           <br>
+           <label for="turma">Turma: </label>
+           <select name="turma">
+               <option value="1">Remota</option>
+               <option value="2">Flexível</option>
+               <option value="3">Presencial</option>
+           </select>
+           <br>
+           <label for="email">E-mail: </label>
+           <input type="email" name="email" placeholder="Digite o email de cadastro do usuário">
+           <br>
+           <label for="matricula">Matrícula: </label>
+           <input type="number" name="matricula" placeholder="Digite apenas números" style="max-width: max-content;">
+           <br>
+
+       </form>
         
         </div>
 
