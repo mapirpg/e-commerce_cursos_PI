@@ -37,6 +37,11 @@
     margin-bottom: 5%;
  }
 
+ #retangulo-admin>h2{
+    text-align: center;
+    padding-top: 30%;
+ }
+
 form{
     padding-top: 5%;
     padding-left: 5%;
