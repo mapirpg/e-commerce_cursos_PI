@@ -1,41 +1,25 @@
 <%- include('partes/inicioHead') %>
-<title>Painel Admin</title>
-<link rel="stylesheet" href="css/painelAdmin.css">
-<%- include('partes/menuNavecacao') %>
+    <title>Painel Admin</title>
+    <link rel="stylesheet" href="css/painelAdmin.css">
+    <%- include('partes/menuNavecacao') %>
 
-<div class="container">
+        <div class="container">
+            <%- include('partes/adminMenu') %>
 
-    <div id="menu-coluna">
-        
-        <div id="foto-perfil">
-            <img src="images/admin/perfilAdmin.jpeg">
-            <p>email@gmail.com</p>
-    </div>
 
-    <nav id="menu-opcoes">
-            <a href="/admin/cadastrar_aluno"><h4>Cadastrar Alunos</h4></a> 
-            <br>
-            <a href="/admin/cadastrar_professor"><h4>Cadastrar Professores</h4></a> 
-            <br>
-            <a href="#"><h4>Cadastrar Cursos/Turmas</h4></a> 
-            <br>
-            <a href="#"><h4>Cadastrar Postagens</h4></a>
-            <br>  
-    </nav>
 
-        
-    </div>
-        <div id="retangulo-admin" >
-        
 
-            <h2>Seja Bem-Vindo ao Sistema de Gerenciamento </h2>
+                <div id="retangulo-admin">
 
-       </form>
-        
+
+                    <h2>Seja Bem-Vindo ao Sistema de Gerenciamento </h2>
+
+                    </form>
+
+                </div>
+
         </div>
 
-</div>
 
 
-
-<%- include('partes/footer') %>
+        <%- include('partes/footer') %>
