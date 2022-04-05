@@ -12,6 +12,7 @@
     "ejs": "~2.6.1",
     "express": "^4.17.2",
     "firebase": "^9.6.5",
+    "git": "^0.1.5",
     "http-errors": "~1.6.3",
     "init": "^0.1.2",
     "mongodb": "^4.3.1",
@@ -22,8 +23,7 @@
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.15.0",
-    "sequelize-cli": "^6.4.1",
-    "yarn": "^1.22.17"
+    "sequelize-cli": "^6.4.1"
   },
   "scripts": {
     "start": "nodemon ./bin/www"
