@@ -3,23 +3,16 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
-const dbConfig = require('./config/database');
-const connection = new Sequelize(dbConfig);
-
+const routes = require('./routes');
 const app = express();
 
-
-
-
-
-
-
+require('./database');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -34,10 +27,9 @@ app.use('/carrinho', require('./router/carrinhoRoute'));
 app.use('/certificados', require('./router/certificadosRoute'));
 app.use('/cursos', require('./router/cursosRoute'));
 app.use('/login', require('./router/loginRoute'));
-app.use('/cadastro', require('./router/cadastroRoute'));
 app.use('/nova_senha', require('./router/resetPasswordRoute'));
 app.use('/admin', require('./router/adminRoute'));
-
+app.use(routes);
 // mongo enviando dados
 app.post("/artigo", (req, res) => {
   return res.json({titulo: "teste"});
