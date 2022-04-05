@@ -1,3 +1,4 @@
+<!--
 <%- include('partes/inicioHead') %>
 
 <title>Cadastro</title>
@@ -66,6 +67,39 @@
                     <input type="checkbox" value="aceite" required>
                     <strong>Concordo com os termos de uso da nossa plataforma </strong><br><br>
                     <button class="botao" type="submit"> FINALIZAR CADASTRO </button>
+    </div>
+        </main>
+</body>
+<%- include('partes/footer') %> 
+-->
+<%- include('partes/inicioHead') %>
+
+<title>Cadastro</title>
+<link rel="stylesheet" href="css/cadastroUsuario.css">
+</head>
+<body>
+    <%- include('partes/menuNavecacao') %>
+        <main>
+            <section id="sessao1"> 
+                <div id="cadastro-se"> Cadastre-se</div>
+            </section>
+            <div class="formulario" id="centralizar">
+                <form method="post">
+                        <div class="campo">
+                            <label for="nomecompleto"> </label>
+                            <input type="text" class="nomecompleto" size="50" name="name" placeholder="Digite seu Nome">
+                        </div>
+                
+                        <div class="campo">
+                            <label for="email"></label>
+                            <input type="email" class="email" name="email" size="50" placeholder="Digite seu E-mail">
+                        </div>               
+                        <div class="campo" id="termos">
+                            <input type="checkbox" value="aceite" required>
+                            <strong>Concordo com os termos de uso da nossa plataforma </strong><br><br>
+                            <input class="botao" type="submit" name="acao" value="cadastrar"  />
+                </form>
+
     </div>
         </main>
 </body>
