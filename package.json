@@ -26,7 +26,8 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.15.0",
     "sequelize-cli": "^6.4.1",
-    "session": "^0.1.0"
+    "session": "^0.1.0",
+    "sweetalert2": "^11.4.8"
   },
   "scripts": {
     "start": "nodemon ./bin/www"
