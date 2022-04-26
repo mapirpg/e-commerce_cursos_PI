@@ -11,6 +11,7 @@
     "dotenv": "^14.3.2",
     "ejs": "~2.6.1",
     "express": "^4.17.2",
+    "express-session": "^1.17.2",
     "firebase": "^9.6.5",
     "git": "^0.1.5",
     "http-errors": "~1.6.3",
