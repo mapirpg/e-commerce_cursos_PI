@@ -68,7 +68,9 @@ fieldset.grupo .campo{
 }
 .formulario{
         display: block;
+        margin-bottom: 5%;
         top: 50%;
+        /* margin-top: auto; */
 }
 #termos{
         color: rgba(0, 0, 0, 0.986);
@@ -89,6 +91,7 @@ fieldset.grupo .campo{
         background-position: center;
         width: 100%;
         margin-top: 50px;
+        margin-bottom: 50px;
         background-size:cover ;
         align-items: center;
         justify-content: center;

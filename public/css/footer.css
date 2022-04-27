@@ -15,12 +15,12 @@ body {
     bottom: 0;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    background-color: #FFEA98;
+    background-color: #f8e00afa;
     height: 100%;
 }
 
 #copyRight{
-    font-size: 8px;
+    font-size: 12px;
     width: 20%;
     text-align: left;
     align-self: end;
@@ -39,14 +39,14 @@ body {
 }
 
 #navegacao h4, #linksUteis h4{
-  font-size: 18px;
+  font-size: 18pt;
   text-align: left;
-  margin-left: 10%;
+  margin-left: 8%;
   padding-top: 5%;
 }
 
 ul.footerNavegacao li, ul.footerLinksUteis li{
-  font-size: 8pt;
+  font-size: 12pt;
   list-style: none;
   text-align: left;
 }
@@ -64,14 +64,16 @@ ul.footerNavegacao li, ul.footerLinksUteis li{
   justify-content: column;
   padding-right: 50%;
   
+  
 }
 
 .linksRedes img{ 
   width: 100%;
-  filter: invert(84%) sepia(38%) saturate(3839%) hue-rotate(6deg) brightness(100%) contrast(102%);
+  filter: invert(20%) sepia(20%) saturate(39%) hue-rotate(6deg) brightness(100%) contrast(102%);
 }
 .linksRedes a{
   list-style: none;
+  
 }
 
 /* Barra de validação de certificado */
@@ -82,10 +84,12 @@ ul.footerNavegacao li, ul.footerLinksUteis li{
   padding: 0;
 }
 #btnBusca, #txtValid{
-  height: 60%;
+  height: 50%;
+  margin-right: 2%;
   border: none;
   font-size: 10px;
   text-align: left; 
+  
 }
 
 @media(max-width: 650px){

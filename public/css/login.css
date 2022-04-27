@@ -16,6 +16,7 @@ input,button{
     margin-right: auto; 
 }
 .campo label{
+    margin-top: 10px;
     margin-bottom: 0.2em;
     color: #FFDD4C;
     display: block;
@@ -24,6 +25,7 @@ input,button{
 fieldset.grupo .campo{
 
     margin-right: 1em;
+    
   
 }
 .campo input[type="email"],.campo input[type="password"]{
@@ -34,6 +36,8 @@ fieldset.grupo .campo{
     width: 400px; 
     margin-left: auto;
     margin-right: auto; 
+    margin-top: 10px;
+    
 }
 
 .campo input:focus{
@@ -51,7 +55,8 @@ fieldset.grupo .campo{
     margin-bottom:1em ;
     width: 400px; 
     margin-left: 150px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 135px;
     
 }
 .botao:hover{
@@ -69,7 +74,7 @@ fieldset.grupo .campo{
     height: 130px;
     display: flex;
     background-position: center;
-    width: 100%;   
+    width: 100%; 
     margin-top: 50px;
     background-size:cover ;
     align-items: center;
