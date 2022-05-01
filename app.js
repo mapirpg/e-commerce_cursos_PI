@@ -6,8 +6,13 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const routes = require('./routes');
-const app = express();
+const app = express();const session = require('express-session');
 
+app.use(session({
+  secret: '1234',
+  resave: false,
+  saveUninitialized: true
+}))
 require('./database');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,6 +36,7 @@ app.use('/nova_senha', require('./router/resetPasswordRoute'));
 app.use('/admin', require('./router/adminRoute'));
 app.use(routes);
 // mongo enviando dados
+
 app.post("/artigo", (req, res) => {
   return res.json({titulo: "teste"});
 });
@@ -47,7 +53,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('');
 });
 
 

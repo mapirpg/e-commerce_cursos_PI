@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-  margin: 0;
 }
 
 .push {
@@ -12,9 +11,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    bottom: 0;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
     background-color: #f8e00afa;
     height: 100%;
 }

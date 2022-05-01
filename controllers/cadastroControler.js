@@ -7,8 +7,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 module.exports = {
     async store(req, res ){
-        const {name} = req.body;
         const {email} = req.body;
+        const {senha} = req.body;
         let getUser = await User.findOne({ where: { email: email} }) // Vá no banco de dados e busque o usuário que tem o email igual ao que foi passado no body
         console.log(getUser?.email)
         
@@ -17,7 +17,7 @@ module.exports = {
             res.render('error', { mensagemErro: 'Conta Existente', voltarLink: '/cadastro' })
             
         }else { // Se getUser.Email for falso, ou se vir vazio(null) ou undefined, ele vai entrar no else
-            User.create({ name, email });
+            User.create({ email, senha });
          }
 
 

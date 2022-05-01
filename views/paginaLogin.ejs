@@ -1,35 +1,69 @@
 <%- include('partes/inicioHead') %>
 <title>Login</title>
-<link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">	
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+
 </head>
 <body>
-    <%- include('partes/menuNavecacao') %>
-        <main>
-            <section id="sessao1"> 
-                <div id="cadastro-se"> ACESSE SEU PORTAL</div>
-            </section>
-            <div class="formulario" id="centralizar">
-                <form action="">
-                            <div class="campo">
-                            <label for="email"></label>
-                            <input type="email" class="email" name="email" size="50" requerid
-                                placeholder="Digite seu E-mail">                          
-                            <label for="pass"></label>
-                            <input type="password" name="password" id="pass" inputmode="numeric" minlength="8"
-                                autocomplete="current-password" required placeholder="Senha">
-                                
-                                <button class="botao" type="submit"> ACESSAR </button>
-                                <br>
-                                
+    <main>
+        <div class="limiter">
+            <div class="containerLogin">
+                <div class="wrapLogin">
+                    <form method="post" class="loginForm validateForm">
+                        <span class="loginFormTitle p-b-26">
+                            Bem-Vindo
+                        </span>
+                        <span class="loginFormTitle p-b-48">
+                            <i class="zmdi zmdiFont"></i>
+                        </span>
+    
+                        <div class="wrapInput1 validateInput1" data-validate = "Valid email is: a@b.c">
+                            <input class="input1" type="text" name="email">
+                            <span class="focusInput1" data-placeholder="E-mail:"></span>
                         </div>
-                                          
-                    </fieldset>
-                    
-                </form>
-
-        </main>
-
+    
+                        <div class="wrapInput1 validateInput1" data-validate="Enter password">
+                            <span class="btnShowPass">
+                                <i class="zmdi zmdiEye"></i>
+                            </span>
+                            <input class="input1" type="password" name="senha">
+                            <span class="focusInput1" data-placeholder="Senha:"></span>
+                        </div>
+    
+                        <div class="containerLoginFormBtn">
+                            <div class="wrapLoginFormBtn">
+                                <div class="loginFormBgBtn"></div>
+                                <button class="loginFormBtn">
+                                    Entrar
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div class="textCenter p-t-115">
+                            <span class="txt1">
+                                Não tem uma conta?
+                            </span>
+    
+                            <a class="txt2" href="/cadastro">
+                                Cadastre-se
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div id="dropDownSelect1"></div>
+    </main>
 </body>
-<%- include('partes/footer') %>
 
     
