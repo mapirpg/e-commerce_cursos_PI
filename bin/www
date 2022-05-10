@@ -11,8 +11,9 @@ var http = require('http');
 /**
  * Get port from environment and store in Express.
  */
+const customPort = '3000'
 
-var port = normalizePort(process.env.PORT || '4000', console.log('Servidor rodando na porta "4000"'));
+var port = normalizePort(process.env.PORT || customPort, console.log(`Servidor rodando na porta ${customPort}`));
 app.set('port', port);
 
 /**

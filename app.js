@@ -6,7 +6,8 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const routes = require('./routes');
-const app = express();const session = require('express-session');
+const app = express();
+const session = require('express-session');
 
 app.use(session({
   secret: '1234',
