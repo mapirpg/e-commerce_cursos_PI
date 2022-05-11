@@ -1,0 +1,29 @@
+<%- include('partes/inicioHead') %>
+    <title>Painel Admin</title>
+    <link rel="stylesheet" href="/css/painelAdmin.css">
+    <%- include('partes/menuNavecacao') %>
+
+        <div class="container">
+
+            <%- include('partes/adminMenu') %>
+
+                <div id="retangulo-admin">
+                    <form action="POST" class="formulario">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" placeholder="Digite sua senha">
+                        <br>
+                        <label for="senha">Senha: </label>
+                        <input type="senha" name="senha" placeholder="Digite o seu email">
+                        <br>
+                        <br>
+                        <button>Excluir</button>
+
+                    </form>
+
+                </div>
+
+        </div>
+
+
+
+        <%- include('partes/footer') %>

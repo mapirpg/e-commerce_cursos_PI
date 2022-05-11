@@ -15,8 +15,8 @@ router.get('/cadastrar_professor', (req, res,) => {
     res.render('adminCadastrarProfessor');
   });
 
-router.get('/cadastrar_curso', (req, res,) => {
-    res.render('adminCadastrarCurso');
+router.get('/excluirConta', (req, res,) => {
+    res.render('excluirConta');
 });
 
 router.get('/cadastrar_postagem', (req, res,) => {
