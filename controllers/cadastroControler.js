@@ -16,11 +16,9 @@ module.exports = {
             console.log("### conta existente") 
             res.render('error', { mensagemErro: 'Conta Existente', voltarLink: '/cadastro' })
             
-        }else { // Se getUser.Email for falso, ou se vir vazio(null) ou undefined, ele vai entrar no else
+        } else { // Se getUser.Email for falso, ou se vir vazio(null) ou undefined, ele vai entrar no else
             User.create({ email, senha });
-         }
-
-
+        }
       res.render('paginaCadastro')
         // await User.create({ name2, email2 });
         // res.render('paginaCadastro');
