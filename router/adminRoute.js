@@ -6,13 +6,13 @@ router.get('/', (req, res,) => {
   res.render('admin');
 });
 
-router.get('/cadastrar_aluno', (req, res,) => {
-    res.render('adminCadastrarAluno');
+router.get('/alterar_email', (req, res,) => {
+    res.render('adminAlterarEmail');
   });
 
   
-router.get('/cadastrar_professor', (req, res,) => {
-    res.render('adminCadastrarProfessor');
+router.get('/alterar_senha', (req, res,) => {
+    res.render('adminAlterarSenha');
   });
 
 router.get('/excluirConta', (req, res,) => {
