@@ -94,15 +94,7 @@ li a.active {
     outline: 0;
     
   }
-  #btnBusca{
-    float:left;
-    height:32px;
-    font-weight:bold;
-    background:#5F9EA0;
-    position: relative;
-    
-  }
-  
+ 
   .menu-principal{
     background-color: #f8e00afa;
   }

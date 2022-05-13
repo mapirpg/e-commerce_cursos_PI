@@ -1,6 +1,6 @@
-.container{
+.admin-container{
     display:flex; 
-    padding:0%;
+    padding:1rem;
     height: auto;
 }
 
@@ -35,18 +35,13 @@
     height: auto;
     border-radius: 5%;
     margin-bottom: 5%;
+    padding: 1rem;
  }
 
  #retangulo-admin>h2{
     text-align: center;
     padding-top: 30%;
  }
-
-form{
-    padding-top: 5%;
-    padding-left: 5%;
-    font-size: 22px;
-}
 
 form>input{
     margin-top: 5%;
