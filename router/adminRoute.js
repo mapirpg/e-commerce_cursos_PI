@@ -2,9 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 
+
 router.get('/', (req, res,) => {
-  res.render('admin');
-});
+  if(!req.session.estaLogado){
+    res.redirect('/login');
+    return
+  }
+    res.render('admin');
+  });
+
 
 router.get('/cadastrar_aluno', (req, res,) => {
     res.render('adminCadastrarAluno');
