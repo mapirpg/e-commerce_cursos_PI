@@ -14,6 +14,17 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+
+
+
+app.use(function adicionarUsuarioRender(req, res, next){
+  res.locals.usuarioLogado = req.session.usuarioLogado
+  res.locals.sessionUsuario = req.session.sessionUsuario
+  res.locals.estaLogado = req.session.estaLogado
+  next()
+});
+
+
 require('./database');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,7 +37,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ---------------- Rotas principais -------------------- //
-
 app.use('/', require('./router/index'));
 app.use('/cadastro', require('./router/cadastroRoute'));
 app.use('/carrinho', require('./router/carrinhoRoute'));
@@ -56,6 +66,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('');
 });
+
+
 
 
 

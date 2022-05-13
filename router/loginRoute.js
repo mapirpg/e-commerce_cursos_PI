@@ -7,7 +7,7 @@ const loginControler = require('../controllers/loginControler');
 router.use(bodyParser.urlencoded({extended:true}));
 router.post('/', loginControler.store);
 router.get('/', (req, res,) => {
-    res.render('paginaLogin',);
+    res.render('paginaLogin');
   });
 
   
