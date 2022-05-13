@@ -4,105 +4,113 @@
   box-sizing: border-box;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-html, body{
+html,
+body {
   margin: 0;
   padding: 0;
-  background-color:#e4e4e4;
+  background-color: #e4e4e4;
 }
 
 body {
-    font-family: 'Road Rage';
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  font-family: 'Road Rage';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ul#menu {
-    list-style-type: none;
-    overflow: hidden;
-    border: 1px solid white;
-    background-color: #f8e00afa;
-    width: 100%;
-    font-family: 'Road Rage';
-    font-weight: bold;
+  list-style-type: none;
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: #f8e00afa;
+  width: 100%;
+  font-family: 'Road Rage';
+  font-weight: bold;
 
-  }
-  li.liMenu {
-    float: left;
-  }
-  li.liMenu a {
-    display: block; 
-    margin-left: auto;
-    margin-right: auto; 
-    color: rgb(95, 84, 84);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin-top: 5px;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #fcfcfc;
-    color: black;
-  }
-  
-  li a.active {
-    color: rgb(23, 143, 199);
-    background-color: #04AA6D;
-    
-  }
-  #iconeSite{
-    position: absolute;
-    float: left;
-    width: 100px;
-    height: 50px;
-    margin-top: 5px;
-    background-color: rgb(110, 9, 9);
-    margin-left: 3%;
-  }
+}
 
-  #primeiraLi{
+li.liMenu {
+  float: left;
+}
+
+li.liMenu a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(95, 84, 84);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+li a:hover:not(.active) {
+  background-color: #fcfcfc;
+  color: black;
+}
+
+li a.active {
+  color: rgb(23, 143, 199);
+  background-color: #04AA6D;
+
+}
+
+#iconeSite {
+  position: absolute;
+  float: left;
+  width: 100px;
+  height: 50px;
+  margin-top: 5px;
+  background-color: rgb(110, 9, 9);
+  margin-left: 3%;
+}
+
+#primeiraLi {
   margin-left: 15%;
-  }
+}
 
 
 
-  #divBusca{
-    display: block; 
-    margin-left: auto;
-    margin-right: auto; 
-    float:right;
-    margin-top: 10px;
-    
-  }
-  #txtBusca{
-    float:left;
-    background-color:transparent;
-    font-style:italic;
-    font-size:18px;
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-    
-  }
-  #btnBusca{
-    float:left;
-    height:32px;
-    font-weight:bold;
-    background:#5F9EA0;
-    position: relative;
-    
-  }
+#divBusca {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+  margin-top: 10px;
 
-  @media screen and (max-width: 640px){
-    #menu{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+}
+
+#txtBusca {
+  float: right;
+  font-style: italic;
+  font-size: 18px;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  margin-right: 10%;
+  background-image: "/images/logado.png";
+
+}
+
+#btnBusca {
+  float: right;
+  height: 32px;
+  font-weight: bold;
+  background-image: "/images/logado.png";
+  position: relative;
+  margin-right: 10%;
+
+}
+
+@media screen and (max-width: 640px) {
+  #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+}

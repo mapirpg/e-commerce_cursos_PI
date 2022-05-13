@@ -25,10 +25,10 @@
 
 
                                     <% if(estaLogado) { %>
-                                        <li class="liMenu">
-                                            <p id="sessionUsuarioLogado">
-                                                <%= sessionUsuario %>
-                                            </p>
+                                        <li class="liMenu" style="float: right;">
+                                           
+                                                <a href="/admin">Logado</a>
+                                        </li>
                                         </li>
                                         <% } else { %>
                                             <li class="liMenu">
@@ -36,11 +36,7 @@
                                             </li>
                                             <% } %>
 
-                                                <div id="divBusca">
-                                                    <input type="text" id="txtBusca" placeholder="Buscar..." />
-                                                    <img src="/images/inicio/iconepesquisa.png" id="btnBusca"
-                                                        alt="Buscar" style="background-color: transparent;" />
-                                                </div>
+
         </ul>
         <br>
 
