@@ -1,6 +1,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/cssPartes/menu.css">
+<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <body>
 <nav class="menu-principal navbar navbar-expand-lg navbar-light">
@@ -45,3 +46,52 @@
     </div>
 </nav>
 </body>
+=======
+
+<body>
+    <nav>
+
+        <ul id="menu">
+            <img src="/images/inicio/iconeSite.png" id="iconeSite" />
+            <li class="liMenu" id="primeiraLi"><a href='/'>Home</a></li>
+            <li class="liMenu"><a href='/cursos'>Cursos</a></li>
+            <li class="liMenu"><a href='/certificados'>Certificados</a></li>
+
+
+            <% if(estaLogado) { %>
+                <% } else { %>
+                    <li class="liMenu"><a href="/login">Login</a></li>
+                    <% } %>
+
+
+                        <li class="liMenu"><a href="/carrinho">Carrinho</a></li>
+                        <% if(estaLogado) { %>
+                            <% } else { %>
+                                <li class="liMenu"><a href="/cadastro">Cadastro</a></li>
+                                <% } %>
+
+                                    <% if(estaLogado) { %>
+                                        <li class="liMenu"><a href="/admin">Painel Admin</a></li>
+                                        <% } else { %>
+                                            
+                                            <% } %>
+
+                                                <% if(estaLogado) { %>
+                                                    <li class="liMenu" style="float: right;">
+
+                                                        <a href="/admin">Logado</a>
+                                                    </li>
+                                                    </li>
+                                                    <% } else { %>
+                                                        <li class="liMenu">
+                                                            <p id="sessionUsuarioLogado"></p>
+                                                        </li>
+                                                        <% } %>
+
+
+        </ul>
+        <br>
+
+    </nav>
+</body>
+>>>>>>> f2f48cc9dd6741bd6cc7f646ac761eb4242cc6ef
