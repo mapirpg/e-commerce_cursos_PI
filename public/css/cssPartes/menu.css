@@ -76,7 +76,6 @@ li a.active {
 
 
 
-<<<<<<< HEAD
   #divBusca{
     display: block; 
     margin-left: auto;
@@ -116,43 +115,3 @@ li a.active {
       justify-content: space-between;
     }
   } */
-=======
-#divBusca {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float: right;
-  margin-top: 10px;
-
-}
-
-#txtBusca {
-  float: right;
-  font-style: italic;
-  font-size: 18px;
-  box-shadow: 0 0 0 0;
-  border: 0 none;
-  outline: 0;
-  margin-right: 10%;
-  background-image: "/images/logado.png";
-
-}
-
-#btnBusca {
-  float: right;
-  height: 32px;
-  font-weight: bold;
-  background-image: "/images/logado.png";
-  position: relative;
-  margin-right: 10%;
-
-}
-
-@media screen and (max-width: 640px) {
-  #menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-}
->>>>>>> f2f48cc9dd6741bd6cc7f646ac761eb4242cc6ef
