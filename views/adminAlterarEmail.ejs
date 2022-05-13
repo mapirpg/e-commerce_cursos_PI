@@ -6,16 +6,18 @@
         <div class="container">
 
             <%- include('partes/adminMenu') %>
-            
+
                 <div id="retangulo-admin">
                     <form action="POST" class="formulario">
-                        <label for="senha">senha: </label>
-                        <input type="senha" nome="senha" placeholder="Digite a nova senha  ">
+                        
+                <label for="email">E-mail atual: </label>
+                        <input type="email" nome="email" placeholder="Digite seu e-mail atual ">
+                        <br>
+                <label for="novoEmail">Novo E-mail: </label>
+                        <input type="email" nome="novoEmail" placeholder="Digite o novo e-mail ">
                         <br>
                         
-                        
-                    <button>Enviar</button>
-
+                        <button>Enviar</button>
                     </form>
 
                 </div>

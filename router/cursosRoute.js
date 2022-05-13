@@ -1,10 +1,14 @@
 const express = require('express');
-const cursos = require('../database/cursos')
-
+const bodyParser = require('body-parser');
 const router = express.Router()
 
 router.get('/', (req, res,) => {
-    res.render('paginaCursos', {cursos});
+  if(!req.session.estaLogado){
+    res.redirect('/login');
+    return
+  }
+    res.render('paginaCursos');
   });
+
   
 module.exports = router;
