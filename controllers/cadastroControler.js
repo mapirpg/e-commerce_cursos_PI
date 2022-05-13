@@ -18,8 +18,10 @@ module.exports = {
 
         } else { // Se getUser.Email for falso, ou se vir vazio(null) ou undefined, ele vai entrar no else
             User.create({ email, senha });
+            req.session.estaLogado = true;
+            req.session.sessionUsuario = email;
+            res.redirect('/');
         }
-        res.render('paginaCadastro')
         // await User.create({ name2, email2 });
         // res.render('paginaCadastro');
 

@@ -21,6 +21,7 @@ app.use(function adicionarUsuarioRender(req, res, next) {
   res.locals.usuarioLogado = req.session.usuarioLogado
   res.locals.sessionUsuario = req.session.sessionUsuario
   res.locals.estaLogado = req.session.estaLogado
+  res.locals.sessionSenha = req.session.sessionSenha
   next()
 });
 

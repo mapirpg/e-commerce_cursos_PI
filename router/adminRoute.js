@@ -1,4 +1,5 @@
 const express = require('express');
+const excluirContaBD = require('../controllers/excluirContaBD');
 const router = express.Router();
 
 
@@ -21,9 +22,11 @@ router.get('/alterar_senha', (req, res,) => {
     res.render('adminAlterarSenha');
   });
 
-router.get('/excluirConta', (req, res,) => {
+  router.post('/excluirConta', excluirContaBD.store);
+  router.get('/excluirConta', (req, res,) => {
     res.render('excluirConta');
 });
+
 
 router.get('/cadastrar_postagem', (req, res,) => {
   res.render('adminCadastrarPostagem');

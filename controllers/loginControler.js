@@ -18,12 +18,13 @@ module.exports = {
             console.log("Logado");
             req.session.estaLogado = true;
             req.session.sessionUsuario = email;
+            req.session.sessionSenha = senha;
             res.redirect('/');
 
         } else {
             console.log("Nome ou Email errado");
-            res.render('error', { mensagemErro: 'Email ou Senha incorretos!', voltarLink: '/login' })
         }
+        res.render('error', { mensagemErro: 'Email ou Senha incorretos!', voltarLink: '/login' })
 
     }
 }

@@ -8,9 +8,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 module.exports = {
     async store(req, res) {
-        let buscaUser = await User.findOne({ where: { email: email } })
+        const { senha } = req.body;
+        const { email } = req.body;
 
 
+        let getUser = await User.findOne({ where: { email: email, senha: senha } }) 
+        if (getUser?.email && getUser?.senha) {
+            console.log("Conta excluida");
+            User.destroy({ where: { email: email } })
+            res.redirect('/');
+
+        } else {
+            console.log("Nome ou Email errado");
+            res.render('error', { mensagemErro: 'Email ou Senha incorretos!', voltarLink: '/login' })
+
+        }
 
     }
 
