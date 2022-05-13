@@ -98,11 +98,16 @@ ul#menu {
     position: relative;
     
   }
+  
+  .menu-principal{
+    background-color: #f8e00afa;
+  }
 
-  @media screen and (max-width: 640px){
+
+  /* @media screen and (max-width: 640px){
     #menu{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-  }
+  } */
