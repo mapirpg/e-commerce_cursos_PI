@@ -20,6 +20,7 @@ module.exports = {
             User.create({ email, senha });
             req.session.estaLogado = true;
             req.session.sessionUsuario = email;
+            req.session.sessionSenha = senha;
             res.redirect('/');
         }
         // await User.create({ name2, email2 });

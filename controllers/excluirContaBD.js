@@ -16,6 +16,9 @@ module.exports = {
         if (getUser?.email && getUser?.senha) {
             console.log("Conta excluida");
             User.destroy({ where: { email: email } })
+            req.session.estaLogado = false;
+            req.session.sessionUsuario = '';
+            req.session.sessionSenha = '';
             res.redirect('/');
 
         } else {
