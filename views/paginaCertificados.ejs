@@ -4,7 +4,7 @@
 <body>
     <%- include('partes/menuNavecacao') %>
 <main class="conteudo">   
-    <input type="button" id="buttPdf" value="Gerar PDF" onclick="gerarPDF">
+    
     <h1 id="titulo">Certificados</h1>
     
     <div id="media-400">
@@ -51,7 +51,8 @@
             <div class="certCodValidacao">Cod Valicação</div>
             <div class="certEmissao">data de Emissão</div>
         </article>
-    </section>
+        </section>
+        <input type="button" id="buttPdf" value="Gerar PDF" onclick="gerarPDF">
     <script>
         gerarPDF = '/gerarPDF'
     </script>
