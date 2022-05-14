@@ -180,3 +180,27 @@
     background-image: linear-gradient(to right, transparent, #CCC, transparent);  
     
 }
+
+#tituloOutrosCursos{
+  font-size: 32px;
+  font-family: "Road Range";
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 992px){
+
+  #linha-horizontal{
+    margin-top: 95px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  #tituloOutrosCursos{
+    font-size:x-large;
+    text-align: center;
+    margin-top: 130px;
+  }
+}

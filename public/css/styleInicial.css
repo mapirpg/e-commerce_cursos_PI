@@ -180,3 +180,32 @@ padding-top: 7%;
       transform: translateY(0px);
   }
 }
+
+@media screen and (max-width: 992px){
+  .slideshow-container{
+    display: none;
+  }
+  #dotCenter{
+    display: none;
+  }
+
+  #informacaoCursoRecomendado, #tituloCursoRecomendado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+  #sobreCursoRecomendado{
+    margin-top: 50px;
+  }
+  .textoSobreCursoRecomendadoTitulo{
+    font-weight: bold;
+  }
+  .textoSobreCursoRecomendado{
+    width:fit-content;
+  }
+  .text-box{
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+}
