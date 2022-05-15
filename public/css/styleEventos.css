@@ -51,6 +51,12 @@
     font-weight: bold;
     font-size: 3ch;
 }
+#tituloEventos{
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+}
 
 @media screen and (max-width: 992px){
     #eventos{
