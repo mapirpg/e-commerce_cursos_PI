@@ -1,4 +1,6 @@
 .conteudo{
+  flex: 1;
+  height: 100%;
     background-color: white;
     padding-bottom: 1%;
 }
@@ -26,7 +28,11 @@ h1#title{
 /* section de Cursos */
 .curBox{
     display: flex;
-    overflow-x: hidden;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: auto;
     padding-right: 2%;
     margin-bottom: 2%;
 }
@@ -57,8 +63,9 @@ h2{
     justify-content: center;
     margin: 0 1%;
     padding: 1%;
-    max-width: 410px;
-    min-width: 410px;
+    width: 50%;
+    max-width: 50%;
+    margin-bottom: 30px;
     border: 2px solid #FFEA98;
 }
 
@@ -81,7 +88,7 @@ h2{
 
 .curNome{
     width: 100%;
-    height: 100px;
+    height: 40px;
     margin: 3px;
     text-align: left;
     font-weight: bolder;

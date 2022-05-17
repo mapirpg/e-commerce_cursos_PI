@@ -1,36 +1,44 @@
 const cursos = [
   {
-    nome: "Harmonização facial",
-    img: '../public/images/cursos/cur_harm__facial.png',
-    cargaHoraria: 50,
-    professor: 'Maria Fernanda da Graça',
-    valor: 0.00,
-    descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dicta eius tempore totam quis beatae nulla, exercitationem incidunt cupiditate autem consequatur hic dolores, amet eum reiciendis aut consectetur, veniam repellendus.' 
+    img: "images/cursos/cur_harm_facial.png",
+    name: 'Harmonização facial',
+    value: 'R$ 1000,00',
+    ch: '100h',
+    tutor: 'Fernando',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere impedit eaque maxime possimus totam magnam cum ad voluptatibus non at ipsa a modi nobis pariatur deleniti quae, inventore sed porro.'
   },
   {
-    nome: "Depilação",
-    img: '../public/images/cursos/depilacao.png',
-    cargaHoraria: 40,
-    professor: 'José da Silva Prado',
-    valor: 0,
-    descricao: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, inventore voluptate, commodi, ad maiores velit aut nam laudantium ab hic delectus. Consequatur architecto quod suscipit cum deleniti, voluptas enim molestias.'
+    img: "images/cursos/cur_maquiagem.png",
+    name: 'Maquiagem',
+    value: 'R$ 2000,00',
+    ch: '500h',
+    tutor: 'Juliana',
+    description: 'Facere impedit eaque maxime possimus totam magnam cum ad voluptatibus non at ipsa a modi nobis pariatur deleniti quae, inventore sed porro.'
   },
   {
-    nome: "Sobrancelha",
-    img: '../public/images/cursos/cur_sobrancelha.png',
-    cargaHoraria: 100,
-    professor: 'Adalberta Reginalda',
-    valor: 100.00,
-    descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae laborum odit velit eius recusandae excepturi quidem ipsa autem tenetur, id, ad ea mollitia officia iusto saepe repellendus eaque soluta!' 
+    img: "images/cursos/cur_depilacao.png",
+    name: 'Depilação',
+    value: 'R$ 500,00',
+    ch: '50h',
+    tutor: 'Gabriel',
+    description: 'Autem ad, vel iusto cumque nostrum eveniet dignissimos repellendus non consectetur amet dicta modi commodi accusantium fuga rem nisi officiis excepturi. Necessitatibus.'
   },
   {
-    nome: "Maquiagem",
-    img: '/images/cursos/cur_maquiagem.png',
-    cargaHoraria: 200,
-    professor: 'Aderbaldo Garcia',
-    valor: 500.00,
-    descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In, natus? Veritatis, quo inventore vitae deleniti illum doloribus quasi officiis, dicta, quia perspiciatis laborum ullam. Necessitatibus eaque corrupti deserunt molestias? Delectus!'
+    img: "images/cursos/cur_sobrancelha.png",
+    name: 'Sobrancelha',
+    value: 'R$ 5000,00',
+    ch: '1400h',
+    tutor: 'Elizangela',
+    description: 'Rem ad, vel iusto cumque nostrum eveniet dignissimos repellendus non consectetur amet dicta modi commodi accusantium fuga rem nisi officiis excepturi. Facere impedit eaque maxime possimus totam magnam cum ad voluptatibus non at ipsa a modi nobis pariatur deleniti quae, inventore sed porro. Necessitatibus.'
+  },
+  {
+    img: "images/cursos/cur_trat_facial.png",
+    name: 'Tratamento Facial',
+    value: 'R$ 300,00',
+    ch: '50h',
+    tutor: 'Thiago',
+    description: 'Dolorem expedita sit autem, tempora id veniam iusto totam, eius vel facilis quae, cumque corrupti. Laudantium minus officia iusto, odit sed maxime! Quis laudantium totam optio distinctio itaque ipsum esse in. Deleniti illum modi aut quod ea est mollitia sit quaerat delectus! Nobis, explicabo?'
   }
-];
+]
 
 module.exports = cursos
