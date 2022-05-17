@@ -105,10 +105,4 @@ li a.active {
   }
 
 
-  /* @media screen and (max-width: 640px){
-    #menu{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  } */
+  

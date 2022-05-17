@@ -1,82 +1,59 @@
 <%- include('partes/inicioHead') %>
-<link rel="stylesheet" href="/css/cursos.css">
 </head>
 <body>
+
 <%- include('partes/menuNavecacao') %>
   <main class="conteudo">
     <h1 id="title">Cursos</h1>
     <h2>Todos os Cursos</h2>
     <hr>        
     <section name="cursosTodos" class="curBox" id="moveTodo" ontouchstart="dragBox()">
-      <!-- DIV DE BOTÕES DE MOVIMENTAÇÃO DO FRAME -->
-      <div class="moveButtons" id="btnTodoDiv">
-        <input 
-          class="boxToLeft" 
-          id="btnTodoL" 
-          type="button" 
-          value="<" 
-          onmouseover="moveToLeft(btnTodoL)" 
-          onmouseenter="enableRightMove(btnTodoR)" 
-          onmouseout="stopMove('stop')"
-        >
-        <input 
-          class="boxToRight" 
-          id="btnTodoR" 
-          type="button" 
-          value=">" 
-          onmouseover="moveToRight(btnTodoR)" 
-          onmouseenter="enableLeftMove(btnTodoL)" 
-          onmouseout="stopMove('stop')"
-        >
-      </div>
-
       <!-- CURSOS -->
-      <% cursos.forEach((curso) => { %>
-      <article class="curContainer" id="cur_harm_facial"> 
+      <% cursos.forEach(curso => { %>
+        <article class="curContainer" id="cur_harm_facial"> 
           <div class="curImg">
               <img 
-                src="<%= cursos.img %>>" 
+                src="<%= curso.img %> "
                 alt="Harmonização Facial" 
-                draggable="false"
               >
           </div>
           <div class="curInfo">
               <a onclick="toFrame('#cur_harm_facial', '#title_harm_facial')">
                   <p class="curNome" id="title_harm_facial" >
-
-                    <%= curso.nome%>
-
+                    <%= curso.name %>
+                  </p>
+                  <p>
+                    <%= curso.description %>
                   </p>
               </a>
               <p class="curCarga" >
-                Carga Horária:&nbsp;<strong>
-
-                  <%= curso.cargaHoraria %>h
-
+                Carga Horária:&nbsp;
+                <strong>
+                  <%= curso.ch %>
                 </strong>
               </p>
               <p class="curTutor">
-                Professor(a):&nbsp;<strong><%= curso.professor %></strong>
+                Professor(a):&nbsp;
+                  <strong>
+                    <%= curso.tutor %>
+                  </strong>
               </p>
               <p class="curVal">
-                Valor:&nbsp;<strong> <%= curso.valor > 0.00? 'R$' : '' %>&nbsp;<%=  curso.valor == 0? 'GRÁTIS' : curso.valor %></strong>
+                Valor::&nbsp;
+                  <strong>
+                    <%= curso.value %>
+                  </strong> 
               </p>
           </div>
       </article>
-      <% }); %>
+      <% }) %>
+      
+    
     </section>
 
   <!-- FRAME COM INFORMAÇÕES DO CURSO -->
 
-  <section name="cursoInd" id="curInd">
-
-  </section>
   </main>
     <%- include('partes/footer') %>
-
-  <script>
-    const img = require('../public/images/')
-    
-  </script>
 </body>
 </html>
