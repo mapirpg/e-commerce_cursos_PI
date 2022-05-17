@@ -17,6 +17,7 @@ app.use(session({
 
 
 
+
 app.use(function adicionarUsuarioRender(req, res, next) {
   res.locals.usuarioLogado = req.session.usuarioLogado
   res.locals.sessionUsuario = req.session.sessionUsuario

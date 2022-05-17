@@ -19,7 +19,7 @@ module.exports = {
             req.session.estaLogado = true;
             req.session.sessionUsuario = email;
             req.session.sessionSenha = senha;
-            res.render('/');
+            res.redirect('/');
 
         } else {
             console.log("Nome ou Email errado");
